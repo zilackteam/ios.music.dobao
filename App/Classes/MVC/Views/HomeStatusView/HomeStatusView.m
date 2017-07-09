@@ -14,7 +14,6 @@
 @interface HomeStatusView() {
 }
 @property (weak, nonatomic) IBOutlet UIImageView *imageBackgroundView;
-@property (weak, nonatomic) IBOutlet UIButton *expandButton;
 @property (weak, nonatomic) IBOutlet UIImageView *artistLogoView;
 @property (weak, nonatomic) IBOutlet UIImageView *artistSignalView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
@@ -26,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *artistLogoWidthConstraint;
 @property (weak, nonatomic) IBOutlet UILabel *likeCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *commentCountLabel;
+@property (weak, nonatomic) IBOutlet UIView *inforView;
 
 - (void)p_updatePost:(Post *)post;
 
@@ -83,15 +83,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     CGPoint locationPoint = [[touches anyObject] locationInView:self];
     
-    BOOL touched = CGRectContainsPoint(_expandButton.frame, locationPoint);
-    if (touched) {
-        if (_delegate && [_delegate respondsToSelector:@selector(homeStatusView:performAction:)]) {
-            [_delegate homeStatusView:self performAction:1];
-        }
-        return;
-    }
-    
-    touched = CGRectContainsPoint(_statusContainerView.frame, locationPoint);
+    BOOL touched = CGRectContainsPoint(_statusContainerView.frame, locationPoint);
     if (touched) {
         if (_delegate && [_delegate respondsToSelector:@selector(homeStatusView:performAction:)]) {
             [_delegate homeStatusView:self performAction:2];
@@ -104,7 +96,6 @@
     _artistLogoView.alpha = pow(alpha, 2);
     float ap = alpha - (1 - pow(alpha, 2));
     _imageBackgroundView.alpha = pow(alpha, 2);
-    _expandButton.alpha = ap;
     _artistSignalView.alpha = ap;
     _statusContainerView.alpha = ap;
     
@@ -162,5 +153,19 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [_activityView stopAnimating];
     });
+}
+
+- (void)drawRect:(CGRect)rect {
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGRect innerRect = CGRectInset(_inforView.frame, 2, 0);
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:innerRect byRoundingCorners:(UIRectCornerBottomLeft|UIRectCornerBottomRight) cornerRadii:CGSizeMake(5, 5)];
+    CGContextAddPath(context, path.CGPath);
+    
+    [[UIColor whiteColor] setFill];
+    [[UIColor whiteColor] setStroke];
+    path.lineWidth = 2;
+    [path stroke];
+    [path fill];
 }
 @end

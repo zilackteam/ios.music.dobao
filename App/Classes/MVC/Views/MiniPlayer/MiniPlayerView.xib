@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,6 +21,7 @@
                 <outlet property="detailLabel" destination="oIQ-vm-Wyn" id="hGu-t7-YYv"/>
                 <outlet property="playPauseButton" destination="zbb-Gm-mVB" id="nmB-Lw-frm"/>
                 <outlet property="progressView" destination="HXR-Yp-gAZ" id="q1c-LF-XJ2"/>
+                <outlet property="progressViewWidthConstraint" destination="pju-A1-nCt" id="fww-SS-pbo"/>
                 <outlet property="thumbnailBgrView" destination="XCb-tg-gpx" id="3pc-Pb-h0D"/>
                 <outlet property="titleLabel" destination="50R-fo-aYi" id="Lhu-4A-OVN"/>
                 <outlet property="view" destination="iN0-l3-epB" id="V72-rM-ZLe"/>
@@ -54,7 +55,7 @@
                         <constraint firstAttribute="height" constant="20" id="hc8-wB-gNu"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
-                    <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.68468410801820723" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCb-tg-gpx">
@@ -64,18 +65,19 @@
                         <constraint firstAttribute="width" secondItem="XCb-tg-gpx" secondAttribute="height" multiplier="1:1" id="olI-B1-eWp"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXR-Yp-gAZ" userLabel="ProgressView">
-                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="4"/>
-                    <color key="backgroundColor" red="0.94117647059999998" green="0.84705882349999995" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="4" id="Oke-cx-QHv"/>
-                    </constraints>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srM-9u-0rz" userLabel="ProgressView Background">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="4"/>
-                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="4" id="VNd-gX-O2e"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXR-Yp-gAZ" userLabel="ProgressView">
+                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="4"/>
+                    <color key="backgroundColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="Oke-cx-QHv"/>
+                        <constraint firstAttribute="width" id="pju-A1-nCt"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbb-Gm-mVB" userLabel="PlayButton">
@@ -94,7 +96,7 @@
                         <constraint firstAttribute="height" constant="20" id="mv1-wn-dt3"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.37647058823529411" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suy-Bg-OJv" userLabel="PreButton">
@@ -109,11 +111,10 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="50R-fo-aYi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-15" id="2KW-6X-CFv"/>
                 <constraint firstItem="BbQ-85-QHq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3rN-Kw-EqY"/>
-                <constraint firstItem="srM-9u-0rz" firstAttribute="leading" secondItem="HXR-Yp-gAZ" secondAttribute="trailing" id="6A6-0w-zhr"/>
                 <constraint firstItem="oIQ-vm-Wyn" firstAttribute="leading" secondItem="BbQ-85-QHq" secondAttribute="trailing" constant="10" id="8Qa-gc-WXO"/>
                 <constraint firstItem="BbQ-85-QHq" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="AWo-zt-AIt"/>
                 <constraint firstItem="Suy-Bg-OJv" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AbJ-mD-FRu"/>
@@ -146,9 +147,9 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_mini_player_back" width="30" height="30"/>
-        <image name="ic_mini_player_next" width="30" height="30"/>
-        <image name="ic_mini_player_start" width="43" height="43"/>
-        <image name="img_mini_bg" width="65" height="65"/>
+        <image name="ic_mini_player_back" width="22" height="22"/>
+        <image name="ic_mini_player_next" width="22" height="22"/>
+        <image name="ic_mini_player_start" width="34" height="34"/>
+        <image name="img_mini_bg" width="47" height="47"/>
     </resources>
 </document>

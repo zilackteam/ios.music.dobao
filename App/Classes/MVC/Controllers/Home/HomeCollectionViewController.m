@@ -70,13 +70,16 @@
     
     [self setLeftNavButton:Menu];
     screenLoading = YES;
-    self.view.backgroundColor = RGB(34, 34, 34);
+//    self.view.backgroundColor = RGB(34, 34, 34);
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    self.collectionView.scrollEnabled = NO;
-    self.collectionView.backgroundView.backgroundColor = RGB(34, 34, 34);
+    [self useMainBackgroundOpacity:1];
+    
+//    self.collectionView.scrollEnabled = NO;
+    self.collectionView.backgroundView.backgroundColor = [UIColor whiteColor];
     self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, APPLICATION_MINI_PLAYER_HEIGHT, 0);
     self.collectionView.alwaysBounceVertical = NO;
-    self.collectionView.bounces = NO;
+//    self.collectionView.bounces = NO;
     
     UICollectionViewFlowLayout *currentLayout = (UICollectionViewFlowLayout *)_collectionView.collectionViewLayout;
     currentLayout.minimumLineSpacing = 10;
@@ -315,7 +318,7 @@
     if (kind == UICollectionElementKindSectionHeader) {
         HomeSectionHeaderReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"forIndexPath:indexPath];
         
-        headerView.titleLabel.text = LocalizedString(setting.title);
+        headerView.titleLabel.text = [LocalizedString(setting.title) uppercaseString];
         reusableview = headerView;
     } else if (kind == UICollectionElementKindSectionFooter) {
         HomeSectionFooterReusableView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footer" forIndexPath:indexPath];
@@ -351,7 +354,7 @@
     if (setting.sectionStyle == SectionStyleStatus) {
         return CGSizeZero;
     }
-    return CGSizeMake(collectionView.bounds.size.width, 40.);
+    return CGSizeMake(collectionView.bounds.size.width, 60.);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
@@ -366,7 +369,8 @@
     SectionSetting *setting = [sectionSettingList itemAtIndex:indexPath.section];
     
     if (setting.sectionStyle == SectionStyleStatus) {
-        return CGSizeMake(CGRectGetWidth(collectionView.frame), CGRectGetHeight(self.view.frame));
+//        return CGSizeMake(CGRectGetWidth(collectionView.frame), CGRectGetHeight(self.view.frame));
+        return CGSizeMake(CGRectGetWidth(collectionView.frame), 200.0f);
     }
     
     int numberOfColumns = MAX(1, setting.numberOfColumns);

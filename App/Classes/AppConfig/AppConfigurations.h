@@ -17,8 +17,8 @@
 #define APPLICATION_MODE_DEMO                               NO         // 0:login/social. 1. Hidden
 
 #define APPLICATION_FONT                                    @"Roboto-Regular"
-#define APPLICATION_COLOR                                   [UIColor colorWithRed:34/255.0 green:34/255.0 blue:34/255.0 alpha:1]
-#define APPLICATION_COLOR_TEXT                              [UIColor colorWithRed:222/255.0 green:186/255.0 blue:74/255.0 alpha:1]
+#define APPLICATION_COLOR                                   [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1]
+#define APPLICATION_COLOR_TEXT                              [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]
 #define APPLICATION_MINI_PLAYER_HEIGHT                      80
 
 #endif /* AppConfigurations_h */

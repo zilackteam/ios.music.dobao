@@ -69,7 +69,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self useMainBackgroundOpacity:0.05];
+    [self useMainBackgroundOpacity:1];
     
     itemSpacing  = 10;
     PlayingItem = INVALID_INDEX;

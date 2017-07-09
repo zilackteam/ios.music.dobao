@@ -82,7 +82,7 @@
     [_collectionView registerClass:[AlbumHeaderReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerDidStartPlayingItem:) name:kNotification_AudioPlayerDidStartPlayingItem object:nil];
     
-    [self useMainBackgroundOpacity:0.05];
+    [self useMainBackgroundOpacity:1];
     [self setLeftNavButton:Back];
 }
 

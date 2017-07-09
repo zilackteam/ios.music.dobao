@@ -39,9 +39,9 @@
     self.view.alpha = 0;
     
     self.collectionView.layer.cornerRadius = 5.0f;
-    self.collectionView.layer.borderColor = RGBA(222, 186, 74, 1).CGColor;
+    self.collectionView.layer.borderColor = RGBA(0, 0, 0, 1).CGColor;
     self.collectionView.layer.borderWidth = 1;
-    self.collectionView.backgroundColor  = RGBA(1, 1, 1, 0.5);
+    self.collectionView.backgroundColor  = RGBA(255, 255, 255, 0.9);
     
     UICollectionViewFlowLayout *currentLayout = (UICollectionViewFlowLayout *)_collectionView.collectionViewLayout;
     currentLayout.minimumLineSpacing = 10;
@@ -162,6 +162,7 @@
             }
             
             headerView.titleLabel.numberOfLines = 2;
+            headerView.titleLabel.textColor = RGB(96, 96, 96);
             headerView.backgroundColor = [UIColor clearColor];
             
             reusableview = headerView;
@@ -169,7 +170,7 @@
     } else {
         UICollectionReusableView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footer" forIndexPath:indexPath];
         
-        footerView.backgroundColor = RGBA(222, 186, 74, 1);
+        footerView.backgroundColor = RGB(96, 96, 96);
         reusableview = footerView;
     }
     

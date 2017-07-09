@@ -127,27 +127,6 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>tlt_live_streaming</string>
-			<key>items</key>
-			<array>
-				<dict>
-					<key>name</key>
-					<string>tlt_live_streaming</string>
-					<key>icon</key>
-					<string>ic_menu_live_streaming</string>
-					<key>s_identifier</key>
-					<string>LiveStreamingViewController</string>
-					<key>sb</key>
-					<string>Live</string>
-					<key>direction</key>
-					<false/>
-					<key>value</key>
-					<string></string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>name</key>
 			<string>tlt_other</string>
 			<key>items</key>
 			<array>

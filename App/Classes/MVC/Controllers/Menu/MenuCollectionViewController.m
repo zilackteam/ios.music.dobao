@@ -134,7 +134,7 @@ static NSString * const reuseIdentifier = @"cell";
                                              selector:@selector(updateLocalization)
                                                  name:kLanguageChangedNotification object:nil];
     
-    self.collectionView.backgroundColor  = APPLICATION_COLOR;
+    self.collectionView.backgroundColor  = [UIColor whiteColor];
     float headerHeight = 0.0f;
     self.collectionView.contentInset = UIEdgeInsetsMake(headerHeight, 0, 0, 0);
     self.collectionView.allowsSelection = YES;

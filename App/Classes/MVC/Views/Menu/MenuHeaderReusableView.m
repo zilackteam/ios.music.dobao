@@ -14,12 +14,15 @@
 @implementation MenuHeaderReusableView
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+/*
     if (_delegate && [_delegate respondsToSelector:@selector(menuHeaderResableView:selectedSection:)]) {
         [_delegate menuHeaderResableView:self selectedSection:_idx];
     }
+*/
 }
 
 - (void)updateState:(MenuHeaderState)state {
+/*
     [UIView animateWithDuration:0.5 animations:^{
         if (state == MenuHeaderState_Collapse) {
             _statusImage.image = [UIImage imageNamed:@"ic_menu_section_expand"];
@@ -28,6 +31,7 @@
         }
     } completion:^(BOOL finished) {
     }];
+*/
 }
 
 @end

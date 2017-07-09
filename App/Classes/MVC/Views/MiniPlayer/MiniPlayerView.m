@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 @property (weak, nonatomic) IBOutlet UIButton *playPauseButton;
 @property (weak, nonatomic) IBOutlet UIView *progressView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *progressViewWidthConstraint;
 @property (strong, nonatomic) IBOutlet UIView *view;
 
 @end
@@ -100,10 +101,12 @@
 - (void)timerTick {
     AudioPlayer *player = [AudioPlayer shared];
     if (player.currentItem && player.duration != 0) {
-        _progressView.frame = CGRectMake(0, 0, (player.progress/player.duration)*self.bounds.size.width, _progressView.bounds.size.height);
+        _progressViewWidthConstraint.constant = (player.progress/player.duration) * self.bounds.size.width;
     }else {
-        _progressView.frame = CGRectMake(0, 0, 0, _progressView.bounds.size.height);
+        _progressViewWidthConstraint.constant = 0;
     }
+    
+    [self layoutIfNeeded];
 }
 
 - (void)updateControls {

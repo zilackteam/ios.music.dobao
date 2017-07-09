@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,9 @@
     <customFonts key="customFonts">
         <array key="Roboto-Medium.ttf">
             <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-ThinItalic.ttf">
+            <string>Roboto-ThinItalic</string>
         </array>
     </customFonts>
     <objects>
@@ -32,26 +35,36 @@
                         <constraint firstAttribute="width" constant="80" id="c6X-XR-XFM"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
-                    <color key="textColor" red="0.87058823529411766" green="0.72941176470588232" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.99607843137254903" green="0.49019607843137253" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUq-l5-pjC">
-                    <rect key="frame" x="90" y="32" width="220" height="1"/>
-                    <color key="backgroundColor" red="0.87058823529411766" green="0.72941176470588232" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrow_right_b" translatesAutoresizingMaskIntoConstraints="NO" id="aN9-qg-VbQ">
+                    <rect key="frame" x="295" y="17" width="20" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="1" id="lQg-A8-cGH"/>
+                        <constraint firstAttribute="height" constant="30" id="TKq-Xi-df2"/>
+                        <constraint firstAttribute="width" constant="20" id="sn3-gM-D7w"/>
                     </constraints>
-                </view>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xem toàn bộ" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WX9-5f-cYP">
+                    <rect key="frame" x="202" y="21.333333333333336" width="88" height="21.333333333333336"/>
+                    <fontDescription key="fontDescription" name="Roboto-ThinItalic" family="Roboto" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="bUq-l5-pjC" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="90" id="08b-9a-X6S"/>
-                <constraint firstAttribute="trailing" secondItem="bUq-l5-pjC" secondAttribute="trailing" constant="10" id="1tZ-Qr-IZC"/>
-                <constraint firstItem="bUq-l5-pjC" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="K4R-lE-kmk"/>
+                <constraint firstItem="aN9-qg-VbQ" firstAttribute="leading" secondItem="WX9-5f-cYP" secondAttribute="trailing" constant="5" id="7UD-yn-Ufi"/>
                 <constraint firstItem="cli-do-rWy" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="Nid-ph-n35"/>
                 <constraint firstItem="cli-do-rWy" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="ODM-mI-3bV"/>
+                <constraint firstItem="WX9-5f-cYP" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="bE2-xG-7r0"/>
+                <constraint firstAttribute="trailing" secondItem="aN9-qg-VbQ" secondAttribute="trailing" constant="5" id="ujN-MT-anM"/>
+                <constraint firstItem="aN9-qg-VbQ" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="zaR-Gb-trK"/>
             </constraints>
             <point key="canvasLocation" x="25" y="59"/>
         </collectionReusableView>
     </objects>
+    <resources>
+        <image name="ic_arrow_right_b" width="7" height="4"/>
+    </resources>
 </document>
