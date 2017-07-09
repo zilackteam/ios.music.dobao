@@ -1,0 +1,6 @@
+[submodule "Core"]
+	path = Core
+	url = https://github.com/zilackteam/ios.core.git
+[submodule "AppBase"]
+	path = AppBase
+	url = https://github.com/zilackteam/ios.music.core.git
