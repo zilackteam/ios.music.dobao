@@ -153,7 +153,6 @@
 		2AF508331ECDF9730099B640 /* ZLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF508321ECDF9730099B640 /* ZLUtilities.m */; };
 		2AFABBD31EC1729F009E9CDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AFABBD21EC1729F009E9CDF /* GoogleService-Info.plist */; };
 		7EA308B51CBB90F900F9C44A /* Cer + Provisioning in Resources */ = {isa = PBXBuildFile; fileRef = 7EA308B41CBB90F900F9C44A /* Cer + Provisioning */; };
-		BD6631436A2B31AF9575AA5A /* libPods-music.damvinhhung.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDFFCB2EF5C4A12467D1972 /* libPods-music.damvinhhung.a */; };
 		CE00E7091E8CAF88006DF99D /* search_section_settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE00E7081E8CAF88006DF99D /* search_section_settings.plist */; };
 		CE00E70D1E8CDF39006DF99D /* PlaylistFooterReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E70B1E8CDF39006DF99D /* PlaylistFooterReusableView.m */; };
 		CE00E70E1E8CDF39006DF99D /* PlaylistFooterReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE00E70C1E8CDF39006DF99D /* PlaylistFooterReusableView.xib */; };
@@ -570,10 +569,11 @@
 		2AF5082F1ECDF7930099B640 /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
 		2AF508311ECDF9730099B640 /* ZLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLUtilities.h; sourceTree = "<group>"; };
 		2AF508321ECDF9730099B640 /* ZLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLUtilities.m; sourceTree = "<group>"; };
+		2AF895BF1F126E3600ED7334 /* dobaomusician.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dobaomusician.entitlements; sourceTree = "<group>"; };
 		2AFABBD21EC1729F009E9CDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7EA308B41CBB90F900F9C44A /* Cer + Provisioning */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Cer + Provisioning"; sourceTree = "<group>"; };
 		8EDFFCB2EF5C4A12467D1972 /* libPods-music.damvinhhung.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-music.damvinhhung.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A226846F1C05A66D00D2421C /* damvinhhung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = damvinhhung.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A226846F1C05A66D00D2421C /* dobaomusician.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dobaomusician.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7AFB0A403045D0BA9B91DD /* Pods-music.dobao.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music.dobao.debug.xcconfig"; path = "Pods/Target Support Files/Pods-music.dobao/Pods-music.dobao.debug.xcconfig"; sourceTree = "<group>"; };
 		CDD14E509E27C4CF5A1DAB90 /* Pods-music.dobao.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music.dobao.release.xcconfig"; path = "Pods/Target Support Files/Pods-music.dobao/Pods-music.dobao.release.xcconfig"; sourceTree = "<group>"; };
 		CE00E7081E8CAF88006DF99D /* search_section_settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = search_section_settings.plist; sourceTree = "<group>"; };
@@ -785,7 +785,6 @@
 				CEBD7D6A1CB40EC400AB3EB6 /* FBSDKLoginKit.framework in Frameworks */,
 				CEBD7D6B1CB40EC400AB3EB6 /* FBSDKShareKit.framework in Frameworks */,
 				E80614411C09678E009B5454 /* AVFoundation.framework in Frameworks */,
-				BD6631436A2B31AF9575AA5A /* libPods-music.damvinhhung.a in Frameworks */,
 				1862037A81DEAE8A7DB41D49 /* libPods-music.dobao.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1649,6 +1648,7 @@
 		A22684661C05A66D00D2421C = {
 			isa = PBXGroup;
 			children = (
+				2AF895BF1F126E3600ED7334 /* dobaomusician.entitlements */,
 				2A126EBF1EDBF9380077D6AB /* IJKMediaPlayer.xcodeproj */,
 				7EA308B41CBB90F900F9C44A /* Cer + Provisioning */,
 				2A1561871EAFBD1800671BC0 /* Core */,
@@ -1663,7 +1663,7 @@
 		A22684701C05A66D00D2421C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A226846F1C05A66D00D2421C /* damvinhhung.app */,
+				A226846F1C05A66D00D2421C /* dobaomusician.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2351,7 +2351,7 @@
 			);
 			name = music.dobao;
 			productName = "Singer-ObjC";
-			productReference = A226846F1C05A66D00D2421C /* damvinhhung.app */;
+			productReference = A226846F1C05A66D00D2421C /* dobaomusician.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2366,7 +2366,7 @@
 					A226846E1C05A66D00D2421C = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 5PKQ63AX2Q;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -2575,7 +2575,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run 641071bdde94e1ffbd00f186eb2f2f2d8bb5cfeb ff2caf32ba9bdf592bab5de7a6d7d27daebf0ce347f25c062f1f2dbccbb56152";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2894,10 +2894,10 @@
 			baseConfigurationReference = BC7AFB0A403045D0BA9B91DD /* Pods-music.dobao.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = damvinhhung.entitlements;
+				CODE_SIGN_ENTITLEMENTS = dobaomusician.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: VIET NAM SMART CONTENT JOINT STOCK COMPANY (5PKQ63AX2Q)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5PKQ63AX2Q;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2930,15 +2930,7 @@
 				INFOPLIST_FILE = App/Supporting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ThirdParty/MediaLib/lib/CommLibiOS",
-					"$(PROJECT_DIR)/ThirdParty/MediaLib/lib/libav-11.4/lib",
-					"$(PROJECT_DIR)/ThirdParty/MediaLib/lib/MediaLibiOS",
-					"$(PROJECT_DIR)/ThirdParty/MediaLib/lib/speex-1.2rc2/lib",
-					"$(PROJECT_DIR)/ThirdParty/MediaLib/lib/x264/lib",
-					"$(PROJECT_DIR)/ThirdParty/IJKMedia/universal/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-lz",
@@ -2994,10 +2986,10 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zilack.music.damvinhhung;
-				PRODUCT_NAME = damvinhhung;
-				PROVISIONING_PROFILE = "1dfdee49-35bf-4055-8cec-37ed6d8d9d03";
-				PROVISIONING_PROFILE_SPECIFIER = DVH.Development;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zilack.music.dobaomusician;
+				PRODUCT_NAME = dobaomusician;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3007,10 +2999,10 @@
 			baseConfigurationReference = CDD14E509E27C4CF5A1DAB90 /* Pods-music.dobao.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = damvinhhung.entitlements;
+				CODE_SIGN_ENTITLEMENTS = dobaomusician.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: VIET NAM SMART CONTENT JOINT STOCK COMPANY (5PKQ63AX2Q)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 5PKQ63AX2Q;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Crashlytics/iOS\"",
@@ -3106,10 +3098,10 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zilack.music.damvinhhung;
-				PRODUCT_NAME = damvinhhung;
-				PROVISIONING_PROFILE = "f474a49c-1c61-499a-884d-e5d8947508f5";
-				PROVISIONING_PROFILE_SPECIFIER = DVH.Adhoc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zilack.music.dobaomusician;
+				PRODUCT_NAME = dobaomusician;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
