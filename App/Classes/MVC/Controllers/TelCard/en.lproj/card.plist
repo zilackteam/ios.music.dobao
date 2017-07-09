@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>MOBIFONE</string>
+		<key>description</key>
+		<string>The card is offered by MOBIFONE</string>
+		<key>code</key>
+		<string>VMS</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>VINAPHONE</string>
+		<key>description</key>
+		<string>The card is offered by VINAPHONE</string>
+		<key>code</key>
+		<string>VNP</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>VIETTEL</string>
+		<key>description</key>
+		<string>The card is offered by VIETTEL</string>
+		<key>code</key>
+		<string>VTT</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>MEGACARD</string>
+		<key>description</key>
+		<string>The card is offered by Epay</string>
+		<key>code</key>
+		<string>MGC</string>
+	</dict>
+</array>
+</plist>

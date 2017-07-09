@@ -1,0 +1,23 @@
+//
+//  App-Prefix.pch
+//
+//  Created by thanhvu on 11/25/15.
+//  Copyright © 2015 Zilack. All rights reserved.
+//
+
+#ifndef App_Prefix_pch
+#define App_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "Macro.h"
+#import "Constants.h"
+#import "UIStoryboard+Extension.h"
+#import "AudioPlayer.h"
+#import "AppUtils.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "AMLocalizeHelper.h"
+#import "StoryBoardConfig.h"
+#import "AppConfigurations.h"
+
+#endif /* App-Prefix_pch */

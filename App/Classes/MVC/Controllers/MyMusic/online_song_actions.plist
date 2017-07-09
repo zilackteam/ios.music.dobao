@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Donwload</string>
+		<key>icon</key>
+		<string>ic_media_download_gray</string>
+		<key>iconhl</key>
+		<string>ic_media_download_hl</string>
+		<key>actiontype</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Add Favourite</string>
+		<key>icon</key>
+		<string>ic_media_add_favourite_gray</string>
+		<key>iconhl</key>
+		<string>ic_media_add_favourite_hl</string>
+		<key>actiontype</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Add Playlist</string>
+		<key>icon</key>
+		<string>ic_media_add_playlist_gray</string>
+		<key>iconhl</key>
+		<string>ic_media_add_playlist_hl</string>
+		<key>actiontype</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Delete</string>
+		<key>icon</key>
+		<string>ic_media_trash_gray</string>
+		<key>iconhl</key>
+		<string>ic_media_trash_hl</string>
+		<key>actiontype</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sharing</string>
+		<key>icon</key>
+		<string>ic_media_share_gray</string>
+		<key>iconhl</key>
+		<string>ic_media_share_hl</string>
+		<key>actiontype</key>
+		<integer>4</integer>
+	</dict>
+</array>
+</plist>

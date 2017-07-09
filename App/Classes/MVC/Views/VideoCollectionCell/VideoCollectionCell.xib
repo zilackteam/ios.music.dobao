@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoCollectionCell">
+            <connections>
+                <outlet property="detailView" destination="zjP-KA-85j" id="FFU-Vg-jm9"/>
+                <outlet property="imageView" destination="Q3A-hv-413" id="PNs-6K-2qG"/>
+                <outlet property="titleView" destination="xPT-2c-CQX" id="UsM-Di-2ad"/>
+                <outlet property="view" destination="gTV-IL-0wX" id="5Ka-dc-Iwa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="165"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="240" height="165"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q3A-hv-413">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Q3A-hv-413" secondAttribute="height" multiplier="2:1" id="zMh-AP-e0G"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPT-2c-CQX">
+                        <rect key="frame" x="0.0" y="125" width="240" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Dd9-R6-Dik"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjP-KA-85j">
+                        <rect key="frame" x="0.0" y="145" width="240" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="woF-v0-pov"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                        <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_media_play" translatesAutoresizingMaskIntoConstraints="NO" id="XoC-Ud-TSd">
+                        <rect key="frame" x="196" y="81" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="XoC-Ud-TSd" secondAttribute="height" multiplier="1:1" id="lYp-N6-Q1V"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Q3A-hv-413" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6Xx-8e-KSI"/>
+                <constraint firstItem="xPT-2c-CQX" firstAttribute="top" secondItem="XoC-Ud-TSd" secondAttribute="bottom" constant="8" id="AIa-Fy-h7a"/>
+                <constraint firstAttribute="trailing" secondItem="Q3A-hv-413" secondAttribute="trailing" id="C77-RX-Cjh"/>
+                <constraint firstAttribute="trailing" secondItem="XoC-Ud-TSd" secondAttribute="trailing" constant="8" id="LLf-BA-kyg"/>
+                <constraint firstItem="xPT-2c-CQX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LlP-kN-Xil"/>
+                <constraint firstItem="Q3A-hv-413" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WyV-ms-yoH"/>
+                <constraint firstAttribute="trailing" secondItem="zjP-KA-85j" secondAttribute="trailing" id="dcj-DJ-RYC"/>
+                <constraint firstItem="zjP-KA-85j" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="owf-TR-0LV"/>
+                <constraint firstAttribute="bottom" secondItem="zjP-KA-85j" secondAttribute="bottom" id="v9H-Y0-ra4"/>
+                <constraint firstItem="XoC-Ud-TSd" firstAttribute="height" secondItem="Q3A-hv-413" secondAttribute="height" multiplier="0.3" id="w8F-N2-lfw"/>
+                <constraint firstAttribute="trailing" secondItem="xPT-2c-CQX" secondAttribute="trailing" id="whz-7T-I4z"/>
+                <constraint firstItem="xPT-2c-CQX" firstAttribute="top" secondItem="Q3A-hv-413" secondAttribute="bottom" constant="5" id="yEF-nt-t5q"/>
+            </constraints>
+            <size key="customSize" width="183" height="126"/>
+            <point key="canvasLocation" x="92" y="14"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_media_play" width="67" height="67"/>
+    </resources>
+</document>

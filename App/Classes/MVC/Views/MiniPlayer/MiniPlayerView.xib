@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MiniPlayerView">
+            <connections>
+                <outlet property="detailLabel" destination="oIQ-vm-Wyn" id="hGu-t7-YYv"/>
+                <outlet property="playPauseButton" destination="zbb-Gm-mVB" id="nmB-Lw-frm"/>
+                <outlet property="progressView" destination="HXR-Yp-gAZ" id="q1c-LF-XJ2"/>
+                <outlet property="thumbnailBgrView" destination="XCb-tg-gpx" id="3pc-Pb-h0D"/>
+                <outlet property="titleLabel" destination="50R-fo-aYi" id="Lhu-4A-OVN"/>
+                <outlet property="view" destination="iN0-l3-epB" id="V72-rM-ZLe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_mini_bg" translatesAutoresizingMaskIntoConstraints="NO" id="BbQ-85-QHq">
+                    <rect key="frame" x="10" y="20" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="BbQ-85-QHq" secondAttribute="height" multiplier="1:1" id="1oq-6o-4Ss"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIx-HT-87z" userLabel="NexButton">
+                    <rect key="frame" x="325" y="22" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="9Ni-iO-9q9"/>
+                        <constraint firstAttribute="height" constant="35" id="EqT-cR-ezi"/>
+                    </constraints>
+                    <state key="normal" image="ic_mini_player_next"/>
+                    <connections>
+                        <action selector="tapOnNextButton:" destination="-1" eventType="touchUpInside" id="UaQ-8u-a2t"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đàm Vĩnh Hưng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="oIQ-vm-Wyn" userLabel="Detail Label">
+                    <rect key="frame" x="60" y="45" width="160" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="hc8-wB-gNu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                    <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCb-tg-gpx">
+                    <rect key="frame" x="10" y="20" width="40" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="XCb-tg-gpx" secondAttribute="height" multiplier="1:1" id="olI-B1-eWp"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXR-Yp-gAZ" userLabel="ProgressView">
+                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="4"/>
+                    <color key="backgroundColor" red="0.94117647059999998" green="0.84705882349999995" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="Oke-cx-QHv"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srM-9u-0rz" userLabel="ProgressView Background">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="4"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="VNd-gX-O2e"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbb-Gm-mVB" userLabel="PlayButton">
+                    <rect key="frame" x="275" y="20" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="zbb-Gm-mVB" secondAttribute="height" multiplier="1:1" id="5xL-al-gD2"/>
+                    </constraints>
+                    <state key="normal" image="ic_mini_player_start"/>
+                    <connections>
+                        <action selector="playPauseButtonSelected:" destination="-1" eventType="touchUpInside" id="ky4-SN-UKg"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dạ khúc cho tình nhân" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="50R-fo-aYi" userLabel="Name Label">
+                    <rect key="frame" x="60" y="15" width="160" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="mv1-wn-dt3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suy-Bg-OJv" userLabel="PreButton">
+                    <rect key="frame" x="230" y="23" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Cnh-4o-oPX"/>
+                        <constraint firstAttribute="width" constant="35" id="ekM-70-8Oz"/>
+                    </constraints>
+                    <state key="normal" image="ic_mini_player_back"/>
+                    <connections>
+                        <action selector="tapOnBackButton:" destination="-1" eventType="touchUpInside" id="N4o-qY-IpY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="50R-fo-aYi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-15" id="2KW-6X-CFv"/>
+                <constraint firstItem="BbQ-85-QHq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3rN-Kw-EqY"/>
+                <constraint firstItem="srM-9u-0rz" firstAttribute="leading" secondItem="HXR-Yp-gAZ" secondAttribute="trailing" id="6A6-0w-zhr"/>
+                <constraint firstItem="oIQ-vm-Wyn" firstAttribute="leading" secondItem="BbQ-85-QHq" secondAttribute="trailing" constant="10" id="8Qa-gc-WXO"/>
+                <constraint firstItem="BbQ-85-QHq" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="AWo-zt-AIt"/>
+                <constraint firstItem="Suy-Bg-OJv" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AbJ-mD-FRu"/>
+                <constraint firstItem="WIx-HT-87z" firstAttribute="leading" secondItem="zbb-Gm-mVB" secondAttribute="trailing" constant="10" id="Dym-Fw-EiO"/>
+                <constraint firstItem="XCb-tg-gpx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="H2h-rk-Gv0"/>
+                <constraint firstItem="HXR-Yp-gAZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JNW-2A-xfG"/>
+                <constraint firstItem="zbb-Gm-mVB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="L5j-Lg-mGQ"/>
+                <constraint firstItem="Suy-Bg-OJv" firstAttribute="leading" secondItem="50R-fo-aYi" secondAttribute="trailing" constant="10" id="LiU-85-FNq"/>
+                <constraint firstItem="WIx-HT-87z" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PJb-0l-Yj1"/>
+                <constraint firstAttribute="trailing" secondItem="zbb-Gm-mVB" secondAttribute="trailing" constant="60" id="Rbq-rP-tcY"/>
+                <constraint firstItem="zbb-Gm-mVB" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="UFs-zT-SCF"/>
+                <constraint firstItem="zbb-Gm-mVB" firstAttribute="leading" secondItem="Suy-Bg-OJv" secondAttribute="trailing" constant="10" id="Uo9-98-pxc"/>
+                <constraint firstItem="Suy-Bg-OJv" firstAttribute="leading" secondItem="oIQ-vm-Wyn" secondAttribute="trailing" constant="10" id="X0f-4H-n8t"/>
+                <constraint firstItem="srM-9u-0rz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Xbf-6X-1Al"/>
+                <constraint firstItem="XCb-tg-gpx" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="aiZ-t6-dwj"/>
+                <constraint firstAttribute="trailing" secondItem="zbb-Gm-mVB" secondAttribute="trailing" constant="60" id="dPo-1T-mV5"/>
+                <constraint firstItem="BbQ-85-QHq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="eUV-kI-gdK"/>
+                <constraint firstItem="50R-fo-aYi" firstAttribute="leading" secondItem="XCb-tg-gpx" secondAttribute="trailing" constant="10" id="pX9-sx-EP9"/>
+                <constraint firstItem="oIQ-vm-Wyn" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="15" id="qVP-pJ-sR8"/>
+                <constraint firstAttribute="trailing" secondItem="srM-9u-0rz" secondAttribute="trailing" id="r2h-at-1et"/>
+                <constraint firstItem="srM-9u-0rz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="taY-9j-byq"/>
+                <constraint firstItem="HXR-Yp-gAZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xRz-lm-cFT"/>
+                <constraint firstItem="XCb-tg-gpx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xea-eK-WiW"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="25.5" y="-231"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_mini_player_back" width="30" height="30"/>
+        <image name="ic_mini_player_next" width="30" height="30"/>
+        <image name="ic_mini_player_start" width="43" height="43"/>
+        <image name="img_mini_bg" width="65" height="65"/>
+    </resources>
+</document>

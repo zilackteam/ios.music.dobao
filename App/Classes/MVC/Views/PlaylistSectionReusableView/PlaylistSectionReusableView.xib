@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaylistSectionReusableView">
+            <connections>
+                <outlet property="accessoryView" destination="aVl-72-pRh" id="VhK-Vq-tAT"/>
+                <outlet property="detailView" destination="rkH-XW-vSQ" id="0I3-Pe-NH2"/>
+                <outlet property="imageView" destination="2oh-7J-EP7" id="3pH-yy-Lzd"/>
+                <outlet property="titleView" destination="Tjz-oM-0WL" id="ZJH-kK-xhL"/>
+                <outlet property="view" destination="U6b-Vx-4bR" id="AWN-bn-EzU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="75"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2oh-7J-EP7">
+                    <rect key="frame" x="10" y="12.666666666666664" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="GvC-G3-stP"/>
+                        <constraint firstAttribute="height" constant="50" id="O7g-OC-izV"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjz-oM-0WL">
+                    <rect key="frame" x="68" y="12" width="271" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="JrC-gc-Rue"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkH-XW-vSQ">
+                    <rect key="frame" x="68" y="43" width="271" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="G5B-0K-iq2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                    <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="0.39520474137931033" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dM0-Yq-dX1" userLabel="SeparatorView">
+                    <rect key="frame" x="10" y="0.0" width="329" height="1"/>
+                    <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="0.40315193965517243" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Qis-tw-peT"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVl-72-pRh" customClass="MediaAccessoryView">
+                    <rect key="frame" x="309" y="0.0" width="40" height="75"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="GtA-fe-c3A"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="ic_dot_list"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="2oh-7J-EP7" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="4mT-vQ-gTg"/>
+                <constraint firstItem="Tjz-oM-0WL" firstAttribute="leading" secondItem="2oh-7J-EP7" secondAttribute="trailing" constant="8" id="5rP-e0-t3O"/>
+                <constraint firstItem="Tjz-oM-0WL" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="12" id="8H4-lG-fpV"/>
+                <constraint firstItem="rkH-XW-vSQ" firstAttribute="leading" secondItem="2oh-7J-EP7" secondAttribute="trailing" constant="8" id="GSw-MA-kpk"/>
+                <constraint firstAttribute="trailing" secondItem="dM0-Yq-dX1" secondAttribute="trailing" constant="10" id="L0G-PJ-NP5"/>
+                <constraint firstAttribute="trailing" secondItem="rkH-XW-vSQ" secondAttribute="trailing" constant="10" id="V94-jv-t5m"/>
+                <constraint firstAttribute="bottom" secondItem="aVl-72-pRh" secondAttribute="bottom" id="cFd-Ju-Ce3"/>
+                <constraint firstAttribute="bottom" secondItem="rkH-XW-vSQ" secondAttribute="bottom" constant="12" id="dQb-rE-XIh"/>
+                <constraint firstAttribute="trailing" secondItem="Tjz-oM-0WL" secondAttribute="trailing" constant="10" id="f7U-WS-9ht"/>
+                <constraint firstItem="aVl-72-pRh" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="h98-hV-5gT"/>
+                <constraint firstItem="dM0-Yq-dX1" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="ilT-uX-Ref"/>
+                <constraint firstAttribute="trailing" secondItem="aVl-72-pRh" secondAttribute="trailing" id="jo5-VV-xVs"/>
+                <constraint firstItem="2oh-7J-EP7" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="pOg-do-vL7"/>
+                <constraint firstItem="dM0-Yq-dX1" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="yFa-Cf-gNL"/>
+            </constraints>
+            <point key="canvasLocation" x="39.5" y="64.5"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="ic_dot_list" width="13" height="20"/>
+    </resources>
+</document>

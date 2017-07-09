@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVideoCell">
+            <connections>
+                <outlet property="detailView" destination="8FX-ol-90W" id="cfJ-3f-u6o"/>
+                <outlet property="imageView" destination="DWk-cC-eGp" id="9Wb-Ww-zGs"/>
+                <outlet property="titleView" destination="QLd-Gr-wLN" id="tv1-Gi-4k5"/>
+                <outlet property="view" destination="gTV-IL-0wX" id="NkL-ZI-Fug"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="165"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="240" height="165"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DWk-cC-eGp">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="DWk-cC-eGp" secondAttribute="height" multiplier="2:1" id="9J8-pk-Nmk"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLd-Gr-wLN">
+                        <rect key="frame" x="0.0" y="125" width="240" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="dsP-Tz-lu1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FX-ol-90W">
+                        <rect key="frame" x="0.0" y="145" width="240" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Jtv-9G-Jsf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                        <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_media_play" translatesAutoresizingMaskIntoConstraints="NO" id="HtU-ie-z76">
+                        <rect key="frame" x="102.66666666666666" y="42" width="35.999999999999972" height="36"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="HtU-ie-z76" secondAttribute="height" multiplier="1:1" id="rCJ-Ru-y7Y"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="8FX-ol-90W" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0aA-ae-8PU"/>
+                <constraint firstItem="DWk-cC-eGp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3yS-DM-4Ba"/>
+                <constraint firstAttribute="trailing" secondItem="QLd-Gr-wLN" secondAttribute="trailing" id="CZR-eC-vy9"/>
+                <constraint firstAttribute="bottom" secondItem="8FX-ol-90W" secondAttribute="bottom" id="EOm-gw-HZ1"/>
+                <constraint firstAttribute="trailing" secondItem="8FX-ol-90W" secondAttribute="trailing" id="MX8-Vs-XNf"/>
+                <constraint firstAttribute="trailing" secondItem="DWk-cC-eGp" secondAttribute="trailing" id="Q5b-NS-MpZ"/>
+                <constraint firstItem="QLd-Gr-wLN" firstAttribute="top" secondItem="DWk-cC-eGp" secondAttribute="bottom" constant="5" id="SwQ-Mn-pbB"/>
+                <constraint firstItem="HtU-ie-z76" firstAttribute="centerX" secondItem="DWk-cC-eGp" secondAttribute="centerX" id="YrA-6K-T3D"/>
+                <constraint firstItem="QLd-Gr-wLN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jue-qL-vcp"/>
+                <constraint firstItem="HtU-ie-z76" firstAttribute="centerY" secondItem="DWk-cC-eGp" secondAttribute="centerY" id="snD-gQ-tw9"/>
+                <constraint firstItem="DWk-cC-eGp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xvC-1L-pZk"/>
+                <constraint firstItem="HtU-ie-z76" firstAttribute="height" secondItem="DWk-cC-eGp" secondAttribute="height" multiplier="0.3" id="zOa-5P-Yy7"/>
+            </constraints>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_media_play" width="67" height="67"/>
+    </resources>
+</document>
