@@ -39,6 +39,7 @@ typedef NS_OPTIONS(NSInteger, FooterState) {
 @property (assign, nonatomic) unsigned int numberOfColumnsExtend;
 @property (assign, nonatomic, readonly) unsigned int sectionStyle;
 @property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *icon;
 
 @end
 

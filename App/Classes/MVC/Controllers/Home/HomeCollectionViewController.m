@@ -362,15 +362,21 @@
     if (setting.sectionStyle == SectionStyleStatus) {
         return CGSizeZero;
     }
-    return CGSizeMake(collectionView.bounds.size.width, 40);
+    return CGSizeMake(collectionView.bounds.size.width, 60);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     SectionSetting *setting = [sectionSettingList itemAtIndex:indexPath.section];
     
     if (setting.sectionStyle == SectionStyleStatus) {
-//        return CGSizeMake(CGRectGetWidth(collectionView.frame), CGRectGetHeight(self.view.frame));
-        return CGSizeMake(CGRectGetWidth(collectionView.frame), 200.0f);
+        if (!_lastestPost) {
+            return CGSizeZero;
+        }
+        
+        CGRect rect = [AppUtils boundingRectForString:_lastestPost.content font:[UIFont fontWithName:APPLICATION_FONT size:16] width:CGRectGetWidth(collectionView.frame) - 20.0f];
+        
+        
+        return CGSizeMake(CGRectGetWidth(collectionView.frame), CGRectGetHeight(rect) + 20.0 + 50.0);
     }
     
     int numberOfColumns = MAX(1, setting.numberOfColumns);

@@ -42,7 +42,7 @@
     
     [self setLeftNavButton:Menu];
     [self updateLocalization];
-    [self useMainBackgroundOpacity:0.5];
+    [self useMainBackgroundOpacity:1];
     
     UICollectionViewFlowLayout *currentLayout = (UICollectionViewFlowLayout *)_collectionView.collectionViewLayout;
     currentLayout.minimumLineSpacing = 0;

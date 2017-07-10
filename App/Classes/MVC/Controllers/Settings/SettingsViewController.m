@@ -29,10 +29,10 @@ typedef NS_OPTIONS(NSInteger, SettingStyle) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self useMainBackgroundOpacity:0.05];
+    [self useMainBackgroundOpacity:1];
     
     self.tableView.backgroundColor = [UIColor clearColor];
-    self.tableView.separatorColor = RGBA(68, 68, 68, 0.4);
+    self.tableView.separatorColor = RGBA(212, 212, 212, 1);
     self.title = LocalizedString(@"tlt_setting");
 }
 
@@ -136,11 +136,11 @@ typedef NS_OPTIONS(NSInteger, SettingStyle) {
     }
     
     cell.textLabel.text = title;
-    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.textColor = RGB(34, 34, 34);
     cell.textLabel.font = [UIFont fontWithName:APPLICATION_FONT size:16];
     cell.detailTextLabel.font = [UIFont fontWithName:APPLICATION_FONT size:16];
     cell.detailTextLabel.text = detail;
-    cell.detailTextLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.textColor = RGB(34, 34, 34);
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }

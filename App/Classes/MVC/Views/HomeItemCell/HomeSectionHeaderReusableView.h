@@ -12,6 +12,7 @@
 @interface HomeSectionHeaderReusableView : SectionReusableBaseView
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *iconView;
 
 + (UINib *) nib;
 

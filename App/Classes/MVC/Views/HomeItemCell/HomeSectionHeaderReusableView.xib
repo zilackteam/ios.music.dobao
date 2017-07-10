@@ -29,7 +29,7 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="80" translatesAutoresizingMaskIntoConstraints="NO" id="cli-do-rWy">
-                    <rect key="frame" x="10" y="22" width="80" height="20"/>
+                    <rect key="frame" x="35" y="22" width="80" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="aC8-Cn-Vwe"/>
                         <constraint firstAttribute="width" constant="80" id="c6X-XR-XFM"/>
@@ -51,13 +51,22 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_home_section_song" translatesAutoresizingMaskIntoConstraints="NO" id="TEJ-b1-tpm">
+                    <rect key="frame" x="10" y="25" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="INm-MK-SKk"/>
+                        <constraint firstAttribute="width" constant="15" id="WQG-Vm-5Z0"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="aN9-qg-VbQ" firstAttribute="leading" secondItem="WX9-5f-cYP" secondAttribute="trailing" constant="5" id="7UD-yn-Ufi"/>
-                <constraint firstItem="cli-do-rWy" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="Nid-ph-n35"/>
+                <constraint firstItem="TEJ-b1-tpm" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="8l4-Pg-PzJ"/>
+                <constraint firstItem="TEJ-b1-tpm" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="KBL-nO-RZD"/>
                 <constraint firstItem="cli-do-rWy" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="ODM-mI-3bV"/>
                 <constraint firstItem="WX9-5f-cYP" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="bE2-xG-7r0"/>
+                <constraint firstItem="cli-do-rWy" firstAttribute="leading" secondItem="TEJ-b1-tpm" secondAttribute="trailing" constant="10" id="mle-Bf-IUJ"/>
                 <constraint firstAttribute="trailing" secondItem="aN9-qg-VbQ" secondAttribute="trailing" constant="5" id="ujN-MT-anM"/>
                 <constraint firstItem="aN9-qg-VbQ" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="zaR-Gb-trK"/>
             </constraints>
@@ -66,5 +75,6 @@
     </objects>
     <resources>
         <image name="ic_arrow_right_b" width="7" height="4"/>
+        <image name="ic_home_section_song" width="10" height="10"/>
     </resources>
 </document>

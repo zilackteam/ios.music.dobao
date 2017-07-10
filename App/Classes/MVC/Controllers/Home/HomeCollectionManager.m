@@ -41,6 +41,7 @@
     section.numberOfColumns = (int)[obj intValueKey:@"numbercolumn"];
     section.numberOfColumnsExtend = MAX(1, (int)[obj intValueKey:@"numbercolumn_extend"]);
     section.sectionStyle = (SectionStyle)[obj intValueKey:@"sectionstyle"];
+    section.icon = [obj stringValueKey:@"icon"];
     
     return section;
 }

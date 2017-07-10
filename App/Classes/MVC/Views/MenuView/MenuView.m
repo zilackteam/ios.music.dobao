@@ -13,7 +13,7 @@
 + (instancetype)buttonWithType:(UIButtonType)buttonType {
     MenuButton *button = [super buttonWithType:buttonType];
     {
-        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+        [button setTitleColor:RGB(254, 125, 13) forState:UIControlStateSelected];
         [button setTitleColor:RGBA(136, 136, 136, 1) forState:UIControlStateNormal];
         
         button.backgroundColor = [UIColor clearColor];
@@ -48,7 +48,7 @@
     
     self.backgroundColor = [UIColor clearColor];
     _indicatorView = [[UIView alloc] init];
-    _indicatorView.backgroundColor = RGB(240, 216, 106);
+    _indicatorView.backgroundColor = RGB(254, 125, 13);
     
     paddingLeft_ = 10.0f;
     paddingRight_ = 10.0f;

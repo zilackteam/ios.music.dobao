@@ -13,6 +13,8 @@
 		<integer>1</integer>
 		<key>numbercolumn_extend</key>
 		<integer>1</integer>
+		<key>icon</key>
+		<string></string>
 	</dict>
 	<dict>
 		<key>comment</key>
@@ -25,6 +27,8 @@
 		<integer>1</integer>
 		<key>numbercolumn_extend</key>
 		<integer>2</integer>
+		<key>icon</key>
+		<string></string>
 	</dict>
 	<dict>
 		<key>comment</key>
@@ -34,9 +38,11 @@
 		<key>title</key>
 		<string>tlt_album</string>
 		<key>numbercolumn</key>
-		<integer>3</integer>
+		<integer>2</integer>
 		<key>numbercolumn_extend</key>
 		<integer>3</integer>
+		<key>icon</key>
+		<string>ic_home_section_album</string>
 	</dict>
 	<dict>
 		<key>comment</key>
@@ -49,6 +55,8 @@
 		<integer>3</integer>
 		<key>numbercolumn_extend</key>
 		<integer>3</integer>
+		<key>icon</key>
+		<string>ic_home_section_song</string>
 	</dict>
 </array>
 </plist>
