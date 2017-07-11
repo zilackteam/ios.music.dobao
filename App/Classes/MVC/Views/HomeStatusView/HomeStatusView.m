@@ -160,6 +160,7 @@
     });
 }
 
+/*
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGRect innerRect = CGRectInset(_inforView.frame, 2, 0);
@@ -173,4 +174,5 @@
     [path stroke];
     [path fill];
 }
+*/
 @end

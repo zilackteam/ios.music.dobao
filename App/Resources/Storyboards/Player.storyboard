@@ -629,19 +629,18 @@
                                                         <rect key="frame" x="5" y="4.6666666666666856" width="90" height="91"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="m1S-IY-Owr" secondAttribute="height" multiplier="124:125" id="Jq7-EW-VzK"/>
-                                                            <constraint firstAttribute="width" constant="90" id="dXy-05-qye"/>
                                                         </constraints>
                                                     </imageView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cassette_left_cirlce_inside" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-YP-ERt">
-                                                        <rect key="frame" x="15" y="15" width="70" height="70"/>
+                                                        <rect key="frame" x="15.333333333333329" y="15.333333333333314" width="70.000000000000014" height="70"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="70" id="6lE-ca-8G9"/>
                                                             <constraint firstAttribute="width" secondItem="BEy-YP-ERt" secondAttribute="height" multiplier="1:1" id="v45-71-1Fn"/>
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstItem="m1S-IY-Owr" firstAttribute="width" secondItem="BEy-YP-ERt" secondAttribute="width" constant="20" id="64q-Tw-KqU"/>
                                                     <constraint firstItem="m1S-IY-Owr" firstAttribute="centerX" secondItem="mA9-1F-vHQ" secondAttribute="centerX" id="8ov-0v-syE"/>
                                                     <constraint firstItem="BEy-YP-ERt" firstAttribute="centerX" secondItem="mA9-1F-vHQ" secondAttribute="centerX" id="CR7-JV-x90"/>
                                                     <constraint firstItem="m1S-IY-Owr" firstAttribute="centerY" secondItem="mA9-1F-vHQ" secondAttribute="centerY" id="IF4-qS-OeJ"/>
@@ -654,16 +653,14 @@
                                                 <rect key="frame" x="167" y="-16.666666666666686" width="100" height="100"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cassette_right_cirlce" translatesAutoresizingMaskIntoConstraints="NO" id="J0F-dT-TBu">
-                                                        <rect key="frame" x="-30" y="-29.666666666666657" width="160" height="159.99999999999997"/>
+                                                        <rect key="frame" x="-24.666666666666657" y="-24.333333333333343" width="149.66666666666666" height="149.66666666666666"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="J0F-dT-TBu" secondAttribute="height" multiplier="1:1" id="Qqh-IB-4E0"/>
-                                                            <constraint firstAttribute="width" constant="160" id="X2g-dI-gRY"/>
                                                         </constraints>
                                                     </imageView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cassette_right_cirlce_inside" translatesAutoresizingMaskIntoConstraints="NO" id="HHf-oP-oOv">
-                                                        <rect key="frame" x="10.333333333333343" y="10.333333333333314" width="79.999999999999972" height="80"/>
+                                                        <rect key="frame" x="10.333333333333343" y="10.333333333333314" width="79.666666666666657" height="79.666666666666686"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="80" id="pQ1-WJ-H4t"/>
                                                             <constraint firstAttribute="width" secondItem="HHf-oP-oOv" secondAttribute="height" multiplier="1:1" id="sSA-Xe-YlI"/>
                                                         </constraints>
                                                     </imageView>
@@ -671,6 +668,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="HHf-oP-oOv" firstAttribute="centerY" secondItem="5rx-j5-161" secondAttribute="centerY" id="0zr-1F-i9p"/>
+                                                    <constraint firstItem="J0F-dT-TBu" firstAttribute="width" secondItem="HHf-oP-oOv" secondAttribute="width" constant="70" id="OKW-v4-RKa"/>
                                                     <constraint firstItem="J0F-dT-TBu" firstAttribute="centerY" secondItem="5rx-j5-161" secondAttribute="centerY" id="PVI-81-1aG"/>
                                                     <constraint firstAttribute="height" constant="100" id="VXR-7O-xyv"/>
                                                     <constraint firstItem="HHf-oP-oOv" firstAttribute="centerX" secondItem="5rx-j5-161" secondAttribute="centerX" id="WAK-wK-mdm"/>
@@ -714,12 +712,14 @@
                                         <constraints>
                                             <constraint firstItem="5rx-j5-161" firstAttribute="centerY" secondItem="Cyb-cX-cEL" secondAttribute="centerY" id="1Zp-xq-2Xd"/>
                                             <constraint firstAttribute="bottom" secondItem="45c-yc-mw1" secondAttribute="bottom" id="2Fk-2q-gX6"/>
+                                            <constraint firstItem="BEy-YP-ERt" firstAttribute="width" secondItem="Jvr-Vn-YVO" secondAttribute="width" constant="15" id="2gV-R7-Adu"/>
                                             <constraint firstItem="Cyb-cX-cEL" firstAttribute="centerX" secondItem="Yhh-bD-rvc" secondAttribute="centerX" id="5nj-Ya-BJs"/>
                                             <constraint firstItem="Jvr-Vn-YVO" firstAttribute="width" secondItem="btX-RB-RNQ" secondAttribute="width" id="71F-ji-215"/>
                                             <constraint firstItem="5rx-j5-161" firstAttribute="centerX" secondItem="Cyb-cX-cEL" secondAttribute="centerX" id="76k-1l-DgE"/>
                                             <constraint firstItem="Jvr-Vn-YVO" firstAttribute="centerY" secondItem="btX-RB-RNQ" secondAttribute="centerY" id="Ek9-Z4-suG"/>
                                             <constraint firstItem="Cyb-cX-cEL" firstAttribute="centerY" secondItem="Yhh-bD-rvc" secondAttribute="centerY" id="EkU-fJ-ki1"/>
                                             <constraint firstItem="Yhh-bD-rvc" firstAttribute="top" secondItem="rtP-pJ-zxu" secondAttribute="top" id="GY8-2P-eaO"/>
+                                            <constraint firstItem="HHf-oP-oOv" firstAttribute="width" secondItem="Cyb-cX-cEL" secondAttribute="width" constant="30" id="L2u-tT-Uaw"/>
                                             <constraint firstItem="Jvr-Vn-YVO" firstAttribute="height" secondItem="btX-RB-RNQ" secondAttribute="height" id="OmM-AF-0aX"/>
                                             <constraint firstItem="Yhh-bD-rvc" firstAttribute="leading" secondItem="aKB-2M-zqH" secondAttribute="trailing" id="Poh-gE-8rt"/>
                                             <constraint firstItem="qZ9-nc-GX4" firstAttribute="leading" secondItem="Yhh-bD-rvc" secondAttribute="trailing" id="QCs-k0-abm"/>
@@ -815,23 +815,50 @@
                                     <outlet property="trackLabel" destination="8q5-ja-snq" id="elG-dc-vjr"/>
                                 </connections>
                             </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lqk-uN-kqQ">
+                                <rect key="frame" x="35.333333333333343" y="470.66666666666669" width="303.33333333333337" height="2"/>
+                                <color key="progressTintColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4g-BR-8Ak">
+                                <rect key="frame" x="35" y="477.66666666666674" width="24.666666666666664" height="16.333333333333314"/>
+                                <fontDescription key="fontDescription" name="UVNCatBienBold" family="UVN Cat Bien" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qS2-2Q-2uk">
+                                <rect key="frame" x="314.33333333333326" y="478" width="24.666666666666686" height="16.333333333333314"/>
+                                <fontDescription key="fontDescription" name="UVNCatBienBold" family="UVN Cat Bien" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="b4g-BR-8Ak" firstAttribute="top" secondItem="Lqk-uN-kqQ" secondAttribute="bottom" constant="5" id="05J-Hg-Pfs"/>
                             <constraint firstItem="7FC-gl-EFo" firstAttribute="centerY" secondItem="8zb-gb-Fxq" secondAttribute="centerY" id="6Mi-Yv-RAp"/>
+                            <constraint firstItem="Lqk-uN-kqQ" firstAttribute="centerX" secondItem="8zb-gb-Fxq" secondAttribute="centerX" id="6SW-Vz-wPi"/>
                             <constraint firstItem="jvf-Dc-yh9" firstAttribute="width" secondItem="8zb-gb-Fxq" secondAttribute="width" multiplier="168:1164" id="78I-O1-255"/>
                             <constraint firstAttribute="trailing" secondItem="ztK-dY-HWp" secondAttribute="trailing" id="CfN-fu-vtj"/>
                             <constraint firstItem="ztK-dY-HWp" firstAttribute="leading" secondItem="8zb-gb-Fxq" secondAttribute="leading" id="EES-73-sr3"/>
+                            <constraint firstItem="b4g-BR-8Ak" firstAttribute="leading" secondItem="Lqk-uN-kqQ" secondAttribute="leading" id="JOf-yt-zmp"/>
                             <constraint firstItem="7FC-gl-EFo" firstAttribute="width" secondItem="8zb-gb-Fxq" secondAttribute="width" multiplier="0.9" id="Jl5-ix-2vE"/>
                             <constraint firstItem="7FC-gl-EFo" firstAttribute="centerX" secondItem="8zb-gb-Fxq" secondAttribute="centerX" id="QSK-Gl-jZR"/>
                             <constraint firstItem="ztK-dY-HWp" firstAttribute="top" secondItem="8zb-gb-Fxq" secondAttribute="top" id="R9C-AW-l3R"/>
                             <constraint firstItem="rJq-kn-Czw" firstAttribute="top" secondItem="ztK-dY-HWp" secondAttribute="bottom" id="Ufh-hs-HAe"/>
+                            <constraint firstItem="Lqk-uN-kqQ" firstAttribute="width" secondItem="7FC-gl-EFo" secondAttribute="width" multiplier="0.9" id="aZR-J4-PfZ"/>
+                            <constraint firstItem="Lqk-uN-kqQ" firstAttribute="top" secondItem="7FC-gl-EFo" secondAttribute="bottom" constant="25" id="jvd-hO-Ji3"/>
+                            <constraint firstItem="qS2-2Q-2uk" firstAttribute="trailing" secondItem="Lqk-uN-kqQ" secondAttribute="trailing" id="k5T-cb-jAb"/>
+                            <constraint firstItem="qS2-2Q-2uk" firstAttribute="top" secondItem="Lqk-uN-kqQ" secondAttribute="bottom" constant="5" id="ohA-hl-cad"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="cassetter" destination="7FC-gl-EFo" id="DfR-n3-TyA"/>
+                        <outlet property="durationLabel" destination="qS2-2Q-2uk" id="HUt-JO-DCA"/>
+                        <outlet property="progressLabel" destination="b4g-BR-8Ak" id="Q3f-8P-0f2"/>
+                        <outlet property="progressView" destination="Lqk-uN-kqQ" id="7NH-Rs-0EL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTz-9W-0QF" sceneMemberID="firstResponder"/>
@@ -851,8 +878,8 @@
         <image name="cassette_fw_hl" width="165" height="240"/>
         <image name="cassette_gear_left" width="200" height="244"/>
         <image name="cassette_gear_right" width="182" height="244"/>
-        <image name="cassette_info_left" width="168" height="135"/>
-        <image name="cassette_info_right" width="813" height="135"/>
+        <image name="cassette_info_left" width="168" height="134"/>
+        <image name="cassette_info_right" width="813" height="134"/>
         <image name="cassette_left" width="89" height="532"/>
         <image name="cassette_left_bottom" width="166" height="240"/>
         <image name="cassette_left_cirlce_inside" width="250" height="250"/>

@@ -10,21 +10,70 @@
 #import "UIViewController+Common.h"
 #import "CassetterPlayerView.h"
 
-@interface CassetterPlayerViewController ()<CassetterPlayerViewDelegate>
+@interface CassetterPlayerViewController ()<CassetterPlayerViewDelegate> {
+    NSTimer *_timer;
+}
+
 @property (weak, nonatomic) IBOutlet CassetterPlayerView *cassetter;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
+@property (weak, nonatomic) IBOutlet UILabel *progressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *durationLabel;
 
 - (void)p_updatePlayerInfo;
 
 @end
 
 @implementation CassetterPlayerViewController
+- (void)dealloc {
+    [_timer invalidate];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - Private Methods
+- (NSString *)p_formatStringWithSeconds:(int)seconds {
+    int s = seconds % 60;
+    int m = seconds / 60;
+    return [NSString stringWithFormat:@"%02d.%02d", m, s];
+}
+
 - (void)p_updatePlayerInfo {
     AudioPlayer *player = [AudioPlayer shared];
     if (player.currentItem) {
         [_cassetter updatePlayInfomation:[[AudioPlayer shared].currentItem name] detail:[[AudioPlayer shared].currentItem detail] duration:player.duration track:(player.playingIndex + 1) totalList:[player.allItems count]];
+        
+        _durationLabel.text = [self p_formatStringWithSeconds:player.duration];
     }
 }
 
+- (void)p_setupTimer {
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(p_timerTick) userInfo:nil repeats:YES];
+    [_timer fire];
+}
+
+- (void)p_timerTick {
+    AudioPlayer *player = [AudioPlayer shared];
+    UIApplicationState state = [[UIApplication sharedApplication] applicationState];
+    if (state == UIApplicationStateActive) {
+        if (player.currentItem) {
+            [self p_updateProgressingTime:player.progress maxValue:player.duration minValue:0];
+        } else {
+            [self p_updateProgressingTime:0 maxValue:0 minValue:0];
+        }
+    }
+}
+
+// progress
+- (void)p_updateProgressingTime:(float)value maxValue:(float)maxValue minValue:(float)minValue {
+    if (maxValue > 0) {
+        [_progressView setProgress:(value / maxValue)];
+    } else {
+        [_progressView setProgress:0];
+    }
+    _progressLabel.text = [self p_formatStringWithSeconds:(int)value];
+    _durationLabel.text = [self p_formatStringWithSeconds:(int)maxValue];
+}
+
+#pragma mark - UIView
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -39,6 +88,19 @@
     [self p_updatePlayerInfo];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self p_setupTimer];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    if (_timer) {
+        [_timer invalidate];
+    }
+}
 
 - (void)backButtonSelected {
     [self.navigationController dismissViewControllerAnimated:YES completion:^{

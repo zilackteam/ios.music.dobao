@@ -396,7 +396,7 @@
                                                 <real key="value" value="14"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.94117647059999998" green="0.84705882349999995" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="ic_search_mini"/>
                                         </userDefinedRuntimeAttributes>
@@ -422,7 +422,7 @@
                                                 <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.94117647059999998" green="0.84705882349999995" blue="0.41568627450000001" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" red="0.99607843139999996" green="0.49019607840000001" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
