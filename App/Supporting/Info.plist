@@ -69,17 +69,7 @@
 	<string>Photo Library Access Warning</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>SourceSansPro-Black.ttf</string>
-		<string>SourceSansPro-BlackItalic.ttf</string>
-		<string>SourceSansPro-Bold.ttf</string>
-		<string>SourceSansPro-BoldItalic.ttf</string>
-		<string>SourceSansPro-ExtraLight.ttf</string>
-		<string>SourceSansPro-ExtraLightItalic.ttf</string>
-		<string>SourceSansPro-Italic.ttf</string>
-		<string>SourceSansPro-LightItalic.ttf</string>
-		<string>SourceSansPro-Regular.ttf</string>
-		<string>SourceSansPro-Thin.ttf</string>
-		<string>SourceSansPro-ThinItalic.ttf</string>
+		<string>UVNCatBien_B.TTF</string>
 		<string>Roboto-Black.ttf</string>
 		<string>Roboto-BlackItalic.ttf</string>
 		<string>Roboto-Bold.ttf</string>

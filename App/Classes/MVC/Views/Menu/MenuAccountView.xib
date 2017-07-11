@@ -39,6 +39,6 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_avatar_none" width="101" height="101"/>
+        <image name="ic_avatar_none" width="170" height="170"/>
     </resources>
 </document>

@@ -851,7 +851,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Master's name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZu-7B-EyY">
-                                                            <rect key="frame" x="153.66666666666663" y="155.66666666666666" width="105.33333333333337" height="18.666666666666686"/>
+                                                            <rect key="frame" x="153.66666666666663" y="155.66666666666663" width="105.33333333333337" height="21.333333333333343"/>
                                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -931,7 +931,7 @@
         <scene sceneID="LKV-IA-UCs">
             <objects>
                 <navigationController storyboardIdentifier="Nav.AccountManagerController" id="twX-wT-JYO" userLabel="Account Manager.Nav" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pkV-GW-97N">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="pkV-GW-97N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

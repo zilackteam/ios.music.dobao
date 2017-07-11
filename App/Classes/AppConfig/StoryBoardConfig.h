@@ -43,6 +43,7 @@ UIKIT_EXTERN NSString *const SB_AppMainViewController;
 UIKIT_EXTERN NSString *const SB_ChatViewController;
 UIKIT_EXTERN NSString *const SB_Nav_LaunchViewController;
 UIKIT_EXTERN NSString *const SB_CardListCollectionViewController;
+UIKIT_EXTERN NSString *const SB_CassetterPlayerViewController;
 
 NS_ASSUME_NONNULL_END
 

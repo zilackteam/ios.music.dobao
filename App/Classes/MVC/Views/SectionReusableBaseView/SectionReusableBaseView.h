@@ -16,6 +16,7 @@
 @optional
 - (void)sectionBaseView:(SectionReusableBaseView *)view didSelectedSection: (NSInteger)section;
 - (void)sectionBaseView:(SectionReusableBaseView *)view didSelectedAccessoryView: (MediaAccessoryView *)accessoryView atSection:(NSInteger)section;
+- (void)sectionBaseView:(SectionReusableBaseView *)view didSelectedDetailSection:(NSInteger)section;
 
 @end
 

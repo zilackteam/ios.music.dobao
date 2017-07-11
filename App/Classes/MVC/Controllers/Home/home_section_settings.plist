@@ -28,7 +28,7 @@
 		<key>numbercolumn_extend</key>
 		<integer>2</integer>
 		<key>icon</key>
-		<string></string>
+		<string>ic_home_section_video</string>
 	</dict>
 	<dict>
 		<key>comment</key>

@@ -96,6 +96,9 @@
 		2A1561C41EAFBD1800671BC0 /* ZLRoundButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1561B01EAFBD1800671BC0 /* ZLRoundButton.m */; };
 		2A1561C51EAFBD1800671BC0 /* ZLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1561B21EAFBD1800671BC0 /* ZLTextField.m */; };
 		2A1561C61EAFBD1800671BC0 /* ZLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1561B51EAFBD1800671BC0 /* ZLBaseViewController.m */; };
+		2A1A64041F1474AA0077C4A9 /* CassetterPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1A64031F1474AA0077C4A9 /* CassetterPlayerViewController.m */; };
+		2A1A640A1F14A9080077C4A9 /* CassetterPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1A64091F14A9080077C4A9 /* CassetterPlayerView.m */; };
+		2A1A640C1F14B1F90077C4A9 /* UVNCatBien_B.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 2A1A640B1F14B1F90077C4A9 /* UVNCatBien_B.TTF */; };
 		2A218C001EB1DA120084E46B /* SectionReusableBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A218BFF1EB1DA120084E46B /* SectionReusableBaseView.m */; };
 		2A23AFC71EDD6ABD00A4B178 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A23AFC61EDD6ABD00A4B178 /* libiconv.tbd */; };
 		2A2443A11F02007C004843E1 /* ChatCollectionGiftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A2443A01F02007C004843E1 /* ChatCollectionGiftCell.xib */; };
@@ -472,6 +475,11 @@
 		2A1561B21EAFBD1800671BC0 /* ZLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLTextField.m; sourceTree = "<group>"; };
 		2A1561B41EAFBD1800671BC0 /* ZLBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLBaseViewController.h; sourceTree = "<group>"; };
 		2A1561B51EAFBD1800671BC0 /* ZLBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLBaseViewController.m; sourceTree = "<group>"; };
+		2A1A64021F1474AA0077C4A9 /* CassetterPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CassetterPlayerViewController.h; path = Player/CassetterPlayerViewController.h; sourceTree = "<group>"; };
+		2A1A64031F1474AA0077C4A9 /* CassetterPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CassetterPlayerViewController.m; path = Player/CassetterPlayerViewController.m; sourceTree = "<group>"; };
+		2A1A64081F14A9080077C4A9 /* CassetterPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CassetterPlayerView.h; path = Cassetter/CassetterPlayerView.h; sourceTree = "<group>"; };
+		2A1A64091F14A9080077C4A9 /* CassetterPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CassetterPlayerView.m; path = Cassetter/CassetterPlayerView.m; sourceTree = "<group>"; };
+		2A1A640B1F14B1F90077C4A9 /* UVNCatBien_B.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = UVNCatBien_B.TTF; sourceTree = "<group>"; };
 		2A218BFE1EB1DA120084E46B /* SectionReusableBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionReusableBaseView.h; sourceTree = "<group>"; };
 		2A218BFF1EB1DA120084E46B /* SectionReusableBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionReusableBaseView.m; sourceTree = "<group>"; };
 		2A23AFC61EDD6ABD00A4B178 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -1328,6 +1336,15 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		2A1A64071F148FEA0077C4A9 /* Cassetter */ = {
+			isa = PBXGroup;
+			children = (
+				2A1A64081F14A9080077C4A9 /* CassetterPlayerView.h */,
+				2A1A64091F14A9080077C4A9 /* CassetterPlayerView.m */,
+			);
+			name = Cassetter;
+			sourceTree = "<group>";
+		};
 		2A2443AD1F02529E004843E1 /* CollectionBaseCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1855,6 +1872,8 @@
 				CE737AB41C09520F0028DC84 /* VideoPlayerViewController.m */,
 				CEB836601E86649F00062219 /* FullPlayerViewController.h */,
 				CEB836611E86649F00062219 /* FullPlayerViewController.m */,
+				2A1A64021F1474AA0077C4A9 /* CassetterPlayerViewController.h */,
+				2A1A64031F1474AA0077C4A9 /* CassetterPlayerViewController.m */,
 			);
 			name = Player;
 			sourceTree = "<group>";
@@ -2209,6 +2228,7 @@
 		E8ABDAA91C083F76001EEA37 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2A1A64071F148FEA0077C4A9 /* Cassetter */,
 				2A5AF55A1EC2FCF20008A20C /* Account */,
 				2A3C43041EA616C700ADE937 /* PostCollectionCell */,
 				CE0748B01E978A78002C301A /* DownloadingCollectionCell */,
@@ -2258,6 +2278,7 @@
 		E8ABDAB91C083F76001EEA37 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				2A1A640B1F14B1F90077C4A9 /* UVNCatBien_B.TTF */,
 				CE1841011E8AA6080038CAB6 /* Roboto-Black.ttf */,
 				CE1841021E8AA6080038CAB6 /* Roboto-BlackItalic.ttf */,
 				CE1841031E8AA6080038CAB6 /* Roboto-Bold.ttf */,
@@ -2449,6 +2470,7 @@
 				CE0748AC1E9788AB002C301A /* DownloadingCollectionCell.xib in Resources */,
 				CEB969451E836F1E00F8D94F /* online_playlist_actions.plist in Resources */,
 				CE1841111E8AA6080038CAB6 /* Roboto-Italic.ttf in Resources */,
+				2A1A640C1F14B1F90077C4A9 /* UVNCatBien_B.TTF in Resources */,
 				2A0CCED21F0F46DB0052855F /* Localizable.strings in Resources */,
 				CE6E11D81E83C8DD0085A554 /* home_section_settings.plist in Resources */,
 				CE27F9A11E7F988300AD1ADA /* PlaylistSectionReusableView.xib in Resources */,
@@ -2658,6 +2680,7 @@
 				2AE4EB061F11373900C2D062 /* AlbumEntity+CoreDataClass.m in Sources */,
 				E8FA7ECC1C7E2938003E930D /* PhotoPreviewViewController.m in Sources */,
 				2A0CCF1F1F0F47780052855F /* BeatList.m in Sources */,
+				2A1A640A1F14A9080077C4A9 /* CassetterPlayerView.m in Sources */,
 				2A0CCF241F0F47780052855F /* DeviceToken.m in Sources */,
 				2A0CCF2B1F0F47780052855F /* PostList.m in Sources */,
 				CEAB603D1E8D77F0006453F7 /* ShowCollectionViewCell.m in Sources */,
@@ -2672,6 +2695,7 @@
 				CEB57AB91C4BC62100309531 /* SearchDetailViewController.m in Sources */,
 				2A1561C21EAFBD1800671BC0 /* AMLocalizeHelper.m in Sources */,
 				2A25D8001EF02EEF00FCB8B5 /* LiveBottomViewStateInit.m in Sources */,
+				2A1A64041F1474AA0077C4A9 /* CassetterPlayerViewController.m in Sources */,
 				2AE4EB0E1F11373900C2D062 /* MusicStoreManager.m in Sources */,
 				2A00CA7A1ECB6DC200BC218F /* MPMoviePlayerController+BackgroundPlayback.m in Sources */,
 				2A0CCF261F0F47780052855F /* MediaCollection.m in Sources */,

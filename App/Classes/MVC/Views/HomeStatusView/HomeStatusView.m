@@ -81,6 +81,10 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (_delegate && [_delegate respondsToSelector:@selector(homeStatusView:performAction:)]) {
+        [_delegate homeStatusView:self performAction:2];
+    }
+/*
     CGPoint locationPoint = [[touches anyObject] locationInView:self];
     
     BOOL touched = CGRectContainsPoint(_statusContainerView.frame, locationPoint);
@@ -90,6 +94,7 @@
         }
         return;
     }
+*/
 }
 
 - (void)updateAlpha:(float)alpha {

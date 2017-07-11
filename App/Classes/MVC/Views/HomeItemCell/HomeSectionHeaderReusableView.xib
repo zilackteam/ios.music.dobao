@@ -17,8 +17,10 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeSectionReusableView">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeSectionHeaderReusableView">
             <connections>
+                <outlet property="detailLabel" destination="WX9-5f-cYP" id="trf-8A-G05"/>
+                <outlet property="iconView" destination="TEJ-b1-tpm" id="1qR-Uf-C5O"/>
                 <outlet property="titleLabel" destination="cli-do-rWy" id="bhZ-8E-m6h"/>
                 <outlet property="view" destination="U6b-Vx-4bR" id="CUz-jh-nxa"/>
             </connections>

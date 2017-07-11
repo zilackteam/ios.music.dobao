@@ -57,8 +57,6 @@ enum PlayerIndex {
 }
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
-@property (weak, nonatomic) IBOutlet UINavigationItem *navigationItem;
 
 - (PlayingViewCell *)playingCell;
 
@@ -73,27 +71,14 @@ enum PlayerIndex {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blackColor];
-    
-    // clear background for navigationbar
-    [_navigationBar setBackgroundImage:[UIImage new]
-                             forBarMetrics:UIBarMetricsDefault];
-    _navigationBar.shadowImage = [UIImage new];
-    _navigationBar.translucent = YES;
-    _navigationBar.backgroundColor = [UIColor clearColor];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerDidStartPlayingItem:) name:kNotification_AudioPlayerDidStartPlayingItem object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerStateChanged:) name:kNotification_AudioPlayerStateChanged object:nil];
-//  back
-    UIImage *img = [UIImage imageNamed:@"ic_navigation_back"];
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:img forState:UIControlStateNormal];
-    button.frame = CGRectMake(0, 0, img.size.width, img.size.height);
-    [button addTarget:self action:@selector(onClose) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *barItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     
-    _navigationItem.leftBarButtonItem = barItem;
-//
+    [self setLeftNavButton:Back];
+    
+    self.navigationItem.title = @"NOW PLAYING";
+    
     _collectionView.pagingEnabled = YES;
     _collectionView.backgroundColor = [UIColor clearColor];
     
@@ -113,7 +98,7 @@ enum PlayerIndex {
     // Only scroll when the view is rendered for the first time
     
     CGFloat pageWidth = self.collectionView.frame.size.width;
-    CGPoint scrollTo = CGPointMake(pageWidth * 1, 0);
+    CGPoint scrollTo = CGPointMake(pageWidth * PlayerIndexPlaying, 0);
     
     [_collectionView setContentOffset:scrollTo animated:NO];
 }
@@ -128,8 +113,8 @@ enum PlayerIndex {
     [super didReceiveMemoryWarning];
 }
 
-- (void)onClose {
-    [self dismissViewControllerAnimated:YES completion:^{
+- (void)backButtonSelected {
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
     }];
 }
 

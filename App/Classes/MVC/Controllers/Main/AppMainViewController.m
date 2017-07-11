@@ -12,6 +12,7 @@
 #import "FullPlayerViewController.h"
 #import "MiniPlayerView.h"
 #import "BaseViewController.h"
+#import "CassetterPlayerViewController.h"
 
 @interface AppMainViewController()<AudioPlayerDelegate>
 @property (weak, nonatomic) IBOutlet MiniPlayerView *miniPlayer;
@@ -50,12 +51,23 @@
 
 #pragma mark - Private methods
 - (void)showFullPlayer{
+/*
     if ([AudioPlayer shared].currentItem) {
         FullPlayerViewController *vc = [UIStoryboard viewController:SB_FullPlayerViewController storyBoard:StoryBoardPlayer];
-        [self presentViewController:vc animated:YES completion:^{
+        
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        
+        [self presentViewController:nav animated:YES completion:^{
             
         }];
     }
+*/
+    CassetterPlayerViewController *vc = [UIStoryboard viewController:SB_CassetterPlayerViewController storyBoard:StoryBoardPlayer];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    [self presentViewController:nav animated:YES completion:^{
+    }];
 }
 #pragma mark - AudioPlayerDelegate
 - (void) startPlayer:(AudioPlayer *)player {

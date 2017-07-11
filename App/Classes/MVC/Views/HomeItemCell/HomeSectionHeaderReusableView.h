@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "SectionReusableBaseView.h"
 
+@protocol HomeSectionHeaderReusableViewDelegate <NSObject>
+@end
+
 @interface HomeSectionHeaderReusableView : SectionReusableBaseView
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

@@ -317,8 +317,12 @@
     
     if (kind == UICollectionElementKindSectionHeader) {
         HomeSectionHeaderReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"forIndexPath:indexPath];
-        
+        [headerView setDelegate:self];
+        [headerView setSection:indexPath.section];
         headerView.titleLabel.text = [LocalizedString(setting.title) uppercaseString];
+        if (setting.icon) {
+            headerView.iconView.image = [UIImage imageNamed:setting.icon];    
+        }
         reusableview = headerView;
     } else if (kind == UICollectionElementKindSectionFooter) {
         HomeSectionFooterReusableView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footer" forIndexPath:indexPath];
@@ -431,6 +435,29 @@
             [view updateState:HomeSectionFooterState_Narrow];
         }
     }];
+}
+
+#pragma mark - 
+- (void)sectionBaseView:(SectionReusableBaseView *)view didSelectedDetailSection:(NSInteger)section {
+    SectionSetting *sectionSetting = [sectionSettingList itemAtIndex:section];
+    
+    MusicViewController* vc = [UIStoryboard viewController:SB_MusicViewController storyBoard:StoryBoardMain];
+    SectionStyle style = sectionSetting.sectionStyle;
+    switch (style) {
+        case SectionStyleSong:
+            vc.viewType = MusicViewTypeSong;
+            break;
+        case SectionStyleAlbum:
+            vc.viewType = MusicViewTypeAlbum;
+            break;
+        case SectionStyleVideo:
+            vc.viewType = MusicViewTypeVideo;
+            break;
+        default:
+            break;
+    }
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - MediaBaseCellDelagate

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -53,7 +53,7 @@
                             <constraint firstAttribute="height" constant="20" id="YiL-rG-tqK"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izb-ab-xg7">
@@ -66,7 +66,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mxp-GC-AJv" userLabel="SeparatorView">
-                        <rect key="frame" x="10" y="0.0" width="299" height="1"/>
+                        <rect key="frame" x="10" y="69" width="299" height="1"/>
                         <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="uMZ-3z-Na8"/>
@@ -101,8 +101,8 @@
                 <constraint firstAttribute="trailing" secondItem="2ND-c6-Fd7" secondAttribute="trailing" id="MhL-IA-BPi"/>
                 <constraint firstItem="fnq-b1-hTq" firstAttribute="centerY" secondItem="r7J-Jm-u3t" secondAttribute="centerY" id="Pfp-Tv-vRL"/>
                 <constraint firstAttribute="bottom" secondItem="2ND-c6-Fd7" secondAttribute="bottom" id="Pj3-SI-uzt"/>
-                <constraint firstItem="mxp-GC-AJv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="TQO-wv-szq"/>
                 <constraint firstItem="r7J-Jm-u3t" firstAttribute="leading" secondItem="fnq-b1-hTq" secondAttribute="trailing" constant="8" id="cO9-ZE-kXh"/>
+                <constraint firstAttribute="bottom" secondItem="mxp-GC-AJv" secondAttribute="bottom" id="dSs-YM-6AQ"/>
                 <constraint firstItem="2ND-c6-Fd7" firstAttribute="leading" secondItem="Izb-ab-xg7" secondAttribute="trailing" constant="10" id="dgt-7R-4VP"/>
                 <constraint firstItem="2ND-c6-Fd7" firstAttribute="leading" secondItem="r7J-Jm-u3t" secondAttribute="trailing" constant="10" id="haK-BF-GMR"/>
                 <constraint firstItem="r7J-Jm-u3t" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-14" id="ho3-Ei-nHU"/>
@@ -114,6 +114,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="ic_dot_list" width="13" height="20"/>
+        <image name="ic_dot_list" width="6" height="20"/>
     </resources>
 </document>

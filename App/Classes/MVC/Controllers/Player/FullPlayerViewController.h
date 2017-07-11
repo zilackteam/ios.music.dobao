@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViewController+Common.h"
 
 @interface LyricsViewCell : UICollectionViewCell
 - (void)updateLyrics:(NSString *)lyrics;

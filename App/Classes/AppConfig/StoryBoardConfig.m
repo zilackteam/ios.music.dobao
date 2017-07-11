@@ -42,6 +42,7 @@ NSString *const SB_AppMainViewController                        = @"AppMainViewC
 NSString *const SB_ChatViewController                           = @"ChatViewController";
 NSString *const SB_Nav_LaunchViewController                     = @"Nav.LaunchViewController";
 NSString *const SB_CardListCollectionViewController             = @"CardListCollectionViewController";
+NSString *const SB_CassetterPlayerViewController                = @"CassetterPlayerViewController";
 
 @implementation StoryBoardConfig
 
