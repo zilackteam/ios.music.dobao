@@ -145,7 +145,7 @@ static NSString * const reuseIdentifier = @"cell";
         avatarView.userInteractionEnabled = YES;
         avatarView.layer.cornerRadius = avatarView.frame.size.height/2.0;
         avatarView.layer.borderWidth = 1.0f;
-        avatarView.layer.borderColor = RGB(222, 186, 74).CGColor;
+        avatarView.layer.borderColor = RGB(255, 255, 255).CGColor;
         [avatarView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(avatarButtonSelected:)]];
     }
     

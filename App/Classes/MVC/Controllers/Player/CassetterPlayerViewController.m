@@ -73,6 +73,10 @@
     _durationLabel.text = [self p_formatStringWithSeconds:(int)maxValue];
 }
 
+- (void)p_showPlayingList {
+    // show playing list
+}
+
 #pragma mark - UIView
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -81,6 +85,7 @@
     self.navigationItem.title = @"NOW PLAYING";
     [self setLeftNavButton:Back];
     
+    [self showRightButtonWithImage:[UIImage imageNamed:@"ic_playing_list"] target:self selector:@selector(p_showPlayingList)];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerDidStartPlayingItem:) name:kNotification_AudioPlayerDidStartPlayingItem object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerStateChanged:) name:kNotification_AudioPlayerStateChanged object:nil];
     
