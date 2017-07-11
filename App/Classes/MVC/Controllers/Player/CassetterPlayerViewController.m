@@ -71,6 +71,8 @@
     }
     _progressLabel.text = [self p_formatStringWithSeconds:(int)value];
     _durationLabel.text = [self p_formatStringWithSeconds:(int)maxValue];
+    
+    [_cassetter updateProgressingTime:value maxValue:maxValue minValue:minValue];
 }
 
 - (void)p_showPlayingList {

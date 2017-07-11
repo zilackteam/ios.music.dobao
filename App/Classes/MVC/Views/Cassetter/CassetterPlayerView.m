@@ -25,6 +25,10 @@
 @property (weak, nonatomic) IBOutlet UIView *leftCircleContainer;
 @property (weak, nonatomic) IBOutlet UIView *rightCircleContainer;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rollRightWidthConstraint;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rollLeftWidthConstraint;
+
 - (void)p_rotate;
 
 - (void)p_stop;
@@ -108,7 +112,15 @@
 
 // Progress
 - (void)updateProgressingTime:(float)value maxValue:(float)maxValue minValue:(float)minValue {
+    if (maxValue == 0) {
+        _rollLeftWidthConstraint.constant = 100.0;
+        _rollLeftWidthConstraint.constant = 0.0;
+    } else {
+        _rollLeftWidthConstraint.constant = ((maxValue - value)/maxValue) * 100;
+        _rollRightWidthConstraint.constant = (value/maxValue) * 100;
+    }
     
+    [self layoutIfNeeded];
 }
 
 #pragma mark - Utility

@@ -584,7 +584,7 @@
                                             <constraint firstAttribute="width" secondItem="jvf-Dc-yh9" secondAttribute="height" multiplier="168:134" id="R50-wa-fcc"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdY-9B-pIJ">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdY-9B-pIJ" userLabel="Info">
                                         <rect key="frame" x="79" y="29" width="231.33333333333331" height="43.000000000000028"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cassette_info_right" translatesAutoresizingMaskIntoConstraints="NO" id="l0J-hG-yuY">
@@ -812,6 +812,8 @@
                                     <outlet property="maxTimeLabel" destination="p96-Fa-XXa" id="J3m-NX-c8j"/>
                                     <outlet property="nameLabel" destination="8Nf-HU-Na1" id="vTN-9n-KZ7"/>
                                     <outlet property="rightCircleContainer" destination="5rx-j5-161" id="kWM-xc-aAK"/>
+                                    <outlet property="rollLeftWidthConstraint" destination="64q-Tw-KqU" id="SiU-LV-MqQ"/>
+                                    <outlet property="rollRightWidthConstraint" destination="OKW-v4-RKa" id="oex-dQ-VYG"/>
                                     <outlet property="trackLabel" destination="8q5-ja-snq" id="elG-dc-vjr"/>
                                 </connections>
                             </view>
@@ -827,7 +829,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qS2-2Q-2uk">
-                                <rect key="frame" x="314.33333333333326" y="478" width="24.666666666666686" height="16.333333333333314"/>
+                                <rect key="frame" x="315.33333333333326" y="478" width="23.666666666666686" height="16.333333333333314"/>
                                 <fontDescription key="fontDescription" name="UVNCatBienBold" family="UVN Cat Bien" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
