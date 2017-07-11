@@ -22,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 @property (weak, nonatomic) IBOutlet UILabel *trackLabel;
 
+@property (weak, nonatomic) IBOutlet UIView *leftCircleContainer;
+@property (weak, nonatomic) IBOutlet UIView *rightCircleContainer;
 
 - (void)p_rotate;
 
@@ -46,19 +48,28 @@
 }
 
 - (void)p_rotate {
-    CABasicAnimation *fullRotation;
-    fullRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-    fullRotation.fromValue = [NSNumber numberWithFloat:0];
-    fullRotation.toValue = [NSNumber numberWithFloat:((360*M_PI)/180)];
-    fullRotation.duration = 8;
-    fullRotation.repeatCount = HUGE_VALF;
-    [_gearLeft.layer addAnimation:fullRotation forKey:@"360"];
-    [_gearRight.layer addAnimation:fullRotation forKey:@"360"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CABasicAnimation *fullRotation;
+        fullRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+        fullRotation.fromValue = [NSNumber numberWithFloat:0];
+        fullRotation.toValue = [NSNumber numberWithFloat:((360*M_PI)/180)];
+        fullRotation.duration = 8;
+        fullRotation.repeatCount = HUGE_VALF;
+        
+        [_leftCircleContainer.layer addAnimation:fullRotation forKey:@"360"];
+        [_rightCircleContainer.layer addAnimation:fullRotation forKey:@"360"];
+        
+        [_gearLeft.layer addAnimation:fullRotation forKey:@"360"];
+        [_gearRight.layer addAnimation:fullRotation forKey:@"360"];
+        
+    });
 }
 
 - (void)p_stop {
     [_gearLeft.layer removeAllAnimations];
     [_gearRight.layer removeAllAnimations];
+    [_leftCircleContainer.layer removeAllAnimations];
+    [_rightCircleContainer.layer removeAllAnimations];
 }
 
 
