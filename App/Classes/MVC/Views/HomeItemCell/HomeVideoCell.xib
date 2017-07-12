@@ -60,7 +60,7 @@
                         <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_media_play" translatesAutoresizingMaskIntoConstraints="NO" id="HtU-ie-z76">
+                    <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_media_video_play" translatesAutoresizingMaskIntoConstraints="NO" id="HtU-ie-z76">
                         <rect key="frame" x="194" y="79" width="36" height="36"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -87,6 +87,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="ic_media_play" width="67" height="67"/>
+        <image name="ic_media_video_play" width="72" height="72"/>
     </resources>
 </document>
