@@ -283,7 +283,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                         <state key="normal" title="Create">
-                                            <color key="titleColor" red="0.87058823529999996" green="0.72941176470000002" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.99607843139999996" green="0.49019607840000001" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -454,7 +454,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewn-b9-Sq5" userLabel="header_separator">
                                         <rect key="frame" x="10.333333333333343" y="48" width="311" height="1"/>
-                                        <color key="backgroundColor" red="0.94117647059999998" green="0.84705882349999995" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="bCJ-VZ-yzg"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="sgY-UV-6Ts"/>
@@ -483,7 +483,7 @@
                                                                 <constraint firstAttribute="height" constant="20" id="SGd-Et-AN6"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="16"/>
-                                                            <color key="textColor" red="0.94117647059999998" green="0.84705882349999995" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJg-IV-hIT">
@@ -522,10 +522,10 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrw-9Y-B6s">
                                         <rect key="frame" x="0.33333333333334281" y="322" width="331" height="38"/>
-                                        <color key="backgroundColor" red="0.87058823529999996" green="0.72941176470000002" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="16"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                         <state key="normal" title="Thêm ca khúc vào playlist">
-                                            <color key="titleColor" red="0.0039215686274509803" green="0.0039215686274509803" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                 </subviews>
@@ -804,7 +804,7 @@
                                 <rect key="frame" x="0.0" y="257" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiếp theo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNj-fu-2nr">
-                                        <rect key="frame" x="10" y="19.666666666666686" width="67.666666666666671" height="21.333333333333314"/>
+                                        <rect key="frame" x="10" y="21" width="67.666666666666671" height="18.666666666666686"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -860,7 +860,7 @@
         <scene sceneID="wZY-Lx-Drl">
             <objects>
                 <navigationController storyboardIdentifier="Nav.LaunchViewController" id="9jl-3s-CEV" userLabel="#Nav.Launch" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0AU-GJ-4JC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0AU-GJ-4JC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

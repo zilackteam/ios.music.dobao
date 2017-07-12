@@ -44,7 +44,7 @@
     self.view.alpha = 0;
     self.view.backgroundColor = RGBA(1, 1, 1, 0.85);
     self.contentView.layer.cornerRadius = 5.0f;
-    self.contentView.layer.borderColor = RGBA(222, 186, 74, 1).CGColor;
+    self.contentView.layer.borderColor = RGBA(34, 34, 34, 1).CGColor;
     self.contentView.layer.borderWidth = 1;
     self.contentView.backgroundColor  = RGBA(1, 1, 1, 0.5);
     

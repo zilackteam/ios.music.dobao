@@ -61,7 +61,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_media_video_play" translatesAutoresizingMaskIntoConstraints="NO" id="HtU-ie-z76">
-                        <rect key="frame" x="194" y="79" width="36" height="36"/>
+                        <rect key="frame" x="199" y="84" width="36" height="36"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="36" id="NeQ-4b-OU1"/>
@@ -77,11 +77,11 @@
                 <constraint firstAttribute="trailing" secondItem="QLd-Gr-wLN" secondAttribute="trailing" id="CZR-eC-vy9"/>
                 <constraint firstAttribute="bottom" secondItem="8FX-ol-90W" secondAttribute="bottom" id="EOm-gw-HZ1"/>
                 <constraint firstAttribute="trailing" secondItem="8FX-ol-90W" secondAttribute="trailing" id="MX8-Vs-XNf"/>
-                <constraint firstItem="QLd-Gr-wLN" firstAttribute="top" secondItem="HtU-ie-z76" secondAttribute="bottom" constant="10" id="P5d-81-4mg"/>
+                <constraint firstItem="QLd-Gr-wLN" firstAttribute="top" secondItem="HtU-ie-z76" secondAttribute="bottom" constant="5" id="P5d-81-4mg"/>
                 <constraint firstAttribute="trailing" secondItem="DWk-cC-eGp" secondAttribute="trailing" id="Q5b-NS-MpZ"/>
                 <constraint firstItem="QLd-Gr-wLN" firstAttribute="top" secondItem="DWk-cC-eGp" secondAttribute="bottom" constant="5" id="SwQ-Mn-pbB"/>
                 <constraint firstItem="QLd-Gr-wLN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jue-qL-vcp"/>
-                <constraint firstAttribute="trailing" secondItem="HtU-ie-z76" secondAttribute="trailing" constant="10" id="v2q-YU-DfE"/>
+                <constraint firstAttribute="trailing" secondItem="HtU-ie-z76" secondAttribute="trailing" constant="5" id="v2q-YU-DfE"/>
                 <constraint firstItem="DWk-cC-eGp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xvC-1L-pZk"/>
             </constraints>
         </collectionViewCell>
