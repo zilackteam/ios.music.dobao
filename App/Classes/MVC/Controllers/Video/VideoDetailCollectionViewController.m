@@ -159,7 +159,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self useMainBackground];
+    [self useMainBackgroundOpacity:1];
     [self setLeftNavButton:Back];
     
     _actionView.delegate = self;

@@ -90,6 +90,7 @@
                         </label>
                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="u3n-yu-FeR">
                             <rect key="frame" x="20" y="15" width="20" height="20"/>
+                            <color key="color" red="0.99607843139999996" green="0.49019607840000001" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                         </activityIndicatorView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="f1b-JF-sjT">
                             <rect key="frame" x="60" y="5" width="0.0" height="0.0"/>

@@ -162,7 +162,7 @@
                                                             </connections>
                                                         </slider>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb8-6n-pHR">
-                                                            <rect key="frame" x="-5" y="6.6666666666666856" width="40" height="18.666666666666629"/>
+                                                            <rect key="frame" x="-5" y="6" width="40" height="18.666666666666686"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="PLb-XZ-56j"/>
                                                             </constraints>
@@ -171,7 +171,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4:12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pL6-DW-PsM">
-                                                            <rect key="frame" x="301" y="6.6666666666666856" width="40" height="18.666666666666629"/>
+                                                            <rect key="frame" x="301" y="6" width="40" height="18.666666666666686"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="vy7-hq-X0p"/>
                                                             </constraints>

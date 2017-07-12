@@ -726,6 +726,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="176" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -803,7 +804,7 @@
                                 <rect key="frame" x="0.0" y="257" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiếp theo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNj-fu-2nr">
-                                        <rect key="frame" x="10" y="21" width="67.666666666666671" height="18.666666666666686"/>
+                                        <rect key="frame" x="10" y="19.666666666666686" width="67.666666666666671" height="21.333333333333314"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -859,7 +860,7 @@
         <scene sceneID="wZY-Lx-Drl">
             <objects>
                 <navigationController storyboardIdentifier="Nav.LaunchViewController" id="9jl-3s-CEV" userLabel="#Nav.Launch" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0AU-GJ-4JC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0AU-GJ-4JC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
