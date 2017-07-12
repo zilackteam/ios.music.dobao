@@ -162,7 +162,7 @@
                                                             </connections>
                                                         </slider>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb8-6n-pHR">
-                                                            <rect key="frame" x="-5" y="5.6666666666666856" width="40" height="18.666666666666629"/>
+                                                            <rect key="frame" x="-5" y="6.6666666666666856" width="40" height="18.666666666666629"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="PLb-XZ-56j"/>
                                                             </constraints>
@@ -171,7 +171,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4:12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pL6-DW-PsM">
-                                                            <rect key="frame" x="301" y="5.6666666666666856" width="40" height="18.666666666666629"/>
+                                                            <rect key="frame" x="301" y="6.6666666666666856" width="40" height="18.666666666666629"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="vy7-hq-X0p"/>
                                                             </constraints>
@@ -625,7 +625,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mA9-1F-vHQ">
                                                 <rect key="frame" x="20" y="-17.666666666666686" width="100" height="100"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cassette_right_cirlce" translatesAutoresizingMaskIntoConstraints="NO" id="m1S-IY-Owr">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cassette_roll_cirlce" translatesAutoresizingMaskIntoConstraints="NO" id="m1S-IY-Owr">
                                                         <rect key="frame" x="5" y="4.6666666666666856" width="90" height="91"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="m1S-IY-Owr" secondAttribute="height" multiplier="124:125" id="Jq7-EW-VzK"/>
@@ -652,7 +652,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rx-j5-161">
                                                 <rect key="frame" x="167" y="-16.666666666666686" width="100" height="100"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cassette_right_cirlce" translatesAutoresizingMaskIntoConstraints="NO" id="J0F-dT-TBu">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cassette_roll_cirlce" translatesAutoresizingMaskIntoConstraints="NO" id="J0F-dT-TBu">
                                                         <rect key="frame" x="-24.666666666666657" y="-24.333333333333343" width="149.66666666666666" height="149.66666666666666"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="J0F-dT-TBu" secondAttribute="height" multiplier="1:1" id="Qqh-IB-4E0"/>
@@ -893,8 +893,8 @@
         <image name="cassette_pre_hl" width="165" height="240"/>
         <image name="cassette_right" width="94" height="532"/>
         <image name="cassette_right_bottom" width="173" height="240"/>
-        <image name="cassette_right_cirlce" width="270" height="270"/>
         <image name="cassette_right_cirlce_inside" width="250" height="250"/>
+        <image name="cassette_roll_cirlce" width="270" height="270"/>
         <image name="cassette_shuffle" width="165" height="240"/>
         <image name="cassette_shuffle_hl" width="165" height="240"/>
         <image name="cassette_time_background" width="551" height="55"/>
