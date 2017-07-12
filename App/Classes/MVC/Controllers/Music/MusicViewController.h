@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import "ZLCollectionView.h"
 #import "MenuView.h"
 
 @interface MusicViewController : BaseViewController {
-    __weak IBOutlet UICollectionView *_collectionView;
+    __weak IBOutlet ZLCollectionView *_collectionView;
 }
 
 typedef NS_OPTIONS(NSUInteger, MusicViewType) {

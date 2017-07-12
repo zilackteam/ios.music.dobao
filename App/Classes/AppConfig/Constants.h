@@ -14,7 +14,7 @@
 
 #define INVALID_INDEX   -1
 
-#define TIME_MINUTE_REFRESH                 360 // 2 hours22
+#define TIME_MINUTE_REFRESH                 360 // 6 hours
 
 enum PageState {
     PageStateNone,

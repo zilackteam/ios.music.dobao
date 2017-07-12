@@ -86,7 +86,7 @@
                withReuseIdentifier:@"footer"];
     
     [self updateCollectionViewWithMenuType:_viewType];
-    
+    [_collectionView setRefreshTintColor:RGB(254, 125, 13)];
     [self p_fetchData];
 }
 

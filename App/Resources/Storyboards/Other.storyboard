@@ -190,21 +190,12 @@
                                     <outlet property="delegate" destination="vBs-kl-Ogq" id="Zb9-xw-pdM"/>
                                 </connections>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_header_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="v7I-Vp-HXQ">
-                                <rect key="frame" x="0.0" y="20" width="414" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="6st-HI-yHL"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="v7I-Vp-HXQ" firstAttribute="leading" secondItem="wlM-6k-eyF" secondAttribute="leading" id="2Np-mE-0A0"/>
-                            <constraint firstItem="v7I-Vp-HXQ" firstAttribute="trailing" secondItem="wlM-6k-eyF" secondAttribute="trailing" id="9Ll-gi-gwP"/>
                             <constraint firstItem="wlM-6k-eyF" firstAttribute="top" secondItem="9P2-D3-LQ1" secondAttribute="bottom" id="Jxh-79-dOt"/>
                             <constraint firstAttribute="trailing" secondItem="wlM-6k-eyF" secondAttribute="trailing" id="PGk-4M-sYR"/>
                             <constraint firstItem="EOC-Kf-0D4" firstAttribute="top" secondItem="wlM-6k-eyF" secondAttribute="bottom" id="cco-IW-uMV"/>
-                            <constraint firstItem="v7I-Vp-HXQ" firstAttribute="top" secondItem="wlM-6k-eyF" secondAttribute="top" id="fSb-cm-vW5"/>
                             <constraint firstItem="wlM-6k-eyF" firstAttribute="leading" secondItem="DLi-6a-Qxh" secondAttribute="leading" id="mCF-mu-c8w"/>
                         </constraints>
                     </view>
@@ -582,31 +573,13 @@
                                     <outlet property="delegate" destination="mQu-EL-B4K" id="5K3-zQ-oYi"/>
                                 </connections>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_header_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="Bc7-dZ-g4g">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="7XA-r1-xhD"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_footer_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="Afd-sV-kJi">
-                                <rect key="frame" x="0.0" y="691" width="414" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="pQD-11-3yB"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Bc7-dZ-g4g" firstAttribute="top" secondItem="i4c-Gs-tjc" secondAttribute="top" id="1uN-wh-JZr"/>
-                            <constraint firstItem="Afd-sV-kJi" firstAttribute="leading" secondItem="i4c-Gs-tjc" secondAttribute="leading" id="8Ui-SG-8qH"/>
-                            <constraint firstItem="Afd-sV-kJi" firstAttribute="bottom" secondItem="i4c-Gs-tjc" secondAttribute="bottom" id="DYH-RK-Br0"/>
                             <constraint firstAttribute="trailing" secondItem="i4c-Gs-tjc" secondAttribute="trailing" id="Mnr-qI-NQb"/>
-                            <constraint firstItem="Bc7-dZ-g4g" firstAttribute="leading" secondItem="i4c-Gs-tjc" secondAttribute="leading" id="SM8-mP-8m6"/>
                             <constraint firstItem="i4c-Gs-tjc" firstAttribute="leading" secondItem="eOw-y0-Qqa" secondAttribute="leading" id="cxm-QP-HbS"/>
                             <constraint firstItem="i4c-Gs-tjc" firstAttribute="top" secondItem="eOw-y0-Qqa" secondAttribute="top" id="eTo-mG-Tvk"/>
                             <constraint firstItem="LNA-Ez-wBx" firstAttribute="top" secondItem="i4c-Gs-tjc" secondAttribute="bottom" id="lt6-ka-qnH"/>
-                            <constraint firstItem="Afd-sV-kJi" firstAttribute="trailing" secondItem="i4c-Gs-tjc" secondAttribute="trailing" id="wV5-Lv-3GO"/>
-                            <constraint firstItem="Bc7-dZ-g4g" firstAttribute="trailing" secondItem="i4c-Gs-tjc" secondAttribute="trailing" id="zbQ-fm-HcA"/>
                         </constraints>
                     </view>
                     <connections>
@@ -623,7 +596,5 @@
         <image name="ic_search_mini" width="10" height="10"/>
         <image name="ic_web_back" width="30" height="30"/>
         <image name="ic_web_sharing" width="30" height="30"/>
-        <image name="img_footer_shadow" width="414" height="66"/>
-        <image name="img_header_shadow" width="414" height="29"/>
     </resources>
 </document>

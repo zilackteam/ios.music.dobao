@@ -32,7 +32,7 @@ static NSString *kCellIdentifier = @"PhotoCollectionCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self useMainBackgroundOpacity:0.05];
+    [self useMainBackgroundOpacity:1];
     
     _photoCollectionView.backgroundColor = [UIColor clearColor];
     self.title = LocalizedString(@"tlt_photo");

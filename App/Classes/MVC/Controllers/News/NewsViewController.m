@@ -49,7 +49,7 @@
 
 - (void)setups {
     self.title = LocalizedString(@"tlt_news");
-    [self useMainBackgroundOpacity:0.05];
+    [self useMainBackgroundOpacity:1];
     _wBackButton.hidden = YES;
     _wBackButton.alpha = 0.8;
 }
