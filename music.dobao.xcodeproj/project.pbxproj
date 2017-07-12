@@ -155,7 +155,6 @@
 		2AF508301ECDF7930099B640 /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF5082F1ECDF7930099B640 /* Default-568h.png */; };
 		2AF508331ECDF9730099B640 /* ZLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF508321ECDF9730099B640 /* ZLUtilities.m */; };
 		2AFABBD31EC1729F009E9CDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AFABBD21EC1729F009E9CDF /* GoogleService-Info.plist */; };
-		7EA308B51CBB90F900F9C44A /* Cer + Provisioning in Resources */ = {isa = PBXBuildFile; fileRef = 7EA308B41CBB90F900F9C44A /* Cer + Provisioning */; };
 		CE00E7091E8CAF88006DF99D /* search_section_settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE00E7081E8CAF88006DF99D /* search_section_settings.plist */; };
 		CE00E70D1E8CDF39006DF99D /* PlaylistFooterReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E70B1E8CDF39006DF99D /* PlaylistFooterReusableView.m */; };
 		CE00E70E1E8CDF39006DF99D /* PlaylistFooterReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE00E70C1E8CDF39006DF99D /* PlaylistFooterReusableView.xib */; };
@@ -579,7 +578,6 @@
 		2AF508321ECDF9730099B640 /* ZLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLUtilities.m; sourceTree = "<group>"; };
 		2AF895BF1F126E3600ED7334 /* dobaomusician.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dobaomusician.entitlements; sourceTree = "<group>"; };
 		2AFABBD21EC1729F009E9CDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		7EA308B41CBB90F900F9C44A /* Cer + Provisioning */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Cer + Provisioning"; sourceTree = "<group>"; };
 		8EDFFCB2EF5C4A12467D1972 /* libPods-music.damvinhhung.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-music.damvinhhung.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A226846F1C05A66D00D2421C /* dobaomusician.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dobaomusician.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7AFB0A403045D0BA9B91DD /* Pods-music.dobao.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music.dobao.debug.xcconfig"; path = "Pods/Target Support Files/Pods-music.dobao/Pods-music.dobao.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1667,7 +1665,6 @@
 			children = (
 				2AF895BF1F126E3600ED7334 /* dobaomusician.entitlements */,
 				2A126EBF1EDBF9380077D6AB /* IJKMediaPlayer.xcodeproj */,
-				7EA308B41CBB90F900F9C44A /* Cer + Provisioning */,
 				2A1561871EAFBD1800671BC0 /* Core */,
 				2A0CCE801F0F46DB0052855F /* AppBase */,
 				A22684711C05A66D00D2421C /* App */,
@@ -2493,7 +2490,6 @@
 				CE320C361E7E93DE001BADD0 /* SongCollectionCell.xib in Resources */,
 				CE1841171E8AA6080038CAB6 /* Roboto-Thin.ttf in Resources */,
 				CEB836641E8667A600062219 /* Player.storyboard in Resources */,
-				7EA308B51CBB90F900F9C44A /* Cer + Provisioning in Resources */,
 				2A1180031EA0C55A003C9496 /* LoadMoreReusableView.xib in Resources */,
 				CE1AC14C1E7DBD8C0092F1C9 /* HomeSectionFooterReusableView.xib in Resources */,
 				2AA23D2A1EE71FF400340412 /* LiveBottomViewStateNone.xib in Resources */,
