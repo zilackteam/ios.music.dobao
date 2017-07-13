@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageBackgroundView;
 @property (weak, nonatomic) IBOutlet UIImageView *artistLogoView;
 @property (weak, nonatomic) IBOutlet UIImageView *artistSignalView;
+@property (weak, nonatomic) IBOutlet UIImageView *likeImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *commentImageView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
 @property (weak, nonatomic) IBOutlet UIView *statusContainerView;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
@@ -29,9 +31,19 @@
 
 - (void)p_updatePost:(Post *)post;
 
+- (void)setHidden:(BOOL)hidden;
+
 @end
 
 @implementation HomeStatusView
+
+// override
+- (void)setHidden:(BOOL)hidden {
+    _likeCountLabel.hidden = hidden;
+    _commentCountLabel.hidden = hidden;
+    _likeImageView.hidden = hidden;
+    _commentImageView.hidden = hidden;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -68,6 +80,8 @@
 //    _statusContainerView.alpha = 0.0f;
     _messageLabel.alpha = 0.0f;
     self.userInteractionEnabled = YES;
+    
+    [self setHidden:YES];
 }
 
 - (NSLayoutConstraint *)pin:(id)item attribute:(NSLayoutAttribute)attribute {
@@ -133,8 +147,10 @@
 
 - (void)setPost:(Post *)post {
     if (!post) {
+        [self setHidden:YES];
         return;
     }
+    [self setHidden:NO];
     [self performSelector:@selector(p_updatePost:) withObject:post afterDelay:0.1];
 }
 

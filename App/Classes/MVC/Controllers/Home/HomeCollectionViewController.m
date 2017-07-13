@@ -374,7 +374,7 @@
     
     if (setting.sectionStyle == SectionStyleStatus) {
         if (!_lastestPost) {
-            return CGSizeZero;
+            CGSizeMake(CGRectGetWidth(collectionView.frame), 50.0);
         }
         
         CGRect rect = [AppUtils boundingRectForString:_lastestPost.content font:[UIFont fontWithName:APPLICATION_FONT size:16] width:CGRectGetWidth(collectionView.frame) - 20.0f];
