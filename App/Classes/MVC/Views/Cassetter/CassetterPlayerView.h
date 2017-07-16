@@ -2,7 +2,7 @@
 //  CassetterPlayerView.h
 //  music.dobao
 //
-//  Created by vu tat thanh on 7/11/17.
+//  Created by thanhvu on 7/11/17.
 //  Copyright © 2017 Zilack. All rights reserved.
 //
 
@@ -13,6 +13,7 @@ typedef NS_OPTIONS(NSInteger, CassetterPlayState)
     CassetterPlayReady,
     CassetterPlayPlaying,
     CassetterPlayBuffering,
+    CassetterPlayRunning,
     CassetterPlayPaused,
     CassetterPlayStopped
 };

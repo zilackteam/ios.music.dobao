@@ -23,12 +23,12 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb450774478597506</string>
+				<string>fb128853901047831</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>14</string>
+	<string>1</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -44,9 +44,9 @@
 		</array>
 	</dict>
 	<key>FacebookAppID</key>
-	<string>450774478597506</string>
+	<string>128853901047831</string>
 	<key>FacebookDisplayName</key>
-	<string>Thế giới nhạc - Đàm Vĩnh Hưng</string>
+	<string>Không nhạc âm nhạc Đỗ Bảo</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

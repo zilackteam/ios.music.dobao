@@ -2,7 +2,7 @@
 //  CassetterPlayerViewController.m
 //  music.dobao
 //
-//  Created by vu tat thanh on 7/11/17.
+//  Created by thanhvu on 7/11/17.
 //  Copyright © 2017 Zilack. All rights reserved.
 //
 
@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
 
 - (void)p_updatePlayerInfo;
-
+- (void)p_updatePlayerState;
 @end
 
 @implementation CassetterPlayerViewController
@@ -43,6 +43,43 @@
         
         _durationLabel.text = [self p_formatStringWithSeconds:player.duration];
     }
+}
+
+- (void)p_updatePlayerState {
+    STKAudioPlayerState state_ = [[AudioPlayer shared] state];
+    
+    CassetterPlayState cassetterState;
+    
+    switch (state_) {
+        case STKAudioPlayerStatePaused:
+            DLog(@"PAUSED");
+            cassetterState = CassetterPlayPaused;
+            break;
+        case STKAudioPlayerStatePlaying:
+            DLog(@"PLAYING");
+            cassetterState = CassetterPlayPlaying;
+            break;
+        case STKAudioPlayerStateStopped:
+            cassetterState = CassetterPlayStopped;
+            DLog(@"STOPPED");
+            break;
+        case STKAudioPlayerStateRunning:
+            cassetterState = CassetterPlayRunning;
+            DLog(@"OTHER");
+            break;
+        case STKAudioPlayerStateBuffering:
+            cassetterState = CassetterPlayBuffering;
+            DLog(@"BUFFERING");
+            break;
+        case STKAudioPlayerStateDisposed:
+            DLog(@"Disposed");
+            break;
+        default:
+            DLog(@"DEFAULT");
+            break;
+    }
+    
+    [_cassetter updatePlayerState:cassetterState];
 }
 
 - (void)p_setupTimer {
@@ -93,6 +130,7 @@
     
     [_cassetter setDelegate:self];
     [self p_updatePlayerInfo];
+    [self playerStateChanged:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -190,6 +228,9 @@
 }
 
 - (void)playerStateChanged:(NSNotification *)notification {
+    DLog(@"playerStateChanged");
     [self p_updatePlayerInfo];
+    
+    [self p_updatePlayerState];
 }
 @end
