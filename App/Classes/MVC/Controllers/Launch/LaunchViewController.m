@@ -21,7 +21,7 @@ typedef NS_ENUM(NSInteger, LaunchState) {
     LaunchState_Init,
     LaunchState_Loading,
     LaunchState_AppVersionChecking,
-    LaunchState_SugesstionLoading,
+    LaunchState_AppContentLoading,
     LaunchState_Error,
     LaunchState_Finish
 };
@@ -37,6 +37,10 @@ typedef NS_ENUM(NSInteger, LaunchState) {
 - (void)p_appSuggestion;
 - (void)p_appLogin;
 - (void)p_appLaunchHomeScreen;
+
+// Cache music {songs, albums, videos}
+- (void)p_appContent;
+
 - (void)p_updateState: (LaunchState)state;
 
 @end
@@ -46,7 +50,7 @@ typedef NS_ENUM(NSInteger, LaunchState) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.title = LocalizedString(@"tlt_home");
+    //    self.title = LocalizedString(@"tlt_home");
     
     [self setLeftNavButton:Menu];
     [self showSearchButton];
@@ -85,7 +89,7 @@ typedef NS_ENUM(NSInteger, LaunchState) {
                 case AppVerifyStateSuccess: {
                     [[AppDelegate sharedInstance] registerDeviceToken];
                     [self p_appLogin];
-                    [self p_updateState:LaunchState_SugesstionLoading];
+                    [self p_updateState:LaunchState_AppContentLoading];
                 }
                     break;
                 case AppVerifyStateUpdate: {
@@ -125,6 +129,18 @@ typedef NS_ENUM(NSInteger, LaunchState) {
     [[Auth shared] loginWithEmailStored];
 }
 
+- (void)p_appContent {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [ApiDataProvider fetchAppContentCompletion:^(BOOL success) {
+            if (success) {
+                DLog(@"CACHED DATA SUCCESSFULLY!!!!");
+                
+                [self p_updateState:LaunchState_Finish];
+            }
+        }];
+    });
+}
+
 - (void)p_updateState:(LaunchState)aState {
     if (state == aState) {
         return;
@@ -136,8 +152,9 @@ typedef NS_ENUM(NSInteger, LaunchState) {
             break;
         case LaunchState_Loading:
             break;
-        case LaunchState_SugesstionLoading: {
-            [self p_appSuggestion];
+        case LaunchState_AppContentLoading: {
+            // [self p_appSuggestion];
+            [self p_appContent];
         }
             break;
         case LaunchState_AppVersionChecking: {
