@@ -24,14 +24,21 @@
     NSMutableArray *_layouts;
     
     PostList *_postList;
+    
+    DataPage page;
 }
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+- (void)p_fetchData;
+- (void)p_deletePost:(Post *)aPost;
 @end
 
 @implementation SocialViewController
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[Auth shared] addObserver:self selector:@selector(updateUI) forEvent:AuthEventUserSessionChanged];
@@ -40,6 +47,14 @@
     [self updateUI];
     [self.tableView setBackgroundColor:RGB(244, 244, 244)];
     
+    // default
+    page.index = 0;
+    page.numberOfPage = 5;
+    page.state = PageStateNone;
+    
+    _layouts = [NSMutableArray array];
+    
+    [self p_fetchData];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -59,11 +74,6 @@
         self.navigationItem.rightBarButtonItem = nil;
     }
     _layouts = [NSMutableArray array];
-    [self showLoading:YES];
-    [self loadDataWithCompletion:^{
-        [_tableView reloadData];
-        [self showLoading:NO];
-    }];
 }
 
 - (void)onCreatePost {
@@ -79,15 +89,48 @@
     }
 }
 
-- (void)loadDataWithCompletion:(void(^)(void))completion {
-    [[APIClient shared] getListPostsWithCompletion:^(PostList *postList) {
-        _postList = postList;
-        _layouts = [NSMutableArray array];
-        for (Post *aPost in _postList.items) {
-            [_layouts addObject:[aPost layout]];
+- (void)p_fetchData {
+    if (page.state == PageStateLoading) {
+        return;
+    }
+    
+    page.state = PageStateLoading;
+    [self showLoading:YES];
+    
+    [[APIClient shared] getListPostsWithLimit:page.numberOfPage page:(page.index + 1) completion:^(PostList *postList) {
+        if (postList && [postList count] > 0) {
+            page.index += 1;
+            
+            if (!_postList) {
+                _postList = postList;
+            } else {
+                [_postList append:postList];
+            }
+            
+            for (Post *aPost in postList.items) {
+                [_layouts addObject:[aPost layout]];
+            }
+            
+            [_tableView reloadData];
         }
-        completion();
+        page.state = PageStateNone;
+        [self showLoading:NO];
     }];
+}
+
+- (void)p_deletePost:(Post *)aPost {
+    NSInteger idx = [_postList indexOfObject:aPost];
+    if (idx != NSNotFound) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [_postList removeObjectAtIndex:idx];
+            [_layouts removeObjectAtIndex:idx];
+            
+            [_tableView beginUpdates];
+            [_tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:idx inSection:0]] withRowAnimation: UITableViewRowAnimationMiddle];
+            [_tableView endUpdates];
+        });
+    }
 }
 
 - (void)configCell:(PostCell *)cell atIndexPath:(NSIndexPath *)indexPath {
@@ -129,7 +172,13 @@
     }
     
     [cell setNeedsUpdateConstraints];
-    
+/*
+    BOOL lastItemReached = (aPost == [_postList.items lastObject]);
+    if (lastItemReached)
+    {
+        [self p_fetchData];
+    }
+*/
 }
 
 #pragma mark - UITableViewDataSource
@@ -167,7 +216,7 @@
             [_layouts insertObject:[aPost layout] atIndex:0];
             [_tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationTop];
         } else {
-            NSInteger idx = [_postList.items indexOfObject:aPost];
+            NSInteger idx = [_postList indexOfObject:aPost];
             if (idx != NSNotFound) {
                 [_layouts replaceObjectAtIndex:idx withObject:[aPost layout]];
                 [_tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:idx inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
@@ -179,8 +228,7 @@
 - (void)postViewController:(PostViewController *)controller deleteCompletedWithPost:(Post *)aPost {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     
-    [_postList.items removeObject:aPost];
-    [_tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+    [self p_deletePost:aPost];
 }
 
 #pragma mark - PostCellDelegate
@@ -219,16 +267,18 @@
     }
 }
 
+#pragma mark - ScrollView
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+     float bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height;
+     if (bottomEdge >= scrollView.contentSize.height) {
+         [self p_fetchData];
+     }
+}
+
 #pragma mark - CommentView Delegate
 - (void)commentViewController:(CommentViewController *)controller deletePost:(Post *)post {
     [controller.navigationController popViewControllerAnimated:YES];
-    NSInteger idx = [_postList.items indexOfObject:post];
-    [_postList removeObjectAtIndex:idx];
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [_tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
-        
-    });
+    [self p_deletePost:post];
 }
 
 #pragma mark - PostMenuView Delegate
@@ -250,14 +300,7 @@
             [[APIClient shared] deletePost:post.identifier completion:^(BOOL success) {
                 [AppActions hideLoading];
                 if (success) {
-                    NSInteger idx = [_postList.items indexOfObject:post];
-                    if (idx != NSNotFound) {
-                        [_postList removeObjectAtIndex:idx];
-                        [_layouts removeObjectAtIndex:idx];
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            [_tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:idx inSection:0]] withRowAnimation:UITableViewRowAnimationMiddle];
-                        });
-                    }
+                    [self p_deletePost:post];
                 }
             }];
         });
