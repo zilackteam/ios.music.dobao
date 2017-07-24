@@ -231,7 +231,7 @@
         cell.usernameLabel.text = (aComment.user.fullName != nil) ? aComment.user.fullName : aComment.user.secName;
 //        [cell.avatarImageView sd_setImageWithURL:[NSURL URLWithString:aComment.user.avatarUrl]];
         [cell.avatarImageView sd_setImageWithURL:[NSURL URLWithString:aComment.user.avatarUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            cell.avatarImageView.image = [UIImage roundedImage:image cornerRadius:image.size.height/2];
+//            cell.avatarImageView.image = [UIImage roundedImage:image cornerRadius:image.size.height/2];
         }];
     }
     cell.dateLabel.text = [[NSDate datefromString:aComment.date format:APPLICATION_DATETIME_FORMAT_STRING] stringDifferenceSinceNow];
