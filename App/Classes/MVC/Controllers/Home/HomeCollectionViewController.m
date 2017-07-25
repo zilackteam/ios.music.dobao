@@ -18,6 +18,9 @@
 #import "HomeSectionFooterReusableView.h"
 #import "HomeStatusView.h"
 
+#import "SongCollectionCell.h"
+
+#import "ApiDataProvider.h"
 #import "APIClient.h"
 #import "AlbumList.h"
 #import "AppDelegate.h"
@@ -26,8 +29,9 @@
 
 
 #define LIMIT_VIDEO                         6
-#define LIMIT_ALBUM                         6
+#define LIMIT_ALBUM                         9
 #define LIMIT_SONG                          9
+#define CONTENT_REFRESH_TIME_IN_MINUTES     60 * 6
 
 #pragma mark - HomeCollectionViewController Implement
 @interface HomeCollectionViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, HomeSectionFotterReusableViewDelegate, MediaBaseCellDelegate, HomeStatusViewDelegate> {
@@ -184,7 +188,7 @@
     
     switch (style) {
         case SectionStyleVideo: { // video
-            [[APIClient shared] getListOfVideoWithLimit:LIMIT_VIDEO page:1 completion:^(VideoList *videoList, BOOL success) {
+            [ApiDataProvider fetchVideoList:^(VideoList * _Nullable videoList, BOOL success) {
                 [self p_updateSectionStyle:SectionStyleVideo withState:FooterState_Narrow];
                 if (success && videoList) {
                     if (!_sectionItemDictionary) {
@@ -197,11 +201,11 @@
                     } completion:^(BOOL finished) {
                     }];
                 }
-            }];
+            } refreshTimeInMinutes:CONTENT_REFRESH_TIME_IN_MINUTES limit:LIMIT_VIDEO];
         }
             break;
         case SectionStyleAlbum: { // album
-            [[APIClient shared] getListOfAlbumsWithLimit:LIMIT_ALBUM page:1 type:AlbumTypeNormal completion:^(AlbumList *albumList, BOOL success) {
+            [ApiDataProvider fetchAlbumListType:AlbumTypeNormal completion:^(AlbumList * _Nullable albumList, BOOL success) {
                 [self p_updateSectionStyle:SectionStyleAlbum withState:FooterState_Narrow];
                 if (success && albumList) {
                     if (!_sectionItemDictionary) {
@@ -213,11 +217,11 @@
                     } completion:^(BOOL finished) {
                     }];
                 }
-            }];
+            } refreshTimeInMinutes:CONTENT_REFRESH_TIME_IN_MINUTES limit:LIMIT_ALBUM];
         }
             break;
         case SectionStyleSong: { // song
-            [[APIClient shared] getListOfSongsWithLimit:LIMIT_SONG page:1 completion:^(SongList *songList, BOOL success) {
+            [ApiDataProvider fetchSongList:^(SongList * _Nullable songList, BOOL success) {
                 [self p_updateSectionStyle:SectionStyleSong withState:FooterState_Narrow];
                 if (success && songList) {
                     if (!_sectionItemDictionary) {
@@ -229,7 +233,7 @@
                     } completion:^(BOOL finished) {
                     }];
                 }
-            }];
+            } refreshTimeInMinutes:CONTENT_REFRESH_TIME_IN_MINUTES limit:LIMIT_SONG];
         }
             break;
         default:

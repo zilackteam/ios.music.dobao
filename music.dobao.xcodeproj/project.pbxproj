@@ -64,6 +64,10 @@
 		2A0CCF331F0F47780052855F /* VideoList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CCF191F0F47780052855F /* VideoList.m */; };
 		2A0CCF4E1F0F49320052855F /* AudioItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CCF381F0F49320052855F /* AudioItem.m */; };
 		2A0CCF5C1F0F5F1E0052855F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A0CCF5B1F0F5F1E0052855F /* Assets.xcassets */; };
+		2A1135971F2750C200B87B13 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1135921F2750C200B87B13 /* NSData+Base64.m */; };
+		2A1135981F2750C200B87B13 /* NSString+ASCII.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1135941F2750C200B87B13 /* NSString+ASCII.m */; };
+		2A1135991F2750C200B87B13 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1135961F2750C200B87B13 /* NSString+Base64.m */; };
+		2A11359E1F2750F500B87B13 /* ApiDataCached.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A11359D1F2750F500B87B13 /* ApiDataCached.m */; };
 		2A1180021EA0C55A003C9496 /* LoadMoreReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1180001EA0C55A003C9496 /* LoadMoreReusableView.m */; };
 		2A1180031EA0C55A003C9496 /* LoadMoreReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A1180011EA0C55A003C9496 /* LoadMoreReusableView.xib */; };
 		2A126ECB1EDBF9B90077D6AB /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A126EC61EDBF9380077D6AB /* IJKMediaFramework.framework */; };
@@ -419,6 +423,14 @@
 		2A0CCF371F0F49320052855F /* AudioItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioItem.h; sourceTree = "<group>"; };
 		2A0CCF381F0F49320052855F /* AudioItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioItem.m; sourceTree = "<group>"; };
 		2A0CCF5B1F0F5F1E0052855F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A1135911F2750C200B87B13 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		2A1135921F2750C200B87B13 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		2A1135931F2750C200B87B13 /* NSString+ASCII.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ASCII.h"; sourceTree = "<group>"; };
+		2A1135941F2750C200B87B13 /* NSString+ASCII.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ASCII.m"; sourceTree = "<group>"; };
+		2A1135951F2750C200B87B13 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		2A1135961F2750C200B87B13 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		2A11359C1F2750F500B87B13 /* ApiDataCached.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiDataCached.h; sourceTree = "<group>"; };
+		2A11359D1F2750F500B87B13 /* ApiDataCached.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiDataCached.m; sourceTree = "<group>"; };
 		2A117FFF1EA0C55A003C9496 /* LoadMoreReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadMoreReusableView.h; sourceTree = "<group>"; };
 		2A1180001EA0C55A003C9496 /* LoadMoreReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadMoreReusableView.m; sourceTree = "<group>"; };
 		2A1180011EA0C55A003C9496 /* LoadMoreReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadMoreReusableView.xib; sourceTree = "<group>"; };
@@ -890,6 +902,8 @@
 			children = (
 				2A0CCE8D1F0F46DB0052855F /* ApiDataProvider.h */,
 				2A0CCE8E1F0F46DB0052855F /* ApiDataProvider.m */,
+				2A11359C1F2750F500B87B13 /* ApiDataCached.h */,
+				2A11359D1F2750F500B87B13 /* ApiDataCached.m */,
 			);
 			path = ApiDataProvider;
 			sourceTree = "<group>";
@@ -1222,6 +1236,12 @@
 		2A1561881EAFBD1800671BC0 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				2A1135911F2750C200B87B13 /* NSData+Base64.h */,
+				2A1135921F2750C200B87B13 /* NSData+Base64.m */,
+				2A1135931F2750C200B87B13 /* NSString+ASCII.h */,
+				2A1135941F2750C200B87B13 /* NSString+ASCII.m */,
+				2A1135951F2750C200B87B13 /* NSString+Base64.h */,
+				2A1135961F2750C200B87B13 /* NSString+Base64.m */,
 				2AF4C00C1EC4C38400BA01A5 /* UIImage+BezierPath.h */,
 				2AF4C00D1EC4C38400BA01A5 /* UIImage+BezierPath.m */,
 				2A1561891EAFBD1800671BC0 /* CALayer+Extension.h */,
@@ -2638,6 +2658,7 @@
 				2AE0B8691EF2704F00294582 /* LiveStreamButton.m in Sources */,
 				2A1561B61EAFBD1800671BC0 /* CALayer+Extension.m in Sources */,
 				CE320C351E7E93DE001BADD0 /* SongCollectionCell.m in Sources */,
+				2A1135991F2750C200B87B13 /* NSString+Base64.m in Sources */,
 				CE0748B41E978E2A002C301A /* StoryBoardConfig.m in Sources */,
 				2A0CCF1C1F0F47780052855F /* AlbumList.m in Sources */,
 				E8ABDAC61C083F76001EEA37 /* AppDelegate.m in Sources */,
@@ -2719,6 +2740,7 @@
 				2A1180021EA0C55A003C9496 /* LoadMoreReusableView.m in Sources */,
 				2A3B2AE31EFCBE1000D4431F /* BroadCastBottomView.m in Sources */,
 				CE45DBA61E80632600AB4C29 /* MenuHeaderReusableView.m in Sources */,
+				2A1135971F2750C200B87B13 /* NSData+Base64.m in Sources */,
 				CE226A8A1E80C678004F3972 /* MenuAccountView.m in Sources */,
 				CE45DBA31E80623100AB4C29 /* MenuCollectionCell.m in Sources */,
 				2AA23D321EE720C300340412 /* LiveBottomViewStateGift.m in Sources */,
@@ -2744,6 +2766,7 @@
 				2A83063F1F113FBD00E785C4 /* App.xcdatamodeld in Sources */,
 				2A0CCF331F0F47780052855F /* VideoList.m in Sources */,
 				CECF8D8A1E7C515600C6BAF6 /* HomeCollectionViewController.m in Sources */,
+				2A1135981F2750C200B87B13 /* NSString+ASCII.m in Sources */,
 				CE27F9A01E7F988300AD1ADA /* PlaylistSectionReusableView.m in Sources */,
 				E8A274ED1C08A61300888681 /* PhotoViewController.m in Sources */,
 				2A2449981ECD445E00E171B3 /* ZLAppDelegate.m in Sources */,
@@ -2781,6 +2804,7 @@
 				CE17D5CA1E825F4F0067E620 /* MediaActionViewController.m in Sources */,
 				CE27F9951E7F72CB00AD1ADA /* PlaylistCollectionCell.m in Sources */,
 				2A0CCF201F0F47780052855F /* Category.m in Sources */,
+				2A11359E1F2750F500B87B13 /* ApiDataCached.m in Sources */,
 				CE73A56B1DE71FFD0072A636 /* LiveStreamingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
