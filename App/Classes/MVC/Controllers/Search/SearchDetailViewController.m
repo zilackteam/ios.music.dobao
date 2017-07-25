@@ -13,14 +13,12 @@
 #import "AlbumDetailViewController.h"
 #import "PlaylistCollectionViewController.h"
 
-#import "ApiClient.h"
 #import "MediaBaseCell.h"
-#import "MediaCollection.h"
 #import "SongEntity+CoreDataClass.h"
-#import "SongList.h"
-#import "AlbumList.h"
-#import "VideoList.h"
 #import "MusicStoreManager.h"
+
+#import "ApiDataObjects.h"
+#import "ApiDataProvider.h"
 
 @implementation SearchSectionSetting
 
@@ -94,18 +92,18 @@
     NSArray *sectionSettingData = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"search_section_settings" ofType:@"plist"]];
     searchSectionList = [SearchSectionList parseObject:sectionSettingData];
     
-//    [searchSectionList orderField:@"sectionstyle" ascending:YES];
+    //    [searchSectionList orderField:@"sectionstyle" ascending:YES];
     [_collectionView reloadData];
 }
 
 - (void)fetchDataWithKeyword:(NSString *)keyword {
     [self showLoading:YES];
     
-    [[APIClient shared] searchMediaByKeyword:keyword completion:^(MediaCollection *mediaCollection) {
+    [ApiDataProvider fetchMediaCollection:^(MediaCollection * _Nullable mediaCollection, BOOL success) {
         _mediaCollection = mediaCollection;
         [_collectionView reloadData];
         [self showLoading:NO];
-    }];
+    } withKeyword:keyword];
     
     dispatch_async(dispatch_get_main_queue(), ^{
         self.navigationItem.title = keyword;
@@ -124,6 +122,7 @@
     [super viewDidLoad];
     [self setups];
     [self p_loadConfiguration];
+    
     [self fetchDataWithKeyword:_keyword];
 }
 
@@ -383,7 +382,7 @@
     }];
 }
 
-#pragma mark - 
+#pragma mark -
 - (void)playlistCollectionViewController:(PlaylistCollectionViewController *)viewController didSelectedPlaylist:(PlaylistEntity *)playlist {
     if (viewController && viewController.selectedView) { // songs
         NSIndexPath *indexPath = [_collectionView indexPathForCell:viewController.selectedView];

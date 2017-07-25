@@ -116,11 +116,15 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self updateLatestPost];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    // don't remove this line, i'll crash.
+    [_collectionView reloadData];
+    
+    [self updateLatestPost];
 }
 
 - (void)updateLocalization {
