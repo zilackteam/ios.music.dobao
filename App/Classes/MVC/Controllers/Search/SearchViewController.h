@@ -6,21 +6,8 @@
 //  Copyright © 2016 Zilack. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AppSearchViewController.h"
 
-@class SearchViewController;
-
-@protocol SearchViewControllerDelegate <NSObject>
-
-@optional
-- (void)searchViewController:(SearchViewController *)viewController searchWithKeyword:(NSString *)keyword;
-
-@end
-
-@interface SearchViewController : UIViewController
-
-@property (nonatomic, retain) id<SearchViewControllerDelegate> delegate;
-
-- (void)setDefaultKeyword:(NSString *)keyword;
+@interface SearchViewController : AppSearchViewController
 
 @end

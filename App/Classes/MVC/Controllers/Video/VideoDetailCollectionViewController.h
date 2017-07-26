@@ -45,6 +45,6 @@ typedef NS_OPTIONS(NSInteger, ActionViewState) {
 
 @property (nonatomic, assign) NSInteger selectedIndex;
 
-- (void)setVideoList:(VideoList*)videoList;
+- (void)setList:(VideoList*)videoList;
 
 @end
