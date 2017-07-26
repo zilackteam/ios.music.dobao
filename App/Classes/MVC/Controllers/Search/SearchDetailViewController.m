@@ -28,6 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self useMainBackgroundOpacity:1];
 }
 
 #pragma mark -
