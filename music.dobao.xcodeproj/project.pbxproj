@@ -165,7 +165,6 @@
 		2AF508301ECDF7930099B640 /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF5082F1ECDF7930099B640 /* Default-568h.png */; };
 		2AF508331ECDF9730099B640 /* ZLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF508321ECDF9730099B640 /* ZLUtilities.m */; };
 		2AFABBD31EC1729F009E9CDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AFABBD21EC1729F009E9CDF /* GoogleService-Info.plist */; };
-		CE00E7091E8CAF88006DF99D /* search_section_settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE00E7081E8CAF88006DF99D /* search_section_settings.plist */; };
 		CE00E70D1E8CDF39006DF99D /* PlaylistFooterReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E70B1E8CDF39006DF99D /* PlaylistFooterReusableView.m */; };
 		CE00E70E1E8CDF39006DF99D /* PlaylistFooterReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE00E70C1E8CDF39006DF99D /* PlaylistFooterReusableView.xib */; };
 		CE0347E51CAE1560006FF679 /* card.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0347E71CAE1560006FF679 /* card.plist */; };
@@ -609,7 +608,6 @@
 		A226846F1C05A66D00D2421C /* dobaomusician.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dobaomusician.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7AFB0A403045D0BA9B91DD /* Pods-music.dobao.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music.dobao.debug.xcconfig"; path = "Pods/Target Support Files/Pods-music.dobao/Pods-music.dobao.debug.xcconfig"; sourceTree = "<group>"; };
 		CDD14E509E27C4CF5A1DAB90 /* Pods-music.dobao.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music.dobao.release.xcconfig"; path = "Pods/Target Support Files/Pods-music.dobao/Pods-music.dobao.release.xcconfig"; sourceTree = "<group>"; };
-		CE00E7081E8CAF88006DF99D /* search_section_settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = search_section_settings.plist; sourceTree = "<group>"; };
 		CE00E70A1E8CDF39006DF99D /* PlaylistFooterReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistFooterReusableView.h; sourceTree = "<group>"; };
 		CE00E70B1E8CDF39006DF99D /* PlaylistFooterReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistFooterReusableView.m; sourceTree = "<group>"; };
 		CE00E70C1E8CDF39006DF99D /* PlaylistFooterReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaylistFooterReusableView.xib; sourceTree = "<group>"; };
@@ -2005,7 +2003,6 @@
 		CEAE27AA1C4228D800F8CD07 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				CE00E7081E8CAF88006DF99D /* search_section_settings.plist */,
 				CEAE27AB1C422B5500F8CD07 /* SearchViewController.h */,
 				CEAE27AC1C422B5500F8CD07 /* SearchViewController.m */,
 				CEB57AB71C4BC62100309531 /* SearchDetailViewController.h */,
@@ -2525,7 +2522,6 @@
 				CE1841001E8A32A80038CAB6 /* AlbumHeaderReusableView.xib in Resources */,
 				CE18410D1E8AA6080038CAB6 /* Roboto-Black.ttf in Resources */,
 				2A3B2AE41EFCBE1000D4431F /* BroadCastBottomView.xib in Resources */,
-				CE00E7091E8CAF88006DF99D /* search_section_settings.plist in Resources */,
 				CE0748AC1E9788AB002C301A /* DownloadingCollectionCell.xib in Resources */,
 				CEB969451E836F1E00F8D94F /* online_playlist_actions.plist in Resources */,
 				CE1841111E8AA6080038CAB6 /* Roboto-Italic.ttf in Resources */,
