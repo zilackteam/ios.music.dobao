@@ -262,14 +262,12 @@
 		E80614411C09678E009B5454 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E80614401C09678E009B5454 /* AVFoundation.framework */; };
 		E806812F1C85A52A00874A22 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E806812E1C85A52A00874A22 /* CommentCell.m */; };
 		E8352FF51C84269100556881 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8352FF41C84269100556881 /* PostCell.m */; };
-		E85461661C51421600880B07 /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E85461651C51421600880B07 /* UIViewController+Common.m */; };
 		E854616A1C516D1200880B07 /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85461691C516D1200880B07 /* SocialViewController.m */; };
 		E854616E1C516E4900880B07 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E854616D1C516E4900880B07 /* SettingsViewController.m */; };
 		E85B1FB01C86127A00FC8AB6 /* PostCellLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E85B1FAF1C86127A00FC8AB6 /* PostCellLayout.m */; };
 		E85B1FB31C861DC500FC8AB6 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85B1FB21C861DC500FC8AB6 /* CommentViewController.m */; };
 		E8863F471C0CB73900A541A4 /* MiniPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8863F461C0CB73900A541A4 /* MiniPlayerView.m */; };
 		E88EC1CF1CA8554A00521897 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E88EC1CE1CA8554A00521897 /* PostViewController.m */; };
-		E8A274E81C08A61300888681 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A274CF1C08A61300888681 /* BaseViewController.m */; };
 		E8A274EB1C08A61300888681 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A274D81C08A61300888681 /* MusicViewController.m */; };
 		E8A274EC1C08A61300888681 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A274DB1C08A61300888681 /* NewsViewController.m */; };
 		E8A274ED1C08A61300888681 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A274DE1C08A61300888681 /* PhotoViewController.m */; };
@@ -758,8 +756,6 @@
 		E806812E1C85A52A00874A22 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
 		E8352FF31C84269100556881 /* PostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		E8352FF41C84269100556881 /* PostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
-		E85461641C51421600880B07 /* UIViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Common.h"; sourceTree = "<group>"; };
-		E85461651C51421600880B07 /* UIViewController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Common.m"; sourceTree = "<group>"; };
 		E85461681C516D1200880B07 /* SocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialViewController.h; sourceTree = "<group>"; };
 		E85461691C516D1200880B07 /* SocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialViewController.m; sourceTree = "<group>"; };
 		E854616C1C516E4900880B07 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -772,8 +768,6 @@
 		E8863F461C0CB73900A541A4 /* MiniPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiniPlayerView.m; sourceTree = "<group>"; };
 		E88EC1CD1CA8554A00521897 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
 		E88EC1CE1CA8554A00521897 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
-		E8A274CE1C08A61300888681 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		E8A274CF1C08A61300888681 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		E8A274D71C08A61300888681 /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
 		E8A274D81C08A61300888681 /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
 		E8A274DA1C08A61300888681 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
@@ -2139,17 +2133,6 @@
 			path = MiniPlayer;
 			sourceTree = "<group>";
 		};
-		E8A274CD1C08A61300888681 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				E8A274CE1C08A61300888681 /* BaseViewController.h */,
-				E8A274CF1C08A61300888681 /* BaseViewController.m */,
-				E85461651C51421600880B07 /* UIViewController+Common.m */,
-				E85461641C51421600880B07 /* UIViewController+Common.h */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		E8A274D01C08A61300888681 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -2284,7 +2267,6 @@
 				CECE1CBB1C92C440005ADBAF /* TelCard */,
 				CE6627D91C5D17BA00FBDA7F /* Playlist */,
 				E8A274DF1C08A61300888681 /* Main */,
-				E8A274CD1C08A61300888681 /* Base */,
 				E8A274D31C08A61300888681 /* Menu */,
 				E8A274D01C08A61300888681 /* Home */,
 				E8A274E21C08A61300888681 /* Show */,
@@ -2731,7 +2713,6 @@
 				2AF508331ECDF9730099B640 /* ZLUtilities.m in Sources */,
 				2A0CCED31F0F46DB0052855F /* AMPopTip+Animation.m in Sources */,
 				2AE4EAEE1F1105B300C2D062 /* MediaBaseCell.m in Sources */,
-				E8A274E81C08A61300888681 /* BaseViewController.m in Sources */,
 				2AE4EAED1F1105B300C2D062 /* MediaAccessoryView.m in Sources */,
 				2A0CCF1D1F0F47780052855F /* AppInfo.m in Sources */,
 				CEA73A381CD4605D00C15DD2 /* GuideViewController.m in Sources */,
@@ -2838,7 +2819,6 @@
 				CE823B611E9735B1007B81BE /* ExSlider.m in Sources */,
 				CEB969481E83779600F8D94F /* PlaylistCollectionViewController.m in Sources */,
 				2AA23D2E1EE7206200340412 /* LiveBottomViewStateChat.m in Sources */,
-				E85461661C51421600880B07 /* UIViewController+Common.m in Sources */,
 				2A0CCF211F0F47780052855F /* CategoryList.m in Sources */,
 				2A1422C21F283B3D00B2C867 /* AppSearchViewController.m in Sources */,
 				2A00CA7B1ECB6DC200BC218F /* VideoDetailCollectionViewController.m in Sources */,

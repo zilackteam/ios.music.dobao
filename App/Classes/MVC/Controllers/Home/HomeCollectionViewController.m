@@ -488,7 +488,7 @@
                 vc.selectedIndex = [list indexOfObject:item];
             }
             
-            [vc setVideoList:(VideoList *)list];
+            [vc setList:(VideoList *)list];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
