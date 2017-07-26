@@ -22,7 +22,7 @@
 
 #import "ApiDataProvider.h"
 
-@interface MusicViewController()<MenuViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, MediaBaseCellDelegate, AppPlaylistCollectionDelegate, MediaActionViewControllerDelegate>
+@interface MusicViewController()<MenuViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, MediaBaseCellDelegate, AppPlaylistCollectionDelegate, AppMediaActionDelegate>
 {
     float itemSpacing;
     

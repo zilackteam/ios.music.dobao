@@ -29,7 +29,7 @@
 #import "MediaBaseCell.h"
 #import "AppActions.h"
 
-@interface MyMusicViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, MenuViewDelegate, MediaBaseCellDelegate, MediaActionViewControllerDelegate, AppPlaylistCollectionDelegate, PlaylistSectionReusableViewDelegate, ZLDownloadManagerDelegate, DownloadingViewCellDelegate>
+@interface MyMusicViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, MenuViewDelegate, MediaBaseCellDelegate, AppMediaActionDelegate, AppPlaylistCollectionDelegate, PlaylistSectionReusableViewDelegate, ZLDownloadManagerDelegate, DownloadingViewCellDelegate>
 {
     NSInteger sectionSelected;
     

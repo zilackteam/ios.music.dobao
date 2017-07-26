@@ -132,6 +132,10 @@
 		2A3B2AFB1EFCC47800D4431F /* BroadCastViewStateInit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3B2AFA1EFCC47800D4431F /* BroadCastViewStateInit.xib */; };
 		2A3C43031EA5FF6400ADE937 /* SocialCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C43021EA5FF6400ADE937 /* SocialCollectionViewController.m */; };
 		2A3C43071EA616EF00ADE937 /* PostCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C43061EA616EF00ADE937 /* PostCollectionCell.m */; };
+		2A50E80A1F2865A30095310B /* AppMediaActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A50E8031F2865A30095310B /* AppMediaActionViewController.m */; };
+		2A50E80B1F2865A30095310B /* media_actions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A50E8041F2865A30095310B /* media_actions.plist */; };
+		2A50E80C1F2865A30095310B /* MediaActionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A50E8061F2865A30095310B /* MediaActionManager.m */; };
+		2A50E80D1F2865A30095310B /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A50E8091F2865A30095310B /* NewsViewController.m */; };
 		2A59DD141EB07B73009D0D91 /* CardListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A59DD121EB07B73009D0D91 /* CardListCollectionViewController.m */; };
 		2A5AF55D1EC2FD750008A20C /* AccountManagerCollectionCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5AF55C1EC2FD750008A20C /* AccountManagerCollectionCells.m */; };
 		2A83063F1F113FBD00E785C4 /* App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A83063D1F113FBD00E785C4 /* App.xcdatamodeld */; };
@@ -174,8 +178,6 @@
 		CE0748AE1E9788AB002C301A /* PhotoZoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0748AA1E9788AB002C301A /* PhotoZoomCell.m */; };
 		CE0748B41E978E2A002C301A /* StoryBoardConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0748B31E978E2A002C301A /* StoryBoardConfig.m */; };
 		CE0748B81E979B44002C301A /* AccountManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0748B71E979B44002C301A /* AccountManagerController.m */; };
-		CE14CFD71E82EA0F00D0A84D /* MediaActionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE14CFD61E82EA0F00D0A84D /* MediaActionManager.m */; };
-		CE14CFD91E82EAD600D0A84D /* media_actions.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE14CFD81E82EAD600D0A84D /* media_actions.plist */; };
 		CE14CFDB1E82EC6300D0A84D /* music_song_actions.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE14CFDA1E82EC6300D0A84D /* music_song_actions.plist */; };
 		CE17D5CA1E825F4F0067E620 /* MediaActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17D5C81E825F4F0067E620 /* MediaActionViewController.m */; };
 		CE1840FF1E8A32A80038CAB6 /* AlbumHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1840FD1E8A32A80038CAB6 /* AlbumHeaderReusableView.m */; };
@@ -268,7 +270,6 @@
 		E8863F471C0CB73900A541A4 /* MiniPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8863F461C0CB73900A541A4 /* MiniPlayerView.m */; };
 		E88EC1CF1CA8554A00521897 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E88EC1CE1CA8554A00521897 /* PostViewController.m */; };
 		E8A274EB1C08A61300888681 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A274D81C08A61300888681 /* MusicViewController.m */; };
-		E8A274EC1C08A61300888681 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A274DB1C08A61300888681 /* NewsViewController.m */; };
 		E8A274ED1C08A61300888681 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A274DE1C08A61300888681 /* PhotoViewController.m */; };
 		E8A274EE1C08A61300888681 /* AppMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A274E11C08A61300888681 /* AppMainViewController.m */; };
 		E8A274EF1C08A61300888681 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A274E41C08A61300888681 /* ShowViewController.m */; };
@@ -543,6 +544,13 @@
 		2A3C43021EA5FF6400ADE937 /* SocialCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialCollectionViewController.m; sourceTree = "<group>"; };
 		2A3C43051EA616EF00ADE937 /* PostCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCollectionCell.h; sourceTree = "<group>"; };
 		2A3C43061EA616EF00ADE937 /* PostCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCollectionCell.m; sourceTree = "<group>"; };
+		2A50E8021F2865A30095310B /* AppMediaActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMediaActionViewController.h; sourceTree = "<group>"; };
+		2A50E8031F2865A30095310B /* AppMediaActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppMediaActionViewController.m; sourceTree = "<group>"; };
+		2A50E8041F2865A30095310B /* media_actions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = media_actions.plist; sourceTree = "<group>"; };
+		2A50E8051F2865A30095310B /* MediaActionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaActionManager.h; sourceTree = "<group>"; };
+		2A50E8061F2865A30095310B /* MediaActionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaActionManager.m; sourceTree = "<group>"; };
+		2A50E8081F2865A30095310B /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		2A50E8091F2865A30095310B /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		2A59DD111EB07B73009D0D91 /* CardListCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardListCollectionViewController.h; sourceTree = "<group>"; };
 		2A59DD121EB07B73009D0D91 /* CardListCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardListCollectionViewController.m; sourceTree = "<group>"; };
 		2A5AF55B1EC2FD750008A20C /* AccountManagerCollectionCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerCollectionCells.h; sourceTree = "<group>"; };
@@ -624,9 +632,6 @@
 		CE0748B31E978E2A002C301A /* StoryBoardConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryBoardConfig.m; sourceTree = "<group>"; };
 		CE0748B61E979B44002C301A /* AccountManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerController.h; sourceTree = "<group>"; };
 		CE0748B71E979B44002C301A /* AccountManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManagerController.m; sourceTree = "<group>"; };
-		CE14CFD51E82EA0F00D0A84D /* MediaActionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaActionManager.h; sourceTree = "<group>"; };
-		CE14CFD61E82EA0F00D0A84D /* MediaActionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaActionManager.m; sourceTree = "<group>"; };
-		CE14CFD81E82EAD600D0A84D /* media_actions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = media_actions.plist; sourceTree = "<group>"; };
 		CE14CFDA1E82EC6300D0A84D /* music_song_actions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = music_song_actions.plist; sourceTree = "<group>"; };
 		CE17D5C71E825F4F0067E620 /* MediaActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaActionViewController.h; sourceTree = "<group>"; };
 		CE17D5C81E825F4F0067E620 /* MediaActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaActionViewController.m; sourceTree = "<group>"; };
@@ -768,8 +773,6 @@
 		E88EC1CE1CA8554A00521897 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
 		E8A274D71C08A61300888681 /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
 		E8A274D81C08A61300888681 /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
-		E8A274DA1C08A61300888681 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
-		E8A274DB1C08A61300888681 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		E8A274DD1C08A61300888681 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		E8A274DE1C08A61300888681 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		E8A274E01C08A61300888681 /* AppMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMainViewController.h; sourceTree = "<group>"; };
@@ -1231,6 +1234,8 @@
 		2A1422AF1F283B3D00B2C867 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2A50E8011F2865A30095310B /* MediaAction */,
+				2A50E8071F2865A30095310B /* News */,
 				2A1422B01F283B3D00B2C867 /* Base */,
 				2A1422B51F283B3D00B2C867 /* Playlist */,
 				2A1422B81F283B3D00B2C867 /* Search */,
@@ -1563,6 +1568,27 @@
 			path = PostCollectionCell;
 			sourceTree = "<group>";
 		};
+		2A50E8011F2865A30095310B /* MediaAction */ = {
+			isa = PBXGroup;
+			children = (
+				2A50E8021F2865A30095310B /* AppMediaActionViewController.h */,
+				2A50E8031F2865A30095310B /* AppMediaActionViewController.m */,
+				2A50E8041F2865A30095310B /* media_actions.plist */,
+				2A50E8051F2865A30095310B /* MediaActionManager.h */,
+				2A50E8061F2865A30095310B /* MediaActionManager.m */,
+			);
+			path = MediaAction;
+			sourceTree = "<group>";
+		};
+		2A50E8071F2865A30095310B /* News */ = {
+			isa = PBXGroup;
+			children = (
+				2A50E8081F2865A30095310B /* NewsViewController.h */,
+				2A50E8091F2865A30095310B /* NewsViewController.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		2A5AF55A1EC2FCF20008A20C /* Account */ = {
 			isa = PBXGroup;
 			children = (
@@ -1797,11 +1823,8 @@
 		CE17D5C61E825EE90067E620 /* MediaAction */ = {
 			isa = PBXGroup;
 			children = (
-				CE14CFD81E82EAD600D0A84D /* media_actions.plist */,
 				CE17D5C71E825F4F0067E620 /* MediaActionViewController.h */,
 				CE17D5C81E825F4F0067E620 /* MediaActionViewController.m */,
-				CE14CFD51E82EA0F00D0A84D /* MediaActionManager.h */,
-				CE14CFD61E82EA0F00D0A84D /* MediaActionManager.m */,
 			);
 			path = MediaAction;
 			sourceTree = "<group>";
@@ -2162,15 +2185,6 @@
 			path = Music;
 			sourceTree = "<group>";
 		};
-		E8A274D91C08A61300888681 /* News */ = {
-			isa = PBXGroup;
-			children = (
-				E8A274DA1C08A61300888681 /* NewsViewController.h */,
-				E8A274DB1C08A61300888681 /* NewsViewController.m */,
-			);
-			path = News;
-			sourceTree = "<group>";
-		};
 		E8A274DC1C08A61300888681 /* Photo */ = {
 			isa = PBXGroup;
 			children = (
@@ -2273,7 +2287,6 @@
 				CEDB86971C1DB97C009C8A21 /* MyMusic */,
 				CE5BA1C81C1D53D3000A8A7A /* Album */,
 				E8A274D61C08A61300888681 /* Music */,
-				E8A274D91C08A61300888681 /* News */,
 				E8A274DC1C08A61300888681 /* Photo */,
 				E8A274E51C08A61300888681 /* Video */,
 				CE737AB21C0951E40028DC84 /* Player */,
@@ -2510,7 +2523,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1841141E8AA6080038CAB6 /* Roboto-Medium.ttf in Resources */,
-				CE14CFD91E82EAD600D0A84D /* media_actions.plist in Resources */,
 				CE1841131E8AA6080038CAB6 /* Roboto-LightItalic.ttf in Resources */,
 				CE18410F1E8AA6080038CAB6 /* Roboto-Bold.ttf in Resources */,
 				CE1841161E8AA6080038CAB6 /* Roboto-Regular.ttf in Resources */,
@@ -2529,6 +2541,7 @@
 				2A0CCED21F0F46DB0052855F /* Localizable.strings in Resources */,
 				CE6E11D81E83C8DD0085A554 /* home_section_settings.plist in Resources */,
 				CE27F9A11E7F988300AD1ADA /* PlaylistSectionReusableView.xib in Resources */,
+				2A50E80B1F2865A30095310B /* media_actions.plist in Resources */,
 				CE3461FE1E8B9F1E006C1081 /* album_song_actions.plist in Resources */,
 				CE226A921E8122B6004F3972 /* Other.storyboard in Resources */,
 				2A2443A81F023805004843E1 /* GiftCell.xib in Resources */,
@@ -2717,7 +2730,6 @@
 				2AE4EAE61F10FC9500C2D062 /* CollectionBaseCell.m in Sources */,
 				2A0CCF301F0F47780052855F /* User.m in Sources */,
 				CE00E70D1E8CDF39006DF99D /* PlaylistFooterReusableView.m in Sources */,
-				CE14CFD71E82EA0F00D0A84D /* MediaActionManager.m in Sources */,
 				2A0CCED01F0F46DB0052855F /* LocalStored.m in Sources */,
 				CE737AB51C09520F0028DC84 /* VideoPlayerViewController.m in Sources */,
 				2A1561C31EAFBD1800671BC0 /* ZLCollectionView.m in Sources */,
@@ -2774,6 +2786,7 @@
 				CEB836621E86649F00062219 /* FullPlayerViewController.m in Sources */,
 				E8A274EB1C08A61300888681 /* MusicViewController.m in Sources */,
 				CE1DF1311E915EA80031B8F0 /* HomeStatusView.m in Sources */,
+				2A50E80C1F2865A30095310B /* MediaActionManager.m in Sources */,
 				2A0CCF321F0F47780052855F /* Video.m in Sources */,
 				2A0CCF1A1F0F47780052855F /* APIClient.m in Sources */,
 				2A0CCF221F0F47780052855F /* Comment.m in Sources */,
@@ -2816,6 +2829,7 @@
 				CEB969481E83779600F8D94F /* PlaylistCollectionViewController.m in Sources */,
 				2AA23D2E1EE7206200340412 /* LiveBottomViewStateChat.m in Sources */,
 				2A0CCF211F0F47780052855F /* CategoryList.m in Sources */,
+				2A50E80A1F2865A30095310B /* AppMediaActionViewController.m in Sources */,
 				2A1422C21F283B3D00B2C867 /* AppSearchViewController.m in Sources */,
 				2A00CA7B1ECB6DC200BC218F /* VideoDetailCollectionViewController.m in Sources */,
 				2A87E7F31EE6650F00B76C60 /* ChatCollectionViewCell.m in Sources */,
@@ -2833,7 +2847,6 @@
 				2A0CCEDF1F0F46DB0052855F /* SBFlatDatePicker.m in Sources */,
 				2A0CCF4E1F0F49320052855F /* AudioItem.m in Sources */,
 				2A34AA8F1EE539CF00E83688 /* ChatViewController.m in Sources */,
-				E8A274EC1C08A61300888681 /* NewsViewController.m in Sources */,
 				E8EAB17E1C58AF8700E1DFA9 /* ProgressSlider.m in Sources */,
 				2A0CCF291F0F47780052855F /* PhotoList.m in Sources */,
 				2A0CCF231F0F47780052855F /* CommentList.m in Sources */,
@@ -2846,6 +2859,7 @@
 				CE17D5CA1E825F4F0067E620 /* MediaActionViewController.m in Sources */,
 				CE27F9951E7F72CB00AD1ADA /* PlaylistCollectionCell.m in Sources */,
 				2A0CCF201F0F47780052855F /* Category.m in Sources */,
+				2A50E80D1F2865A30095310B /* NewsViewController.m in Sources */,
 				2A11359E1F2750F500B87B13 /* ApiDataCached.m in Sources */,
 				CE73A56B1DE71FFD0072A636 /* LiveStreamingViewController.m in Sources */,
 			);
