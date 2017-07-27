@@ -133,6 +133,8 @@
 		2A50E80D1F2865A30095310B /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A50E8091F2865A30095310B /* NewsViewController.m */; };
 		2A59DD141EB07B73009D0D91 /* CardListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A59DD121EB07B73009D0D91 /* CardListCollectionViewController.m */; };
 		2A5AF55D1EC2FD750008A20C /* AccountManagerCollectionCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5AF55C1EC2FD750008A20C /* AccountManagerCollectionCells.m */; };
+		2A76B6BF1F29C7E00026574B /* MenuCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A76B6BC1F29C7E00026574B /* MenuCollectionCell.m */; };
+		2A76B6C01F29C7E00026574B /* MenuHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A76B6BE1F29C7E00026574B /* MenuHeaderReusableView.m */; };
 		2A83063F1F113FBD00E785C4 /* App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A83063D1F113FBD00E785C4 /* App.xcdatamodeld */; };
 		2A87E7F31EE6650F00B76C60 /* ChatCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A87E7F21EE6650F00B76C60 /* ChatCollectionViewCell.m */; };
 		2AA23D241EE71E1100340412 /* BottomViewStateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA23D231EE71E1100340412 /* BottomViewStateBase.m */; };
@@ -225,8 +227,6 @@
 		CE401F521E9F3ADF00CD3507 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE401F511E9F3ADF00CD3507 /* LaunchViewController.m */; };
 		CE43D19B1E88AD3C00F0703B /* PlayingPlaylistViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43D1991E88AD3C00F0703B /* PlayingPlaylistViewCell.m */; };
 		CE45DBA01E805ECA00AB4C29 /* MenuCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE45DB9F1E805ECA00AB4C29 /* MenuCollectionViewController.m */; };
-		CE45DBA31E80623100AB4C29 /* MenuCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE45DBA21E80623100AB4C29 /* MenuCollectionCell.m */; };
-		CE45DBA61E80632600AB4C29 /* MenuHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE45DBA51E80632600AB4C29 /* MenuHeaderReusableView.m */; };
 		CE58A6A71E7D0E780061CEEC /* HomeSectionHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE58A6A51E7D0E780061CEEC /* HomeSectionHeaderReusableView.m */; };
 		CE58A6A81E7D0E780061CEEC /* HomeSectionHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE58A6A61E7D0E780061CEEC /* HomeSectionHeaderReusableView.xib */; };
 		CE5BA1CB1C1D5403000A8A7A /* AlbumDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5BA1CA1C1D5403000A8A7A /* AlbumDetailViewController.m */; };
@@ -546,6 +546,10 @@
 		2A59DD121EB07B73009D0D91 /* CardListCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardListCollectionViewController.m; sourceTree = "<group>"; };
 		2A5AF55B1EC2FD750008A20C /* AccountManagerCollectionCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerCollectionCells.h; sourceTree = "<group>"; };
 		2A5AF55C1EC2FD750008A20C /* AccountManagerCollectionCells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManagerCollectionCells.m; sourceTree = "<group>"; };
+		2A76B6BB1F29C7E00026574B /* MenuCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCollectionCell.h; sourceTree = "<group>"; };
+		2A76B6BC1F29C7E00026574B /* MenuCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCollectionCell.m; sourceTree = "<group>"; };
+		2A76B6BD1F29C7E00026574B /* MenuHeaderReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuHeaderReusableView.h; sourceTree = "<group>"; };
+		2A76B6BE1F29C7E00026574B /* MenuHeaderReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuHeaderReusableView.m; sourceTree = "<group>"; };
 		2A83063E1F113FBD00E785C4 /* App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = App.xcdatamodel; sourceTree = "<group>"; };
 		2A87E7F11EE6650F00B76C60 /* ChatCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCollectionViewCell.h; sourceTree = "<group>"; };
 		2A87E7F21EE6650F00B76C60 /* ChatCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCollectionViewCell.m; sourceTree = "<group>"; };
@@ -696,10 +700,6 @@
 		CE43D1991E88AD3C00F0703B /* PlayingPlaylistViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingPlaylistViewCell.m; sourceTree = "<group>"; };
 		CE45DB9E1E805ECA00AB4C29 /* MenuCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCollectionViewController.h; sourceTree = "<group>"; };
 		CE45DB9F1E805ECA00AB4C29 /* MenuCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCollectionViewController.m; sourceTree = "<group>"; };
-		CE45DBA11E80623100AB4C29 /* MenuCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCollectionCell.h; sourceTree = "<group>"; };
-		CE45DBA21E80623100AB4C29 /* MenuCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCollectionCell.m; sourceTree = "<group>"; };
-		CE45DBA41E80632600AB4C29 /* MenuHeaderReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuHeaderReusableView.h; sourceTree = "<group>"; };
-		CE45DBA51E80632600AB4C29 /* MenuHeaderReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuHeaderReusableView.m; sourceTree = "<group>"; };
 		CE58A6A41E7D0E780061CEEC /* HomeSectionHeaderReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSectionHeaderReusableView.h; sourceTree = "<group>"; };
 		CE58A6A51E7D0E780061CEEC /* HomeSectionHeaderReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSectionHeaderReusableView.m; sourceTree = "<group>"; };
 		CE58A6A61E7D0E780061CEEC /* HomeSectionHeaderReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeSectionHeaderReusableView.xib; sourceTree = "<group>"; };
@@ -1184,6 +1184,7 @@
 		2A0CCF591F0F49C20052855F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2A76B6BA1F29C7E00026574B /* Menu */,
 				2AF40FCD1F29BE8A007C8420 /* HomeStatusView */,
 				2AF40FC51F29BE73007C8420 /* CommentCell */,
 				2AF40FC81F29BE73007C8420 /* DownloadCollectionCell */,
@@ -1588,6 +1589,18 @@
 				2A5AF55C1EC2FD750008A20C /* AccountManagerCollectionCells.m */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		2A76B6BA1F29C7E00026574B /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				2A76B6BB1F29C7E00026574B /* MenuCollectionCell.h */,
+				2A76B6BC1F29C7E00026574B /* MenuCollectionCell.m */,
+				2A76B6BD1F29C7E00026574B /* MenuHeaderReusableView.h */,
+				2A76B6BE1F29C7E00026574B /* MenuHeaderReusableView.m */,
+			);
+			name = Menu;
+			path = Views/Menu;
 			sourceTree = "<group>";
 		};
 		2A87E7EE1EE664AE00B76C60 /* ChatView */ = {
@@ -2047,10 +2060,6 @@
 		CEACAF7A1D6DEC26004A99AC /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				CE45DBA11E80623100AB4C29 /* MenuCollectionCell.h */,
-				CE45DBA21E80623100AB4C29 /* MenuCollectionCell.m */,
-				CE45DBA41E80632600AB4C29 /* MenuHeaderReusableView.h */,
-				CE45DBA51E80632600AB4C29 /* MenuHeaderReusableView.m */,
 				CE226A881E80C678004F3972 /* MenuAccountView.h */,
 				CE226A891E80C678004F3972 /* MenuAccountView.m */,
 				CE226A8B1E80C6D2004F3972 /* MenuAccountView.xib */,
@@ -2783,6 +2792,7 @@
 				CEB57AB91C4BC62100309531 /* SearchDetailViewController.m in Sources */,
 				2A1561C21EAFBD1800671BC0 /* AMLocalizeHelper.m in Sources */,
 				2A1422C01F283B3D00B2C867 /* AppPlaylistCollectionViewController.m in Sources */,
+				2A76B6BF1F29C7E00026574B /* MenuCollectionCell.m in Sources */,
 				2A25D8001EF02EEF00FCB8B5 /* LiveBottomViewStateInit.m in Sources */,
 				2A1A64041F1474AA0077C4A9 /* CassetterPlayerViewController.m in Sources */,
 				2AE4EB0E1F11373900C2D062 /* MusicStoreManager.m in Sources */,
@@ -2813,10 +2823,9 @@
 				2A1422BF1F283B3D00B2C867 /* UIViewController+Common.m in Sources */,
 				2A1561C61EAFBD1800671BC0 /* ZLBaseViewController.m in Sources */,
 				2A3B2AE31EFCBE1000D4431F /* BroadCastBottomView.m in Sources */,
-				CE45DBA61E80632600AB4C29 /* MenuHeaderReusableView.m in Sources */,
 				CE226A8A1E80C678004F3972 /* MenuAccountView.m in Sources */,
 				2AF40FC31F29BE67007C8420 /* LoadMoreReusableView.m in Sources */,
-				CE45DBA31E80623100AB4C29 /* MenuCollectionCell.m in Sources */,
+				2A76B6C01F29C7E00026574B /* MenuHeaderReusableView.m in Sources */,
 				2AA23D321EE720C300340412 /* LiveBottomViewStateGift.m in Sources */,
 				2A0CCEDC1F0F46DB0052855F /* UIControl+YYAdd.m in Sources */,
 				2A0CCED41F0F46DB0052855F /* AMPopTip+Draw.m in Sources */,

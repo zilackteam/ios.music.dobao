@@ -267,6 +267,7 @@ static NSString * const reuseIdentifier = @"cell";
         MenuHeaderReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header" forIndexPath:indexPath];
         headerView.delegate = self;
         
+        [headerView setExpandable:NO];
         MenuSection *section = [_sectionList itemAtIndex:indexPath.section];
         
         headerView.titleLabel.text = LocalizedString(section.name);
