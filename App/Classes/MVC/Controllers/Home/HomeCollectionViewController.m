@@ -34,7 +34,7 @@
 #define CONTENT_REFRESH_TIME_IN_MINUTES     60 * 6
 
 #pragma mark - HomeCollectionViewController Implement
-@interface HomeCollectionViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, HomeSectionFotterReusableViewDelegate, MediaBaseCellDelegate, HomeStatusViewDelegate> {
+@interface HomeCollectionViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, HomeSectionFotterReusableViewDelegate, MediaBaseCellDelegate, AppHomeStatusDelegate> {
     SectionSettingList *sectionSettingList;
     
     BOOL screenLoading;
@@ -153,8 +153,8 @@
 }
 
 #pragma mark - HomeStatusViewDelegate
-- (void)homeStatusView:(HomeStatusView *)homeStatusView performAction:(int)action {
-    if (action == 1) {
+- (void)homeStatusView:(HomeStatusView *)homeStatusView performAction:(HomeStatusAction)action {
+    if (action == HomeStatusActionScrollDown) {
         [_collectionView setContentOffset:CGPointMake(0, CGRectGetHeight(self.view.frame)) animated:YES];
     } else {
         if (_lastestPost) {

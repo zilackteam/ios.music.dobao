@@ -7,26 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppHomeStatusView.h"
 
-@class HomeStatusView;
-@class Post;
-
-@protocol HomeStatusViewDelegate <NSObject>
-- (void)homeStatusView:(HomeStatusView *)homeStatusView performAction:(int)action;
-@end
-
-@interface HomeStatusView : UICollectionViewCell
-@property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) id<HomeStatusViewDelegate> delegate;
-
-- (void)updateAlpha:(float)alpha;
-
-- (void)setPost:(Post *)post;
-
-- (void)updateMessage:(NSString *)message;
-
-- (void)showLoading;
-
-- (void)hideLoading;
+@interface HomeStatusView : AppHomeStatusView
 
 @end
