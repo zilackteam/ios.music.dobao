@@ -8,7 +8,7 @@
 #import "SongList.h"
 #import "SongEntity+CoreDataClass.h"
 
-@interface AlbumDetailViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, MediaBaseCellDelegate, MediaActionViewControllerDelegate, PlaylistCollectionViewControllerDelegate>
+@interface AlbumDetailViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, MediaBaseCellDelegate, AppMediaActionDelegate, AppPlaylistCollectionDelegate>
 {
     __weak IBOutlet UICollectionView *_collectionView;
     NSIndexPath *PlayingItem;

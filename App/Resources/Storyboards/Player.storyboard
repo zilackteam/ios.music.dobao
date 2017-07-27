@@ -811,6 +811,8 @@
                                     <outlet property="leftCircleContainer" destination="mA9-1F-vHQ" id="8dk-1u-Gxx"/>
                                     <outlet property="maxTimeLabel" destination="p96-Fa-XXa" id="J3m-NX-c8j"/>
                                     <outlet property="nameLabel" destination="8Nf-HU-Na1" id="vTN-9n-KZ7"/>
+                                    <outlet property="pauseButton" destination="MIe-Fg-A4u" id="OTQ-PR-9ez"/>
+                                    <outlet property="playButton" destination="ojJ-mG-eyB" id="Duq-cT-gM9"/>
                                     <outlet property="rightCircleContainer" destination="5rx-j5-161" id="kWM-xc-aAK"/>
                                     <outlet property="rollLeftWidthConstraint" destination="64q-Tw-KqU" id="SiU-LV-MqQ"/>
                                     <outlet property="rollRightWidthConstraint" destination="OKW-v4-RKa" id="oex-dQ-VYG"/>

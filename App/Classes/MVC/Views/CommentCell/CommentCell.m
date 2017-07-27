@@ -13,6 +13,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    _avatarImageView.layer.cornerRadius = CGRectGetHeight(_avatarImageView.frame)/2.0;
+    _avatarImageView.clipsToBounds = YES;
 }
 - (void)prepareForReuse{
     _avatarImageView.image = nil;

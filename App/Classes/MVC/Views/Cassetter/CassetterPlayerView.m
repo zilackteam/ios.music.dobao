@@ -2,7 +2,7 @@
 //  CassetterPlayerView.m
 //  music.dobao
 //
-//  Created by vu tat thanh on 7/11/17.
+//  Created by thanhvu on 7/11/17.
 //  Copyright © 2017 Zilack. All rights reserved.
 //
 
@@ -14,6 +14,7 @@
 @property (nonatomic, weak) IBOutlet UIImageView *gearRight;
 
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet UIButton *pauseButton;
 @property (weak, nonatomic) IBOutlet UIButton *shuffleButton;
 
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
@@ -93,6 +94,30 @@
 // Player state
 - (void)updatePlayerState:(CassetterPlayState) state {
     
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_pauseButton setSelected:NO];
+        switch (state) {
+            case CassetterPlayBuffering:
+                [_playButton setSelected:YES];
+                break;
+            case CassetterPlayPaused:
+                [_playButton setSelected:NO];
+                [_pauseButton setSelected:YES];
+                break;
+            case CassetterPlayRunning:
+                break;
+            case CassetterPlayStopped:
+                [_playButton setSelected:NO];
+                break;
+            case CassetterPlayReady:
+                break;
+            case CassetterPlayPlaying:
+                [_playButton setSelected:YES];
+                break;
+            default:
+                break;
+        }
+    });
 }
 
 // Volumn

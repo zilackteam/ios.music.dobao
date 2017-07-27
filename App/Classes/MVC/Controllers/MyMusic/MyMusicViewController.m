@@ -29,7 +29,7 @@
 #import "MediaBaseCell.h"
 #import "AppActions.h"
 
-@interface MyMusicViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, MenuViewDelegate, MediaBaseCellDelegate, MediaActionViewControllerDelegate, PlaylistCollectionViewControllerDelegate, PlaylistSectionReusableViewDelegate, ZLDownloadManagerDelegate, DownloadingViewCellDelegate>
+@interface MyMusicViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, MenuViewDelegate, MediaBaseCellDelegate, AppMediaActionDelegate, AppPlaylistCollectionDelegate, PlaylistSectionReusableViewDelegate, ZLDownloadManagerDelegate, DownloadingViewCellDelegate>
 {
     NSInteger sectionSelected;
     
@@ -477,7 +477,7 @@
             [videoList.items addObject:object];
         }
         
-        [vc setVideoList:videoList];
+        [vc setList:videoList];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

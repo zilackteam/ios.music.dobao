@@ -25,7 +25,9 @@
                 <outlet property="activityView" destination="u3n-yu-FeR" id="lPZ-YP-Dwb"/>
                 <outlet property="avatarView" destination="gZV-za-YIy" id="rQN-8e-NTr"/>
                 <outlet property="commentCountLabel" destination="DcZ-XF-MUr" id="ej5-z3-b7D"/>
+                <outlet property="commentImageView" destination="dxm-EK-ctB" id="vlh-el-FaA"/>
                 <outlet property="likeCountLabel" destination="kRC-Q8-bcT" id="EnM-Wd-H9Z"/>
+                <outlet property="likeImageView" destination="I88-MB-Owq" id="MYK-Zy-xOj"/>
                 <outlet property="messageLabel" destination="ZuQ-rz-Tfx" id="Kaj-LZ-xyr"/>
                 <outlet property="statusContainerView" destination="yD3-OE-7qD" id="l4a-2d-q74"/>
                 <outlet property="timeLabel" destination="bzr-7t-M6D" id="fXu-Mi-ZZc"/>

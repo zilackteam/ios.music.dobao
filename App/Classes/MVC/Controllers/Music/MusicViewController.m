@@ -22,7 +22,7 @@
 
 #import "ApiDataProvider.h"
 
-@interface MusicViewController()<MenuViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, MediaBaseCellDelegate, PlaylistCollectionViewControllerDelegate, MediaActionViewControllerDelegate>
+@interface MusicViewController()<MenuViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, MediaBaseCellDelegate, AppPlaylistCollectionDelegate, AppMediaActionDelegate>
 {
     float itemSpacing;
     
@@ -269,7 +269,7 @@
         case MusicViewTypeVideo:{
             VideoDetailCollectionViewController *vc = [UIStoryboard viewController:SB_VideoDetailCollectionViewController storyBoard:StoryBoardMain];
             [vc setSelectedIndex:indexPath.item];
-            [vc setVideoList:(VideoList *)self.itemList];
+            [vc setList:(VideoList *)self.itemList];
             [self.navigationController pushViewController: vc animated:YES];
         }
             break;
@@ -338,7 +338,7 @@
         case MusicViewTypeVideo: {
             VideoDetailCollectionViewController *vc = [UIStoryboard viewController:SB_VideoDetailCollectionViewController storyBoard:StoryBoardMain];
             [vc setSelectedIndex:indexPath.item];
-            [vc setVideoList:(VideoList *)self.itemList];
+            [vc setList:(VideoList *)self.itemList];
             [self.navigationController pushViewController: vc animated:YES];
         }
             break;

@@ -231,7 +231,7 @@
         cell.usernameLabel.text = (aComment.user.fullName != nil) ? aComment.user.fullName : aComment.user.secName;
 //        [cell.avatarImageView sd_setImageWithURL:[NSURL URLWithString:aComment.user.avatarUrl]];
         [cell.avatarImageView sd_setImageWithURL:[NSURL URLWithString:aComment.user.avatarUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            cell.avatarImageView.image = [UIImage roundedImage:image cornerRadius:image.size.height/2];
+//            cell.avatarImageView.image = [UIImage roundedImage:image cornerRadius:image.size.height/2];
         }];
     }
     cell.dateLabel.text = [[NSDate datefromString:aComment.date format:APPLICATION_DATETIME_FORMAT_STRING] stringDifferenceSinceNow];
@@ -241,33 +241,31 @@
 #pragma mark - PHFComposeBarViewDelegate
 - (void)composeBarViewDidPressButton:(PHFComposeBarView *)composeBarView {
     if ([[Session shared] signedIn]) {
-//        if ([Session shared].user.level == UserLevelMaster || [[Session shared].user actived]) {
-            if (_post && composeBarView.text) {
-                [self showLoading:YES];
-                [[APIClient shared] commentPostWithId:_post.identifier content:composeBarView.text completion:^(Comment *aComment) {
-                    if (aComment != nil && _commentList != nil) {
-                        aComment.user = [Session shared].user;
-                        [_commentList.items insertObject:aComment atIndex:0];
-                        CommentCellLayout *layout = [CommentCellLayout new];
-                        CGFloat width = [UIScreen mainScreen].bounds.size.width - 8.0 * 3.0 - 35.0;
-                        UIFont *textFont = [UIFont fontWithName:APPLICATION_FONT size:12.5];
-                        CGRect bounds = [aComment.content boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : textFont} context:nil];
-                        layout.contentHeight = bounds.size.height;
-                        [_commentLayouts insertObject:layout atIndex:0];
-                        _post.commentCount += 1;
-                        [_tableView beginUpdates];
-                        [_tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
-                        [_tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:1]] withRowAnimation:UITableViewRowAnimationFade];
-                        [_tableView endUpdates];
-                    }
-//                    [MBProgressHUD hideHUDForView:self.view animated:YES];
-                    [self showLoading:NO];
-                }];
-            }
-//        } else {
-//            [[[UIAlertView alloc] initWithTitle:nil message:LocalizedString(@"msg_error_account_active_require") delegate:nil cancelButtonTitle:LocalizedString(@"tlt_ok") otherButtonTitles: nil] show];
-//        }
-
+        if (_post && composeBarView.text) {
+            [self showLoading:YES];
+            
+            NSData *data = [composeBarView.text dataUsingEncoding:NSNonLossyASCIIStringEncoding];
+            NSString *text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            
+            [[APIClient shared] commentPostWithId:_post.identifier content:text completion:^(Comment *aComment) {
+                if (aComment != nil && _commentList != nil) {
+                    aComment.user = [Session shared].user;
+                    [_commentList.items insertObject:aComment atIndex:0];
+                    CommentCellLayout *layout = [CommentCellLayout new];
+                    CGFloat width = [UIScreen mainScreen].bounds.size.width - 8.0 * 3.0 - 35.0;
+                    UIFont *textFont = [UIFont fontWithName:APPLICATION_FONT size:12.5];
+                    CGRect bounds = [aComment.content boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : textFont} context:nil];
+                    layout.contentHeight = bounds.size.height;
+                    [_commentLayouts insertObject:layout atIndex:0];
+                    _post.commentCount += 1;
+                    [_tableView beginUpdates];
+                    [_tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
+                    [_tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:1]] withRowAnimation:UITableViewRowAnimationFade];
+                    [_tableView endUpdates];
+                }
+                [self showLoading:NO];
+            }];
+        }
         [_composeView setText:nil];
         [_composeView.textView resignFirstResponder];
     } else {
@@ -331,7 +329,7 @@
 #pragma mark - PostMenuView Delegate
 - (void)postViewController:(PostMenuViewController *)postMenuViewController editPost:(id)post {
     [postMenuViewController dismissViewControllerAnimated:NO completion:^{
-        PostViewController *postVc = (PostViewController *)[UIStoryboard viewController:SB_PostViewController storyBoard:StoryBoardMain];
+        PostViewController *postVc = (PostViewController *)[UIStoryboard viewController:SB_PostViewController storyBoard:StoryBoardSocial];
         postVc.mode = PostViewModeEditing;
         postVc.post = post;
         postVc.delegate = self;
@@ -355,5 +353,13 @@
         });
         
     }];
+}
+
+#pragma mark - PostViewControllerDelegate
+- (void)postViewController:(PostViewController *)controller updateCompletedWithPost:(Post *)aPost {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    _post = aPost;
+    
+    [_tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationMiddle];
 }
 @end

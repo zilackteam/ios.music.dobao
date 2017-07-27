@@ -51,7 +51,7 @@ enum PlayerIndex {
 
 @end
 
-@interface FullPlayerViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, PlayingViewCellDelegate, PlaylistCollectionViewControllerDelegate>
+@interface FullPlayerViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, PlayingViewCellDelegate, AppPlaylistCollectionDelegate>
 {
     NSTimer *_timer;
 }

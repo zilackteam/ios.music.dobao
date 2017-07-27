@@ -315,7 +315,7 @@
     return nil;
 }
 
-- (void)setVideoList:(VideoList *)videoList {
+- (void)setList:(VideoList *)videoList {
     _itemList = videoList;
 }
 

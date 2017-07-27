@@ -18,6 +18,9 @@
 #import "HomeSectionFooterReusableView.h"
 #import "HomeStatusView.h"
 
+#import "SongCollectionCell.h"
+
+#import "ApiDataProvider.h"
 #import "APIClient.h"
 #import "AlbumList.h"
 #import "AppDelegate.h"
@@ -26,11 +29,12 @@
 
 
 #define LIMIT_VIDEO                         6
-#define LIMIT_ALBUM                         6
+#define LIMIT_ALBUM                         9
 #define LIMIT_SONG                          9
+#define CONTENT_REFRESH_TIME_IN_MINUTES     60 * 6
 
 #pragma mark - HomeCollectionViewController Implement
-@interface HomeCollectionViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, HomeSectionFotterReusableViewDelegate, MediaBaseCellDelegate, HomeStatusViewDelegate> {
+@interface HomeCollectionViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, HomeSectionFotterReusableViewDelegate, MediaBaseCellDelegate, AppHomeStatusDelegate> {
     SectionSettingList *sectionSettingList;
     
     BOOL screenLoading;
@@ -116,11 +120,15 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self updateLatestPost];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    // don't remove this line, i'll crash.
+    [_collectionView reloadData];
+    
+    [self updateLatestPost];
 }
 
 - (void)updateLocalization {
@@ -145,8 +153,8 @@
 }
 
 #pragma mark - HomeStatusViewDelegate
-- (void)homeStatusView:(HomeStatusView *)homeStatusView performAction:(int)action {
-    if (action == 1) {
+- (void)homeStatusView:(HomeStatusView *)homeStatusView performAction:(HomeStatusAction)action {
+    if (action == HomeStatusActionScrollDown) {
         [_collectionView setContentOffset:CGPointMake(0, CGRectGetHeight(self.view.frame)) animated:YES];
     } else {
         if (_lastestPost) {
@@ -180,7 +188,7 @@
     
     switch (style) {
         case SectionStyleVideo: { // video
-            [[APIClient shared] getListOfVideoWithLimit:LIMIT_VIDEO page:1 completion:^(VideoList *videoList, BOOL success) {
+            [ApiDataProvider fetchVideoList:^(VideoList * _Nullable videoList, BOOL success) {
                 [self p_updateSectionStyle:SectionStyleVideo withState:FooterState_Narrow];
                 if (success && videoList) {
                     if (!_sectionItemDictionary) {
@@ -193,11 +201,11 @@
                     } completion:^(BOOL finished) {
                     }];
                 }
-            }];
+            } refreshTimeInMinutes:CONTENT_REFRESH_TIME_IN_MINUTES limit:LIMIT_VIDEO];
         }
             break;
         case SectionStyleAlbum: { // album
-            [[APIClient shared] getListOfAlbumsWithLimit:LIMIT_ALBUM page:1 type:AlbumTypeNormal completion:^(AlbumList *albumList, BOOL success) {
+            [ApiDataProvider fetchAlbumListType:AlbumTypeNormal completion:^(AlbumList * _Nullable albumList, BOOL success) {
                 [self p_updateSectionStyle:SectionStyleAlbum withState:FooterState_Narrow];
                 if (success && albumList) {
                     if (!_sectionItemDictionary) {
@@ -209,11 +217,11 @@
                     } completion:^(BOOL finished) {
                     }];
                 }
-            }];
+            } refreshTimeInMinutes:CONTENT_REFRESH_TIME_IN_MINUTES limit:LIMIT_ALBUM];
         }
             break;
         case SectionStyleSong: { // song
-            [[APIClient shared] getListOfSongsWithLimit:LIMIT_SONG page:1 completion:^(SongList *songList, BOOL success) {
+            [ApiDataProvider fetchSongList:^(SongList * _Nullable songList, BOOL success) {
                 [self p_updateSectionStyle:SectionStyleSong withState:FooterState_Narrow];
                 if (success && songList) {
                     if (!_sectionItemDictionary) {
@@ -225,7 +233,7 @@
                     } completion:^(BOOL finished) {
                     }];
                 }
-            }];
+            } refreshTimeInMinutes:CONTENT_REFRESH_TIME_IN_MINUTES limit:LIMIT_SONG];
         }
             break;
         default:
@@ -374,7 +382,7 @@
     
     if (setting.sectionStyle == SectionStyleStatus) {
         if (!_lastestPost) {
-            return CGSizeZero;
+            CGSizeMake(CGRectGetWidth(collectionView.frame), 50.0);
         }
         
         CGRect rect = [AppUtils boundingRectForString:_lastestPost.content font:[UIFont fontWithName:APPLICATION_FONT size:16] width:CGRectGetWidth(collectionView.frame) - 20.0f];
@@ -480,7 +488,7 @@
                 vc.selectedIndex = [list indexOfObject:item];
             }
             
-            [vc setVideoList:(VideoList *)list];
+            [vc setList:(VideoList *)list];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

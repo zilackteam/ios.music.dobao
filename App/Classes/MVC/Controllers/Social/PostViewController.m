@@ -178,6 +178,9 @@
         return;
     }
     
+    NSData *data = [content dataUsingEncoding:NSNonLossyASCIIStringEncoding];
+    content = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    
     [AppActions showLoading];
     if (_mode == PostViewModeEditing) {
         [[APIClient shared] updatePost:_post.identifier content:content image:_contentImageView.image completion:^(Post *aPost) {
