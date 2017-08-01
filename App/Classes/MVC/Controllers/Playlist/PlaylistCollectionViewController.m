@@ -35,8 +35,6 @@
     collectionView.layer.borderWidth = 1;
     collectionView.backgroundColor  = RGBA(1, 1, 1, 0.5);
     
-    collectionView.backgroundColor  = RGBA(1, 1, 1, 0.5);
-    
     UICollectionViewFlowLayout *currentLayout = (UICollectionViewFlowLayout *)collectionView.collectionViewLayout;
     currentLayout.minimumLineSpacing = 0;
     currentLayout.minimumInteritemSpacing = 0;
@@ -46,5 +44,4 @@
     collectionView.allowsSelection = YES;
     [currentLayout invalidateLayout];
 }
-
 @end

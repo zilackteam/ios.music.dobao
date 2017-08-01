@@ -28,11 +28,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self useMainBackgroundOpacity:1];
 }
 
 #pragma mark -
+- (NSString *)appSearchResult:(AppSearchResultViewController *)viewController cellIdentifierWithMenuType:(SeachSectionStyle)type {
+    switch (type) {
+        case SearchSectionStyleSong: {
+            return @"song_cell";
+        }
+            break;
+        case SearchSectionStyleAlbum: {
+            return @"album_cell";
+        }
+            break;
+        case SearchSectionStyleVideo: {
+            return @"video_cell";
+        }
+            break;
+        default:
+            return nil;
+            break;
+    }
+}
+
 - (void)appSearchResult:(AppSearchResultViewController *)viewController didSelectedSection:(SeachSectionStyle)style resultList:(BaseList *)list index:(NSInteger)index {
     switch (style) {
         case SearchSectionStyleSong: {
@@ -55,6 +73,10 @@
         default:
             break;
     }
+}
+
+- (AppPlaylistCollectionViewController *)playlistCollectionViewController {
+    return [UIStoryboard viewController:SB_PlaylistCollectionViewController storyBoard:StoryBoardMain];
 }
 
 @end

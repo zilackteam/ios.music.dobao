@@ -43,7 +43,7 @@
 @end
 
 
-@interface CommentViewController ()<UITableViewDataSource, UITableViewDelegate, PHFComposeBarViewDelegate, PostCellDelegate, PostMenuViewDelegate, PostViewControllerDelegate>{
+@interface CommentViewController ()<UITableViewDataSource, UITableViewDelegate, PHFComposeBarViewDelegate, PostTableCellDelegate, PostMenuViewDelegate, PostViewControllerDelegate>{
     CommentList *_commentList;
     PostCellLayout *_postCellLayout;
     NSMutableArray *_commentLayouts;

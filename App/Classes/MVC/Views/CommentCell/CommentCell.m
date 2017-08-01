@@ -12,20 +12,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
-    _avatarImageView.layer.cornerRadius = CGRectGetHeight(_avatarImageView.frame)/2.0;
-    _avatarImageView.clipsToBounds = YES;
-}
-- (void)prepareForReuse{
-    _avatarImageView.image = nil;
-    _usernameLabel.text = nil;
-    _contentLabel.text = nil;
-    _dateLabel.text = nil;
-}
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 @end

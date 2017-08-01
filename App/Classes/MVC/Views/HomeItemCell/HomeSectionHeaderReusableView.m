@@ -8,9 +8,8 @@
 
 #import "HomeSectionHeaderReusableView.h"
 @interface HomeSectionHeaderReusableView()
-
 @property (nonatomic, weak) IBOutlet UILabel* detailLabel;
-
+@property (weak, nonatomic) IBOutlet UIImageView *iconView;
 @end
 
 @implementation HomeSectionHeaderReusableView

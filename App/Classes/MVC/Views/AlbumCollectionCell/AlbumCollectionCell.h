@@ -6,9 +6,8 @@
 //  Copyright © 2017 Zilack. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "MediaBaseCell.h"
+#import "AppAlbumCollectionCell.h"
 
-@interface AlbumCollectionCell : MediaBaseCell
+@interface AlbumCollectionCell : AppAlbumCollectionCell
 
 @end

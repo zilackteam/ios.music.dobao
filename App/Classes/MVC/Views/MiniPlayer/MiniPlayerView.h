@@ -6,9 +6,7 @@
 //  Copyright © 2015 Zilack. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AppMiniPlayer.h"
 
-@class MiniPlayerView;
-
-@interface MiniPlayerView : UIControl
+@interface MiniPlayerView : AppMiniPlayer
 @end

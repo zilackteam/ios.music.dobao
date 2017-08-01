@@ -6,9 +6,8 @@
 //  Copyright © 2017 Zilack. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "BaseViewController.h"
+#import "AppHomeCollectionViewController.h"
 
-@interface HomeCollectionViewController : BaseViewController
+@interface HomeCollectionViewController : AppHomeCollectionViewController
 
 @end

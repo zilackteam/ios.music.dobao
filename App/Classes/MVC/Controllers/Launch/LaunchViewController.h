@@ -6,8 +6,8 @@
 //  Copyright © 2017 Zilack. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "AppLaunchViewController.h"
 
-@interface LaunchViewController : BaseViewController
+@interface LaunchViewController : AppLaunchViewController
 
 @end

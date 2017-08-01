@@ -6,11 +6,8 @@
 //  Copyright © 2017 Zilack. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "MediaBaseCell.h"
+#import "AppSongCollectionCell.h"
 
-@interface SongCollectionCell : MediaBaseCell
-
-- (void)setPlayingState:(BOOL)playing;
+@interface SongCollectionCell : AppSongCollectionCell
 
 @end

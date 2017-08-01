@@ -6,11 +6,7 @@
 //  Copyright © 2016 Zilack. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "BaseViewController.h"
-#import "PhotoList.h"
+#import "AppPhotoPreviewViewController.h"
 
-@interface PhotoPreviewViewController : BaseViewController
-@property (nonatomic, weak) PhotoList *photoList;
-@property (nonatomic, assign) NSInteger startIndex;
+@interface PhotoPreviewViewController : AppPhotoPreviewViewController
 @end

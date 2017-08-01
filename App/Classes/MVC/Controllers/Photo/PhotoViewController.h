@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
-@interface PhotoViewController : BaseViewController
+#import "AppPhotoViewController.h"
+@interface PhotoViewController : AppPhotoViewController
 
 @end

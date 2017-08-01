@@ -6,13 +6,7 @@
 //  Copyright © 2017 Zilack. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "MediaBaseCell.h"
+#import "AppPlaylistCollectionCell.h"
 
-@interface PlaylistSongCollectionViewCell : MediaBaseCell
-@property (weak, nonatomic) IBOutlet UIButton *statusButton;
-
-- (void)setItemNo:(NSInteger)no;
-- (void)setPlayingState:(BOOL)playing;
-
+@interface PlaylistSongCollectionViewCell : AppPlaylistCollectionCell
 @end

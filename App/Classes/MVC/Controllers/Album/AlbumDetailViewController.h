@@ -1,8 +1,13 @@
-#import "BaseViewController.h"
+//
+//  AlbumDetailViewController.h
 
+//
+//  Created by thanhvu on 12/13/15.
+//  Copyright © 2015 Zilack. All rights reserved.
+//
 
-@interface AlbumDetailViewController : BaseViewController
+#import "AppAlbumDetailViewController.h"
 
-@property (nonatomic, assign) NSInteger albumId;
+@interface AlbumDetailViewController : AppAlbumDetailViewController
 
 @end

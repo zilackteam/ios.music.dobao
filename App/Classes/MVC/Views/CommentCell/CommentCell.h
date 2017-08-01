@@ -7,13 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppCommentCell.h"
 
-@interface CommentCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
-@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentHeightConstraint;
+@interface CommentCell : AppCommentCell
 
 @end

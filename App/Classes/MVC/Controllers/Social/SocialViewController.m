@@ -20,7 +20,7 @@
 #import "AppDelegate.h"
 #import "UIImage+Utilities.h"
 
-@interface SocialViewController ()<UITableViewDataSource, UITableViewDelegate,PostCellDelegate,PostViewControllerDelegate, PostMenuViewDelegate, CommentViewDelegate>{
+@interface SocialViewController ()<UITableViewDataSource, UITableViewDelegate, PostTableCellDelegate, PostViewControllerDelegate, PostMenuViewDelegate, CommentViewDelegate>{
     NSMutableArray *_layouts;
     
     PostList *_postList;
@@ -46,6 +46,9 @@
     self.title = LocalizedString(@"tlt_social_network");
     [self updateUI];
     [self.tableView setBackgroundColor:RGB(244, 244, 244)];
+    
+//    self.tableView.estimatedRowHeight = 80.0;
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     // default
     page.index = 0;
@@ -172,17 +175,9 @@
     }
     
     [cell setNeedsUpdateConstraints];
-/*
-    BOOL lastItemReached = (aPost == [_postList.items lastObject]);
-    if (lastItemReached)
-    {
-        [self p_fetchData];
-    }
-*/
 }
 
 #pragma mark - UITableViewDataSource
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return [_layouts[indexPath.row] cellHeight];
 }

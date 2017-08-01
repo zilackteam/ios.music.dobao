@@ -6,10 +6,8 @@
 //  Copyright © 2017 Zilack. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AppAlbumHeaderReusableView.h"
 
-@interface AlbumHeaderReusableView : UICollectionReusableView
-
-- (void)setTitle:(NSString *)title detail:(NSString *)detail description:(NSString *)description imageUrl:(NSString *)imageUrl;
+@interface AlbumHeaderReusableView : AppAlbumHeaderReusableView
 
 @end

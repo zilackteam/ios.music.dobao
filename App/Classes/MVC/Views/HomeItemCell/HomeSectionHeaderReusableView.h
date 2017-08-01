@@ -6,17 +6,11 @@
 //  Copyright © 2017 Zilack. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "SectionReusableBaseView.h"
+#import "AppHomeSectionHeaderReusableView.h"
 
 @protocol HomeSectionHeaderReusableViewDelegate <NSObject>
 @end
 
-@interface HomeSectionHeaderReusableView : SectionReusableBaseView
-
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *iconView;
-
-+ (UINib *) nib;
+@interface HomeSectionHeaderReusableView : AppHomeSectionHeaderReusableView
 
 @end

@@ -6,9 +6,8 @@
 //  Copyright © 2017 Zilack. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "MediaBaseCell.h"
+#import "AppHomeMediaCell.h"
 
-@interface HomeVideoCell : MediaBaseCell
+@interface HomeVideoCell : AppHomeMediaCell
 
 @end
