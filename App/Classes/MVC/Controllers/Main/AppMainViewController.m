@@ -25,9 +25,4 @@
     return [UIStoryboard viewController:SB_NavigationMenuCollectionViewController storyBoard:StoryBoardDirection];
 }
 
-- (CGFloat)heightOfMiniPlayer {
-    // default
-    return APPLICATION_MINI_PLAYER_HEIGHT;
-}
-
 @end

@@ -44,6 +44,7 @@
 		2A060CEB1F3AF798004598C7 /* AppSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A060CC71F3AF798004598C7 /* AppSearchResultViewController.m */; };
 		2A060CEC1F3AF798004598C7 /* AppSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A060CC91F3AF798004598C7 /* AppSearchViewController.m */; };
 		2A060CED1F3AF798004598C7 /* search_section_settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A060CCA1F3AF798004598C7 /* search_section_settings.plist */; };
+		2A060CF01F3B00A3004598C7 /* AppStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A060CEF1F3B00A3004598C7 /* AppStyles.m */; };
 		2A0A2CB71EAF0051001FF051 /* offline_playlist_actions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A0A2CB51EAF0051001FF051 /* offline_playlist_actions.plist */; };
 		2A0A2CB81EAF0051001FF051 /* offline_song_actions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A0A2CB61EAF0051001FF051 /* offline_song_actions.plist */; };
 		2A0CCEC91F0F46DB0052855F /* AppActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CCE851F0F46DB0052855F /* AppActions.m */; };
@@ -416,6 +417,8 @@
 		2A060CC81F3AF798004598C7 /* AppSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSearchViewController.h; sourceTree = "<group>"; };
 		2A060CC91F3AF798004598C7 /* AppSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSearchViewController.m; sourceTree = "<group>"; };
 		2A060CCA1F3AF798004598C7 /* search_section_settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = search_section_settings.plist; sourceTree = "<group>"; };
+		2A060CEE1F3B00A3004598C7 /* AppStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppStyles.h; sourceTree = "<group>"; };
+		2A060CEF1F3B00A3004598C7 /* AppStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppStyles.m; sourceTree = "<group>"; };
 		2A0A2CB51EAF0051001FF051 /* offline_playlist_actions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = offline_playlist_actions.plist; sourceTree = "<group>"; };
 		2A0A2CB61EAF0051001FF051 /* offline_song_actions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = offline_song_actions.plist; sourceTree = "<group>"; };
 		2A0CCE841F0F46DB0052855F /* AppActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppActions.h; sourceTree = "<group>"; };
@@ -826,7 +829,7 @@
 		CE737AB41C09520F0028DC84 /* VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoPlayerViewController.m; path = Player/VideoPlayerViewController.m; sourceTree = "<group>"; };
 		CE73A5691DE71FFD0072A636 /* LiveStreamingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveStreamingViewController.h; sourceTree = "<group>"; };
 		CE73A56A1DE71FFD0072A636 /* LiveStreamingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveStreamingViewController.m; sourceTree = "<group>"; };
-		CE81F3011E9CB24E008335DB /* AppConfigurations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigurations.h; sourceTree = "<group>"; };
+		CE81F3011E9CB24E008335DB /* Private_AppConfigurations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Private_AppConfigurations.h; sourceTree = "<group>"; };
 		CE823B5F1E9735B1007B81BE /* ExSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExSlider.h; sourceTree = "<group>"; };
 		CE823B601E9735B1007B81BE /* ExSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExSlider.m; sourceTree = "<group>"; };
 		CEA73A361CD4605D00C15DD2 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
@@ -1184,6 +1187,8 @@
 				2A0CCE851F0F46DB0052855F /* AppActions.m */,
 				2A0CCE861F0F46DB0052855F /* AppUtils.h */,
 				2A0CCE871F0F46DB0052855F /* AppUtils.m */,
+				2A060CEE1F3B00A3004598C7 /* AppStyles.h */,
+				2A060CEF1F3B00A3004598C7 /* AppStyles.m */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -2304,7 +2309,7 @@
 				CE401F4E1E9F26DD00CD3507 /* Constants.h */,
 				CE0748B21E978E2A002C301A /* StoryBoardConfig.h */,
 				CE0748B31E978E2A002C301A /* StoryBoardConfig.m */,
-				CE81F3011E9CB24E008335DB /* AppConfigurations.h */,
+				CE81F3011E9CB24E008335DB /* Private_AppConfigurations.h */,
 			);
 			path = AppConfig;
 			sourceTree = "<group>";
@@ -3080,6 +3085,7 @@
 				2A060CD41F3AF798004598C7 /* PlayingLiveViewController.m in Sources */,
 				2A1A64041F1474AA0077C4A9 /* CassetterPlayerViewController.m in Sources */,
 				2AE4EB0E1F11373900C2D062 /* MusicStoreManager.m in Sources */,
+				2A060CF01F3B00A3004598C7 /* AppStyles.m in Sources */,
 				2A0CCF261F0F47780052855F /* MediaCollection.m in Sources */,
 				2A8BC81D1F396D6000108546 /* AppAlbumHeaderReusableView.m in Sources */,
 				2A8BC8521F396D6000108546 /* AppMenuView.m in Sources */,

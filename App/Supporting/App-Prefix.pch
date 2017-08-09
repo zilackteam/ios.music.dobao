@@ -18,6 +18,6 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "AMLocalizeHelper.h"
 #import "StoryBoardConfig.h"
-#import "AppConfigurations.h"
+#import "Private_AppConfigurations.h"
 
 #endif /* App-Prefix_pch */

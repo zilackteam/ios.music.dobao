@@ -53,5 +53,9 @@
     return APPLICATION_API_HOST;
 }
 
+- (CGFloat)AppInit_MiniPlayerHeight {
+    return APPLICATION_MINI_PLAYER_HEIGHT;
+}
+
 // !!!: END
 @end
