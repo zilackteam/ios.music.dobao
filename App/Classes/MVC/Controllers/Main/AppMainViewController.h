@@ -6,8 +6,9 @@
 //  Copyright © 2015 Zilack. All rights reserved.
 //
 
-#import <REFrostedViewController/REFrostedViewController.h>
-@interface AppMainViewController : REFrostedViewController
+//#import <REFrostedViewController/REFrostedViewController.h>
+#import "MainBaseViewController.h"
+@interface AppMainViewController : MainBaseViewController
 @end
 
 
