@@ -18,6 +18,25 @@
 @end
 
 @implementation MusicViewController
+#pragma mark - AppMusicViewProtocol
+- (NSString *)musicCollectionView:(UICollectionView *)collectionView cellIdentifierWithMenuType:(MusicViewType)type {
+    switch (type) {
+        case MusicViewTypeAlbum:
+        case MusicViewTypeSingle:
+            return @"album_cell";
+        case MusicViewTypeSong:
+            return @"song_cell";
+        case MusicViewTypeVideo:
+            return @"video_cell";
+        default:
+            return @"";
+    }
+}
+
+- (NSInteger)refreshTimeInMinutes {
+    return TIME_MINUTE_REFRESH;
+}
+
 #pragma mark - View
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,20 +57,6 @@
 }
 
 - (void)musicCollectionView:(UICollectionView *)collectionView {
-}
-
-- (NSString *)musicCollectionView:(UICollectionView *)collectionView cellIdentifierWithMenuType:(MusicViewType)type {
-    switch (type) {
-        case MusicViewTypeAlbum:
-        case MusicViewTypeSingle:
-            return @"album_cell";
-        case MusicViewTypeSong:
-            return @"song_cell";
-        case MusicViewTypeVideo:
-            return @"video_cell";
-        default:
-            return @"";
-    }
 }
 
 - (void)appMusicView:(AppMusicViewController *)viewController selectedType:(MusicViewType)type list:(BaseList *)list index:(NSInteger)index {
