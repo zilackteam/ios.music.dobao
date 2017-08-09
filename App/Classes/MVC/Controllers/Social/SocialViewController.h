@@ -6,8 +6,8 @@
 //  Copyright © 2016 Zilack. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "BaseViewController.h"
-@interface SocialViewController : BaseViewController
+#import "AppSocialViewController.h"
+
+@interface SocialViewController : AppSocialViewController
 
 @end
