@@ -25,4 +25,9 @@
     return [UIStoryboard viewController:SB_NavigationMenuCollectionViewController storyBoard:StoryBoardDirection];
 }
 
+- (UIViewController *)playerViewController {
+    id vc = [UIStoryboard viewController:SB_CassetterPlayerViewController storyBoard:StoryBoardPlayer];
+    return [[UINavigationController alloc] initWithRootViewController:vc];
+}
+
 @end

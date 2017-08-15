@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TitleView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1z-mx-vBF">
+                    <rect key="frame" x="25" y="30" width="350" height="0.0"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                    <color key="textColor" red="0.68627450980000004" green="0.25490196079999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LHZ-av-4bf">
+                    <rect key="frame" x="0.0" y="19.666666666666664" width="20" height="19.999999999999993"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="N8D-wr-9Du"/>
+                        <constraint firstAttribute="width" constant="20" id="vqk-jD-4v4"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="p1z-mx-vBF" secondAttribute="trailing" id="C1C-Jw-HcR"/>
+                <constraint firstItem="LHZ-av-4bf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="POD-ho-CkD"/>
+                <constraint firstItem="p1z-mx-vBF" firstAttribute="leading" secondItem="LHZ-av-4bf" secondAttribute="trailing" constant="5" id="bpM-KM-3Yt"/>
+                <constraint firstItem="LHZ-av-4bf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gPk-mF-MOL"/>
+                <constraint firstItem="p1z-mx-vBF" firstAttribute="centerY" secondItem="LHZ-av-4bf" secondAttribute="centerY" id="my9-8h-m02"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconView" destination="LHZ-av-4bf" id="6An-zR-lWl"/>
+                <outlet property="titleLabel" destination="p1z-mx-vBF" id="dzA-y3-72e"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="-251.5"/>
+        </view>
+    </objects>
+</document>

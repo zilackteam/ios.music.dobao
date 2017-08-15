@@ -8,9 +8,5 @@
 
 #import "AppHomeSectionHeaderReusableView.h"
 
-@protocol HomeSectionHeaderReusableViewDelegate <NSObject>
-@end
-
 @interface HomeSectionHeaderReusableView : AppHomeSectionHeaderReusableView
-
 @end
