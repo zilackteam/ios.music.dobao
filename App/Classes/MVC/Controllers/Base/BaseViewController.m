@@ -17,20 +17,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+/*
     _titleView = (TitleView *)[AppUtils loadFromNibNamed:@"TitleView"];
     _titleView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 44);
     _titleView.backgroundColor = [UIColor clearColor];
     
     self.navigationItem.titleView = _titleView;
+*/
 }
-
+/*
 - (void)setTitle:(NSString *)title {
     [_titleView setTitle:title];
 }
+*/
 
 - (void)setTitleIconNamed:(NSString *)iconName {
-    [_titleView setIcon:[UIImage imageNamed:iconName]];
+//    [_titleView setIcon:[UIImage imageNamed:iconName]];
 }
 
 - (void)didReceiveMemoryWarning {

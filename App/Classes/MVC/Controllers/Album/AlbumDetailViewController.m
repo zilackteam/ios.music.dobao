@@ -62,4 +62,8 @@
 - (AppMediaActionViewController *)mediaActionViewController {
     return [UIStoryboard viewController:SB_MediaActionViewController storyBoard:StoryBoardMain];
 }
+
+- (CGFloat)initHeightOfHeader {
+    return CGRectGetWidth(self.view.frame) * 0.35 + 20.0f;
+}
 @end

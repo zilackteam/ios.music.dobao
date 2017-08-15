@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -162,7 +162,7 @@
                                                             </connections>
                                                         </slider>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb8-6n-pHR">
-                                                            <rect key="frame" x="-5" y="6" width="40" height="18.666666666666686"/>
+                                                            <rect key="frame" x="-5" y="6.3333333333333144" width="40" height="18.666666666666686"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="PLb-XZ-56j"/>
                                                             </constraints>
@@ -171,7 +171,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4:12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pL6-DW-PsM">
-                                                            <rect key="frame" x="301" y="6" width="40" height="18.666666666666686"/>
+                                                            <rect key="frame" x="301" y="6.3333333333333144" width="40" height="18.666666666666686"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="vy7-hq-X0p"/>
                                                             </constraints>
@@ -475,7 +475,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5Z-Et-FbA" userLabel="cassette_controls">
                                         <rect key="frame" x="48" y="153.66666666666666" width="238.33333333333331" height="70.666666666666686"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojJ-mG-eyB" userLabel="play">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojJ-mG-eyB" userLabel="play">
                                                 <rect key="frame" x="0.0" y="0.0" width="47.333333333333329" height="70.666666666666686"/>
                                                 <state key="normal" image="cassette_play"/>
                                                 <state key="selected" image="cassette_play_hl"/>
@@ -484,7 +484,7 @@
                                                     <action selector="playButtonSelected:" destination="7FC-gl-EFo" eventType="touchUpInside" id="I7m-NA-FHt"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkl-TF-6bp" userLabel="rew">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkl-TF-6bp" userLabel="rew">
                                                 <rect key="frame" x="47.333333333333329" y="0.0" width="47.666666666666657" height="70.666666666666686"/>
                                                 <state key="normal" image="cassette_pre"/>
                                                 <state key="selected" image="cassette_pre_hl"/>
@@ -493,7 +493,7 @@
                                                     <action selector="prevButtonSelected:" destination="7FC-gl-EFo" eventType="touchUpInside" id="Gx6-DZ-tVy"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gko-4y-Z6S" userLabel="fwdd">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gko-4y-Z6S" userLabel="fwdd">
                                                 <rect key="frame" x="94.999999999999986" y="0.0" width="47.333333333333329" height="70.666666666666686"/>
                                                 <state key="normal" image="cassette_fw"/>
                                                 <state key="selected" image="cassette_fw_hl"/>
@@ -502,7 +502,7 @@
                                                     <action selector="nextButtonSelected:" destination="7FC-gl-EFo" eventType="touchUpInside" id="GCP-BB-P2A"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNd-g4-0ba" userLabel="shuffle">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNd-g4-0ba" userLabel="shuffle">
                                                 <rect key="frame" x="189.33333333333331" y="0.0" width="49" height="70.666666666666686"/>
                                                 <state key="normal" image="cassette_shuffle"/>
                                                 <state key="selected" image="cassette_shuffle_hl"/>
@@ -511,7 +511,7 @@
                                                     <action selector="shuffleButtonSelected:" destination="7FC-gl-EFo" eventType="touchUpInside" id="ICH-gD-Rkh"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIe-Fg-A4u" userLabel="pause">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIe-Fg-A4u" userLabel="pause">
                                                 <rect key="frame" x="142" y="0.0" width="47.333333333333343" height="70.666666666666686"/>
                                                 <state key="normal" image="cassette_pause"/>
                                                 <state key="selected" image="cassette_pause_hl"/>

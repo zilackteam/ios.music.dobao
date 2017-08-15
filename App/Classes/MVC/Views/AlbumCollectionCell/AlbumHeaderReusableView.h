@@ -9,5 +9,4 @@
 #import "AppAlbumHeaderReusableView.h"
 
 @interface AlbumHeaderReusableView : AppAlbumHeaderReusableView
-
 @end

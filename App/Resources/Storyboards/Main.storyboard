@@ -218,7 +218,7 @@
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="footer" id="BDB-Ib-YOQ" userLabel="footer">
                                     <rect key="frame" x="0.0" y="100" width="331" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.37647058823529411" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="li0-3v-paw" id="spz-4A-6bZ"/>
@@ -860,7 +860,7 @@
         <scene sceneID="wZY-Lx-Drl">
             <objects>
                 <navigationController storyboardIdentifier="Nav.LaunchViewController" id="9jl-3s-CEV" userLabel="#Nav.Launch" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0AU-GJ-4JC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0AU-GJ-4JC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
